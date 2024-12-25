@@ -9,7 +9,7 @@ const requireDir = require("require-dir"),
                 "./src/views/**/*.html",
                 "./src/views/pages/*.html"
             ],
-            dist: "./dist/",
+            dist: "./build/",
             watch: [
                 "./src/blocks/**/*.html",
                 "./src/views/**/*.html"
@@ -17,7 +17,7 @@ const requireDir = require("require-dir"),
         },
         styles: {
             src: "./src/styles/main.{scss,sass}",
-            dist: "./dist/styles/",
+            dist: "./build/styles/",
             watch: [
                 "./src/blocks/**/*.{scss,sass}",
                 "./src/styles/**/*.{scss,sass}"
@@ -25,7 +25,7 @@ const requireDir = require("require-dir"),
         },
         scripts: {
             src: "./src/js/index.js",
-            dist: "./dist/js/",
+            dist: "./build/js/",
             watch: [
                 "./src/blocks/**/*.js",
                 "./src/js/**/*.js"
@@ -36,26 +36,26 @@ const requireDir = require("require-dir"),
                 "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
                 "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
             ],
-            dist: "./dist/img/",
+            dist: "./build/img/",
             watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
         },
         sprites: {
             src: "./src/img/sprites/*.svg",
-            dist: "./dist/img/sprites/",
+            dist: "./build/img/sprites/",
             watch: "./src/img/sprites/*.svg"
         },
         fonts: {
             src: "./src/fonts/**/*.{woff,woff2}",
-            dist: "./dist/fonts/",
+            dist: "./build/fonts/",
             watch: "./src/fonts/**/*.{woff,woff2}"
         },
         favicons: {
             src: "./src/img/favicon/*.{jpg,jpeg,png,gif}",
-            dist: "./dist/img/favicons/",
+            dist: "./build/img/favicons/",
         },
         gzip: {
             src: "./src/.htaccess",
-            dist: "./dist/"
+            dist: "./build/"
         }
     };
 
