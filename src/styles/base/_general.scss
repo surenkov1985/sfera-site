@@ -1,0 +1,84 @@
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	color: $clrDark;
+	gap: 10px;
+
+	&_light {
+		background: $clrLightBlue;
+
+		&:hover {
+			background: $clrBlue;
+			color: $clrWhite;
+		}
+	}
+
+	&_circle {
+		width: 54px;
+		height: 54px;
+		border-radius: 50%;
+
+		@media screen and (max-width:1200px) {
+			width: 42px;
+			height: 42px;
+
+			& svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	&_primary {
+		color: $clrWhite;
+		background: $clrBlue;
+
+		&:hover {
+			background: $clrLightBlue;
+			color: $clrDarkGray;
+		}
+	}
+}
+
+.phone_link {
+	color: $clrWhite;
+	font-size: rem(24);
+	line-height: (29 / 24);
+	font-weight: 700;
+	text-decoration: none;
+	position: relative;
+		transition: all .3s;
+	display: flex;
+	width: min-content;
+	white-space: nowrap;
+
+	&::after {
+		content: '';
+		width: 0;
+		height: 2px;
+		background: $clrWhite;
+		transition: all .3s;
+		display: block;
+		position: absolute;
+		top: 100%;
+	}
+
+	&:hover {
+		// color: $clrBlue;
+		&::after {
+			width: 100%;	
+		}
+	}
+
+	@media screen and (max-width:1200px) {
+		font-size: 1.25rem;
+	}
+}
