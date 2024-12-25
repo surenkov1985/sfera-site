@@ -1,6 +1,12 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+	margin: 0;
+	padding: 0;
 }
 
 .btn {
@@ -88,6 +94,10 @@ h1, h2, h3, h4, h5, h6, ul {
 			color: $clrBlue;
 		}
 	}
+
+	& svg {
+		flex-shrink: 0;
+	}
 }
 
 .phone_link {
@@ -97,7 +107,7 @@ h1, h2, h3, h4, h5, h6, ul {
 	font-weight: 700;
 	text-decoration: none;
 	position: relative;
-		transition: all .3s;
+	transition: all .3s;
 	display: flex;
 	width: min-content;
 	white-space: nowrap;
@@ -114,9 +124,10 @@ h1, h2, h3, h4, h5, h6, ul {
 	}
 
 	&:hover {
+
 		// color: $clrBlue;
 		&::after {
-			width: 100%;	
+			width: 100%;
 		}
 	}
 
