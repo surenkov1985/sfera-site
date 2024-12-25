@@ -27,8 +27,8 @@ h1, h2, h3, h4, h5, h6, ul {
 		border-radius: 50%;
 
 		@media screen and (max-width:1200px) {
-			width: 42px;
-			height: 42px;
+			width: 40px;
+			height: 40px;
 
 			& svg {
 				width: 24px;
@@ -42,8 +42,50 @@ h1, h2, h3, h4, h5, h6, ul {
 		background: $clrBlue;
 
 		&:hover {
-			background: $clrLightBlue;
-			color: $clrDarkGray;
+			background: $clrPink;
+			// color: $clrDarkGray;
+		}
+	}
+
+	&_burger {
+		display: flex;
+		align-items: center;
+		font-size: rem(18);
+		gap: 10px;
+		font-weight: 500;
+		height: 100%;
+
+		& .lines {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 16px;
+			height: 11px;
+
+			& .line {
+				display: inline-block;
+				width: 100%;
+				height: 1px;
+				background: currentColor;
+				position: absolute;
+
+				&:first-child {
+					top: 0;
+				}
+
+				&:nth-child(2) {
+					top: 5px;
+				}
+
+				&:last-child {
+					bottom: 0;
+				}
+			}
+		}
+
+		&:hover {
+			color: $clrBlue;
 		}
 	}
 }
@@ -80,5 +122,53 @@ h1, h2, h3, h4, h5, h6, ul {
 
 	@media screen and (max-width:1200px) {
 		font-size: 1.25rem;
+	}
+}
+
+.min1200 {
+	display: flex !important;
+
+	@media screen and (max-width: 1200px) {
+		display: none !important;
+	}
+}
+
+.max1200 {
+	display: none !important;
+
+	@media screen and (max-width: 1200px) {
+		display: flex !important;
+	}
+}
+
+.min991 {
+	display: flex !important;
+
+	@media screen and (max-width: 991px) {
+		display: none !important;
+	}
+}
+
+.max991 {
+	display: none !important;
+
+	@media screen and (max-width: 991px) {
+		display: flex !important;
+	}
+}
+
+.min768 {
+	display: flex !important;
+
+	@media screen and (max-width: 768px) {
+		display: none !important;
+	}
+}
+
+.max768 {
+	display: none !important;
+
+	@media screen and (max-width: 768px) {
+		display: flex !important;
 	}
 }

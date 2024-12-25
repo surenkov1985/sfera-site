@@ -16,3 +16,8 @@ $clrBlack: #000000;
 ///////////////////////////////////////////////////////
 
 $gap: 2rem;
+$radius: 20px;
+
+@media screen and (max-width: 991px) {
+	$radius: 10px;
+}
