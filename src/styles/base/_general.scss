@@ -183,3 +183,9 @@ ul {
 		display: flex !important;
 	}
 }
+
+.logo img {
+	@media screen and (max-width: 400px) {
+		width: 120px;
+	}
+}
