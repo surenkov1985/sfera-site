@@ -4,10 +4,38 @@ $gap: rem(32);
 	background: $clrDark;
 	padding-top: rem(204);
 	padding-bottom: rem(120);
+	margin-top: -84px;
+
+	@media screen and (max-width:1024px) {
+		padding-bottom: rem(100);
+	}
+
+	@media screen and (max-width:991px) {
+		padding-bottom: rem(80);
+	}
+
+	@media screen and (max-width:768px) {
+		padding-bottom: rem(60);
+		margin-top: -64px;
+	}
 
 	&__cols {
 		display: flex;
 		gap: $gap;
+		flex-wrap: wrap;
+		width: 100%;
+
+		@media screen and (max-width:576px) {
+			gap: rem(70);
+		}
+
+		@media screen and (max-width:400px) {
+			gap: rem(50);
+		}
+
+		@media screen and (max-width:360px) {
+			gap: rem(36);
+		}
 	}
 
 	&__col {
@@ -18,19 +46,44 @@ $gap: rem(32);
 		&.col {
 
 			&-3 {
-				width: calc((100% - calc($gap * 2)) * 3 );
+				width: calc((100% - calc($gap * 2)) / 12 * 3);
+
+				@media screen and (max-width:1040px) {
+					width: calc((100% - calc($gap * 2)) / 12 * 6);
+				}
+
+				@media screen and (max-width:576px) {
+					width: 100%;
+				}
 			}
 
 			&-6 {
-				width: calc((100% - calc($gap * 2)) * 6 );
+				width: calc((100% - calc($gap * 2)) / 12 * 6);
+
+				@media screen and (max-width:1040px) {
+					width: 100%;
+					gap: 2rem;
+				}
 			}
 		}
 	}
 
 	&__info {
 
+
+		@media screen and (max-width: 576px) {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
+
 		&_list {
 			margin-top: 44px;
+			flex-direction: column;
+
+			@media screen and (max-width: 576px) {
+				margin-top: 0;
+			}
 		}
 
 		&_item {
@@ -47,6 +100,10 @@ $gap: rem(32);
 			&:not(:last-child) {
 				margin-bottom: 14px;
 			}
+
+			@media screen and (max-width: 576px) {
+				flex-direction: column;
+			}
 		}
 	}
 
@@ -55,13 +112,31 @@ $gap: rem(32);
 		&_list {
 			display: flex;
 			flex-direction: column;
-			gap: rem(20);
+			gap: rem(20) rem(16);
+
+			@media screen and (max-width: 576px) {
+				flex-wrap: wrap;
+				max-height: 190px;
+			}
+
+			@media screen and (max-width: 400px) {
+				flex-wrap: wrap;
+				gap: rem(16);
+			}
+		}
+
+		&_item {
+			font-size: rem(18);
+			line-height: (22 / 18);
+
+			@media screen and (max-width: 576px) {
+				width: calc((100% - 1.25rem) / 2);
+				font-size: rem(16);
+			}
 		}
 
 		&_link {
 			color: $clrWhite;
-			font-size: rem(18);
-			line-height: (22 / 18);
 			transition: all .3s;
 
 			&:hover {
@@ -76,7 +151,15 @@ $gap: rem(32);
 		gap: $gap;
 
 		&_item {
-			width: calc((100% - calc($gap)) / 12 * 6 );
+			width: calc((100% - calc($gap)) / 12 * 6);
+
+			@media screen and (max-width: 500px) {
+				width: 100%;
+
+				& .phone_link {
+					font-size: rem(24);
+				}
+			}
 		}
 
 		&_title {
@@ -100,6 +183,10 @@ $gap: rem(32);
 		display: flex;
 		align-items: flex-end;
 		gap: $gap;
+
+		@media screen and (max-width: 576px) {
+			flex-wrap: wrap;
+		}
 
 		&_link {
 			font-size: rem(12);
@@ -136,6 +223,7 @@ $gap: rem(32);
 		& svg {
 			width: 100%;
 			height: 100%;
+
 			& path {
 				transition: all .3s;
 			}

@@ -166,11 +166,17 @@
 				font-size: rem(18);
 				width: 50%;
 			}
+
 			@media screen and (max-width: 419px) {
-				padding: 16px 25px;
+				padding: 16px 20px;
 				font-size: rem(16);
 				width: auto;
 				flex-grow: 1;
+
+				& svg {
+					width: 20px;
+					height: 20px;
+				}
 			}
 		}
 
@@ -202,8 +208,9 @@
 				border-radius: 10px;
 			}
 
-			@media screen and (max-width:  419px) {
+			@media screen and (max-width: 419px) {
 				padding: 16px 25px 16px 65px;
+				margin-left: -50px;
 
 				& .btn_burger {
 					font-size: rem(16);

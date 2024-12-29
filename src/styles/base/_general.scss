@@ -184,6 +184,22 @@ ul {
 	}
 }
 
+.min576 {
+	display: flex !important;
+
+	@media screen and (max-width: 576px) {
+		display: none !important;
+	}
+}
+
+.max576 {
+	display: none !important;
+
+	@media screen and (max-width: 576px) {
+		display: flex !important;
+	}
+}
+
 .logo img {
 	@media screen and (max-width: 400px) {
 		width: 120px;
