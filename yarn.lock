@@ -3284,15 +3284,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-bem-tools-core@bem-tools/bem-tools-core:
+"bem-tools-core@npm:^0.0.3":
   version: 0.0.3
-  resolution: "bem-tools-core@https://github.com/bem-tools/bem-tools-core.git#commit=9a5c91b198a7ce1f2a6b6e64c505aefead27fc8f"
+  resolution: "bem-tools-core@npm:0.0.3"
   dependencies:
     coa: "npm:^1.0.1"
     global-modules: "npm:^0.2.0"
   bin:
     bem: ./bin/bem
-  checksum: 10c0/fcb297188ffba885d29396a1b5783e3137155a55215780fa9142e03958a816b5976d53ec47e80c5ea14c8472998fe5c7b3101f2e8199370ce41c71260f1bdecb
+  checksum: 10c0/bfaea9a9ff81cc3ffe76fd4b9b57eb45bb0e74594e525e54b5add1809ebbe1e2ec257ce2713693a67a1bf436b3e9fd50a7407a2f4bf4d939a5f5eb6d26f9f22e
   languageName: node
   linkType: hard
 
@@ -13849,7 +13849,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     "@babel/register": "npm:^7.17.0"
     "@fancyapps/ui": "npm:^5.0.36"
     babel-loader: "npm:^8.2.3"
-    bem-tools-core: bem-tools/bem-tools-core
+    bem-tools-core: "npm:^0.0.3"
     bem-tools-create: bem-tools/bem-tools-create
     browser-sync: "npm:^2.27.7"
     del: "npm:^6.0.0"

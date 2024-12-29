@@ -1,0 +1,209 @@
+.shape-overlays {
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    & path {
+
+        &:nth-of-type(1) {
+            fill: $clrWhite;
+        }
+    }
+}
+
+.mobile {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__body {
+        flex-grow: 1;
+        overflow: auto;
+        margin-top: 225px;
+        padding-bottom: 64px;
+
+        @media screen and (max-width: 400px) {
+            padding-top: 180px;
+        }
+    }
+
+    &__services {
+        padding-bottom: 57px;
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: rem(32);
+        }
+
+        &_item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &-title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: rem(20);
+            }
+        }
+
+        &_sublist {
+            padding-top: rem(32);
+            padding-left: rem(24);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &_subitem {
+            font-size: rem(14);
+
+            & .link {
+                color: $clrDarkGray;
+                transition: all .2s;
+
+                &:hover {
+                    color: $clrBlue;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        padding-top: 57px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            display: block;
+            background: $clrBorder;
+            bottom: 100%;
+            left: 0;
+        }
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &_item {
+
+            &-title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: rem(16);
+            }
+
+            & .mobile__services_sublist {
+                padding-top: rem(20);
+                padding-left: rem(12);
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    }
+
+    &__foot {
+        width: 100%;
+        background: $clrDark;
+        padding-top: rem(24);
+        padding-bottom: rem(42);
+        border-radius: 20px 20px 0 0;
+
+        &_contacts {
+            display: flex;
+            flex-direction: column;
+            color: $clrWhite;
+            font-size: 12px;
+            font-weight: 500;
+            gap: 40px;
+
+            & .addr {
+                margin-bottom: 6px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                color: $clrWhite;
+                transition: all 0.3s;
+                gap: 10px;
+
+                &:hover {
+                    color: $clrBlue;
+                }
+
+                &::before {
+                    content: url('/img/sprites/navigation.svg');
+                    // position: absolute;
+                    top: 0;
+                    right: calc(100% + 10px);
+                    width: 22px;
+                    height: 22px;
+                    cursor: pointer;
+                }
+            }
+
+            & .work_mode {
+                color: $clrDarkGray;
+            }
+
+            &-phone {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            & .btn_recall {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                color: $clrWhite;
+                display: inline;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: $clrBlue;
+                }
+            }
+        }
+    }
+}
+
+// .shape-overlays path:nth-of-type(1) {
+//     fill: #c4dbea;
+// }
+
+// .shape-overlays path:nth-of-type(2) {
+//     fill: #4c688b;
+// }
+
+// .shape-overlays path:nth-of-type(3) {
+//     fill: #2e496a;
+// }

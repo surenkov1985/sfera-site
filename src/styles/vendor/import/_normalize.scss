@@ -29,6 +29,10 @@ body {
 	font-family: 'Montserrat';
 	min-width: 360px;
 	position: relative;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
 }
 
 * {

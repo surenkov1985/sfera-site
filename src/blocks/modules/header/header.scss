@@ -1,6 +1,7 @@
 .head {
 	position: absolute;
 	width: 100%;
+	z-index: 100;
 
 	& .container {
 		padding-bottom: 2.625rem;
@@ -9,6 +10,12 @@
 		@media screen and (max-width:1200px) {
 			padding-bottom: rem(30);
 			padding-top: rem(30);
+		}
+	}
+
+	& .logo {
+		&_black {
+			display: none;
 		}
 	}
 
@@ -140,6 +147,13 @@
 				}
 			}
 
+			&:hover {
+				&>.head__submenu {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
 			@media screen and (max-width: 1440px) {
 				padding: 25px 30px;
 				font-size: rem(16);
@@ -185,22 +199,23 @@
 			border-radius: $radius;
 			background: $clrLightBlue;
 			// height: 100%;
-			padding: 30px 52px 30px 97px;
+			padding: 0px 52px 0px 97px;
 			margin: 0 0 0 -45px;
 			position: relative;
 			z-index: 2;
+			height: auto;
 
 			@media screen and (max-width: 1440px) {
-				padding: 25px 30px 25px 76px;
+				padding: 0px 30px 0px 76px;
 			}
 
 			@media screen and (max-width: 1200px) {
-				padding: 20px 40px 20px 80px;
+				padding: 0px 40px 0px 80px;
 
 			}
 
 			@media screen and (max-width: 880px) {
-				padding: 20px 25px 20px 60px;
+				padding: 0px 25px 0px 60px;
 
 			}
 
@@ -209,7 +224,7 @@
 			}
 
 			@media screen and (max-width: 419px) {
-				padding: 16px 25px 16px 65px;
+				padding: 0px 25px 0px 65px;
 				margin-left: -50px;
 
 				& .btn_burger {
@@ -225,6 +240,7 @@
 	}
 
 	&__menu {
+		height: 100%;
 
 		&_list {
 			display: flex;
@@ -232,6 +248,7 @@
 			justify-content: space-between;
 			// align-items: center;
 			gap: 16px;
+			height: 100%;
 		}
 
 		&_item {
@@ -307,6 +324,7 @@
 		transition: all 0.3s;
 		visibility: hidden;
 		opacity: 0;
+		z-index: 1;
 
 		&_item {
 
@@ -351,6 +369,7 @@
 			display: flex;
 			color: $clrWhite;
 			align-items: center;
+			position: relative;
 
 			& .caret {
 				width: 20px;
@@ -364,11 +383,34 @@
 				&:hover {
 					color: $clrBlue;
 				}
+
+				&:hover {
+					&>.head__submenu {
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			}
+
+			&:hover {
+				&>.head__submenu {
+					visibility: visible;
+					opacity: 1;
+				}
 			}
 
 			@media screen and (max-width: 991px) {
 				width: calc(50% - 10px);
 			}
+		}
+
+		& .head__submenu {
+			// width: 100%;
+			// border-top-left-radius: 0;
+			// border-top-right-radius: 0;
+			// top: 100%;
+			left: 0;
+			right: auto;
 		}
 
 		@media screen and (max-width: 650px) {

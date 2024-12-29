@@ -75,6 +75,7 @@ ul {
 				height: 1px;
 				background: currentColor;
 				position: absolute;
+				transition: all .2s;
 
 				&:first-child {
 					top: 0;
@@ -86,6 +87,26 @@ ul {
 
 				&:last-child {
 					bottom: 0;
+				}
+			}
+		}
+
+		&.active {
+
+			& .line {
+				&:first-child {
+					transform: rotate(45deg);
+					top: calc(50% - 1px);
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:last-child {
+					width: 100%;
+					transform: rotate(-45deg);
+					bottom: 50%;
 				}
 			}
 		}
@@ -133,6 +154,33 @@ ul {
 
 	@media screen and (max-width:1200px) {
 		font-size: 1.25rem;
+	}
+
+	@media screen and (max-width:576px) {
+		font-size: 1.5rem;
+	}
+}
+
+.service_link {
+	color: $clrDark;
+	transition: all .3s;
+
+	&:hover {
+		color: $clrBlue;
+	}
+}
+
+.caret {
+	width: 20px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	cursor: pointer;
+	transition: all .3s;
+
+	&:hover {
+		color: $clrBlue;
 	}
 }
 
@@ -203,5 +251,30 @@ ul {
 .logo img {
 	@media screen and (max-width: 400px) {
 		width: 120px;
+	}
+}
+
+.accordion {
+
+	&__title {
+		cursor: pointer;
+	}
+
+	&__body {
+		height: auto;
+		max-height: 0;
+		overflow: hidden;
+		transition: all .5s;
+	}
+
+	& .caret {
+
+		transform: perspective(100px) rotateX(0deg);
+	}
+
+	&.open {
+		& .caret {
+			transform: perspective(100px) rotateX(180deg);
+		}
 	}
 }
