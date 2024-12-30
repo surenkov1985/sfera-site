@@ -129,11 +129,7 @@ class ShapeOverlays {
 			elmHamburger.classList.add("active");
 			whiteLogo.style.display = "none";
 			blackLogo.style.display = "block";
-			// mobile.classList.add("show");
 			body.classList.add("no-scroll");
-			// for (var i = 0; i < gNavItems.length; i++) {
-			// 	// gNavItems[i].classList.add("is-opened");
-			// }
 			setTimeout(() => {
 				mobile.classList.add("show");
 			}, 800);
@@ -143,10 +139,6 @@ class ShapeOverlays {
 			blackLogo.style.display = "none";
 			mobile.classList.remove("show");
 			body.classList.remove("no-scroll");
-
-			// for (var i = 0; i < gNavItems.length; i++) {
-			// 	// gNavItems[i].classList.remove("is-opened");
-			// }
 		}
 	});
 })();

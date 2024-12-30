@@ -278,3 +278,51 @@ ul {
 		}
 	}
 }
+
+.color_text {
+	color: $clrBlue;
+}
+
+.swiper {
+	&_navigation {
+		display: flex;
+		gap: 1px;
+	}
+
+	&_prev {
+		background: #E7E7E7;
+		border-radius: 50% 0 0 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 54px;
+		height: 60px;
+		cursor: pointer;
+		transition: all 0.3s;
+
+		&:hover {
+			background: $clrLightBlue;
+		}
+	}
+
+	&_next {
+		background: #E7E7E7;
+		border-radius: 0 50% 50% 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 54px;
+		height: 60px;
+		cursor: pointer;
+		transition: all 0.3s;
+
+		&:hover {
+			background: $clrLightBlue;
+		}
+	}
+}
+
+.gallery__image {
+	width: 100%;
+	height: 100%;
+}

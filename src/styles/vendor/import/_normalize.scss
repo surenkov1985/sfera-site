@@ -51,7 +51,7 @@ main {
 
 h1,
 .h1 {
-	font-size: 2.875rem;
+	font-size: rem(58);
 	line-height: 1.2;
 	margin: 0;
 }
@@ -448,4 +448,9 @@ template {
 ul,
 ol {
 	list-style: none;
+}
+
+* {
+	// transition-timing-function: linear !important;
+	// animation-timing-function: linear !important;
 }
