@@ -1,0 +1,44 @@
+.seo {
+	position: relative;
+	z-index: 9;
+
+	&__cols {
+		display: flex;
+		gap: rem(30);
+	}
+
+	&__col {
+		width: calc((100% - 30px) / 2);
+	}
+}
+
+.nums {
+
+	&__list {
+		display: flex;
+		gap: rem(20);
+		flex-flow: row wrap;
+	}
+
+	&__item {
+		padding: rem(32) rem(33);
+		border-radius: rem(20);
+		background: $clrWhite;
+		flex: 0 1 190px;
+
+		&:nth-child(2), &:nth-child(3), &:nth-child(6) {
+			flex: 0 1 310px;
+		}
+
+		&_title {
+			margin-bottom: 10px;
+		}
+
+		&_text {
+			font-size: rem(14);
+			color: $clrDarkGray;
+		}
+	}
+
+	
+}

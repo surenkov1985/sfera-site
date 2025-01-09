@@ -512,6 +512,16 @@ var ShapeOverlays = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/seo_section/seo_section.js":
+/*!*******************************************************!*\
+  !*** ./src/blocks/modules/seo_section/seo_section.js ***!
+  \*******************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./src/js/import/components.js":
 /*!*************************************!*\
   !*** ./src/js/import/components.js ***!
@@ -537,6 +547,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobile_mobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/mobile/mobile */ "./src/blocks/modules/mobile/mobile.js");
 /* harmony import */ var _modules_mobile_mobile__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_mobile_mobile__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_first_index_first_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/first_index/first_index */ "./src/blocks/modules/first_index/first_index.js");
+/* harmony import */ var _modules_seo_section_seo_section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/seo_section/seo_section */ "./src/blocks/modules/seo_section/seo_section.js");
+/* harmony import */ var _modules_seo_section_seo_section__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_seo_section_seo_section__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 

@@ -4,11 +4,10 @@
 	padding-bottom: 83px;
 	border-radius: 0 0 60px 60px;
 	overflow: hidden;
-	margin-bottom: 150px;
-	// background-image: url(../img/dark_decor.png);
 	background-repeat: no-repeat;
 	background-size: 45%;
 	position: relative;
+	z-index: 10;
 
 	&::after  {
 		// content:  url(../img/dark_decor.png);

@@ -1,4 +1,4 @@
-$gap: rem(32);
+$gap: rem(30);
 
 .foot {
 	background: $clrDark;
@@ -46,10 +46,10 @@ $gap: rem(32);
 		&.col {
 
 			&-3 {
-				width: calc((100% - calc($gap * 2)) / 12 * 3);
+				width: calc((100% - calc($gap * 3)) / 12 * 3);
 
 				@media screen and (max-width:1040px) {
-					width: calc((100% - calc($gap * 2)) / 12 * 6);
+					width: calc((100% - $gap) / 2);
 				}
 
 				@media screen and (max-width:576px) {
@@ -58,7 +58,7 @@ $gap: rem(32);
 			}
 
 			&-6 {
-				width: calc((100% - calc($gap * 2)) / 12 * 6);
+				width: calc((100% - $gap) / 2);
 
 				@media screen and (max-width:1040px) {
 					width: 100%;

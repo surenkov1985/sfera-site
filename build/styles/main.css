@@ -735,6 +735,18 @@ ul {
   height: 100%;
 }
 
+.section {
+  position: relative;
+  padding-top: 314px;
+  margin-top: -218px;
+  border-radius: 60px;
+  padding-bottom: 96px;
+}
+
+.section_gray {
+  background: #F2F2F2;
+}
+
 .head {
   position: absolute;
   width: 100%;
@@ -1018,10 +1030,10 @@ ul {
   padding-bottom: 83px;
   border-radius: 0 0 60px 60px;
   overflow: hidden;
-  margin-bottom: 150px;
   background-repeat: no-repeat;
   background-size: 45%;
   position: relative;
+  z-index: 10;
 }
 
 .first::after {
@@ -1230,6 +1242,48 @@ ul {
   right: calc(100% + 8px);
 }
 
+.seo {
+  position: relative;
+  z-index: 9;
+}
+
+.seo__cols {
+  display: flex;
+  gap: 1.875rem;
+}
+
+.seo__col {
+  width: calc((100% - 30px) / 2);
+}
+
+.nums__list {
+  display: flex;
+  gap: 1.25rem;
+  flex-flow: row wrap;
+}
+
+.nums__item {
+  padding: 2rem 2.0625rem;
+  border-radius: 1.25rem;
+  background: #FFFFFF;
+  flex: 0 1 190px;
+}
+
+.nums__item:nth-child(2),
+.nums__item:nth-child(3),
+.nums__item:nth-child(6) {
+  flex: 0 1 310px;
+}
+
+.nums__item_title {
+  margin-bottom: 10px;
+}
+
+.nums__item_text {
+  font-size: 0.875rem;
+  color: #6B91A0;
+}
+
 .foot {
   background: #1B2A3B;
   padding-top: 12.75rem;
@@ -1239,7 +1293,7 @@ ul {
 
 .foot__cols {
   display: flex;
-  gap: 2rem;
+  gap: 1.875rem;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -1251,11 +1305,11 @@ ul {
 }
 
 .foot__col.col-3 {
-  width: calc((100% - 2rem * 2) / 12 * 3);
+  width: calc((100% - 1.875rem * 3) / 12 * 3);
 }
 
 .foot__col.col-6 {
-  width: calc((100% - 2rem * 2) / 12 * 6);
+  width: calc((100% - 1.875rem) / 2);
 }
 
 .foot__info_list {
@@ -1302,11 +1356,11 @@ ul {
 .foot__contacts {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.875rem;
 }
 
 .foot__contacts_item {
-  width: calc((100% - 2rem) / 12 * 6);
+  width: calc((100% - 1.875rem) / 12 * 6);
 }
 
 .foot__contacts_title {
@@ -1325,7 +1379,7 @@ ul {
 .foot__copyrait {
   display: flex;
   align-items: flex-end;
-  gap: 2rem;
+  gap: 1.875rem;
 }
 
 .foot__copyrait_link {
@@ -1349,7 +1403,7 @@ ul {
 
 .socials__list {
   display: flex;
-  gap: calc(2rem / 2);
+  gap: calc(1.875rem / 2);
 }
 
 .socials__item {
@@ -1706,7 +1760,7 @@ ul {
 
 @media screen and (max-width: 1040px) {
   .foot__col.col-3 {
-    width: calc((100% - 2rem * 2) / 12 * 6);
+    width: calc((100% - 1.875rem) / 2);
   }
 
   .foot__col.col-6 {
