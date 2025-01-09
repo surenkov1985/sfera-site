@@ -1,6 +1,24 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/components/marks/marks.js":
+/*!**********************************************!*\
+  !*** ./src/blocks/components/marks/marks.js ***!
+  \**********************************************/
+/***/ (() => {
+
+modules.define('marks', ['i-bem-dom'], function (provide, bemDom) {
+  provide(bemDom.declBlock(this.name, {
+    onSetMod: {
+      js: {
+        inited: function inited() {}
+      }
+    }
+  }));
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/first_index/first_index.js":
 /*!*******************************************************!*\
   !*** ./src/blocks/modules/first_index/first_index.js ***!
@@ -522,12 +540,26 @@ var ShapeOverlays = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/services/services.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/services/services.js ***!
+  \*************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./src/js/import/components.js":
 /*!*************************************!*\
   !*** ./src/js/import/components.js ***!
   \*************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_marks_marks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %components%/marks/marks */ "./src/blocks/components/marks/marks.js");
+/* harmony import */ var _components_marks_marks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_marks_marks__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),
@@ -549,6 +581,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_first_index_first_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/first_index/first_index */ "./src/blocks/modules/first_index/first_index.js");
 /* harmony import */ var _modules_seo_section_seo_section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/seo_section/seo_section */ "./src/blocks/modules/seo_section/seo_section.js");
 /* harmony import */ var _modules_seo_section_seo_section__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_seo_section_seo_section__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_services_services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/services/services */ "./src/blocks/modules/services/services.js");
+/* harmony import */ var _modules_services_services__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_services_services__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -567,7 +602,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
 /* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/components */ "./src/js/import/components.js");
-/* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_import_components__WEBPACK_IMPORTED_MODULE_1__);
 
 
 

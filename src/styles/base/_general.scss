@@ -341,7 +341,52 @@ ul {
 	border-radius: 60px;
 	padding-bottom: 96px;
 
+	@media screen and (max-width: 768px) {
+		border-radius: 0 0 50px 50px;
+		padding-bottom: 82px;
+	}
+
+	@media screen and (max-width: 576px) {
+		border-radius: 0 0 40px 40px;
+		padding-top: 140px;
+		margin-top: -60px;
+		padding-bottom: 65px;
+	}
+
 	&_gray {
 		background: $clrGray;
+	}
+
+
+}
+
+.text_content {
+
+	& p {
+		color: $clrDark;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: calc(19.2 / 16);
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	transition: all 0.3s;
+	font-size: 16px;
+	font-weight: 500;
+
+	&_primary {
+		color: $clrBlue;
+
+		&:hover {
+			color: $clrDark;
+		}
 	}
 }

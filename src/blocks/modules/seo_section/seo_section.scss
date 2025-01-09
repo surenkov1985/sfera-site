@@ -1,14 +1,73 @@
 .seo {
 	position: relative;
 	z-index: 9;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		object-fit: contain;
+		// left: calc(1200 / 1920 * 100%);
+		right: 0;
+		width: 560px;
+		aspect-ratio: 1 / 1;
+		background-image: url(../img/gray_decor.png);
+		background-size: contain;
+		// transform: rotate(-58deg);
+
+
+		@media screen and (max-width: 1200px) {
+			width: 460px;
+		}
+
+		@media screen and (max-width: 768px) {
+			width: 300px;
+
+		}
+
+		@media screen and (max-width: 576px) {
+			display: none;
+		}
+
+
+		@media screen and (max-width: 400px) {}
+	}
 
 	&__cols {
 		display: flex;
 		gap: rem(30);
+		position: relative;
+		z-index: 1;
+
+		@media screen and (max-width:991px) {
+			flex-direction: column-reverse;
+			gap: rem(80);
+		}
 	}
 
 	&__col {
 		width: calc((100% - 30px) / 2);
+
+		@media screen and (max-width:991px) {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		display: flex;
+		gap: rem(20);
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		width: 92%;
+	}
+
+	&__more {
+		display: flex;
+		margin-top: rem(60);
 	}
 }
 
@@ -18,6 +77,10 @@
 		display: flex;
 		gap: rem(20);
 		flex-flow: row wrap;
+
+		@media screen and (max-width:991px) {
+			gap: rem(16);
+		}
 	}
 
 	&__item {
@@ -26,8 +89,44 @@
 		background: $clrWhite;
 		flex: 0 1 190px;
 
-		&:nth-child(2), &:nth-child(3), &:nth-child(6) {
+		@media screen and (max-width:1200px) {
+			padding: rem(24) rem(22);
+			flex: 0 1 180px;
+		}
+
+		@media screen and (max-width:991px) {
+			padding: rem(24) rem(16);
+			flex: 0 1 220px;
+		}
+
+		@media screen and (max-width:576px) {
+			flex: 1 1 180px;
+		}
+
+		@media screen and (max-width:400px) {
+			flex: 1 1 150px;
+		}
+
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(6) {
 			flex: 0 1 310px;
+
+			@media screen and (max-width:1200px) {
+				flex: 1 1 240px;
+			}
+
+			@media screen and (max-width:991px) {
+				flex: 1 1 220px;
+			}
+
+			@media screen and (max-width:576px) {
+				flex: 1 1 180px;
+			}
+
+			@media screen and (max-width:400px) {
+				flex: 1 1 150px;
+			}
 		}
 
 		&_title {
@@ -37,8 +136,12 @@
 		&_text {
 			font-size: rem(14);
 			color: $clrDarkGray;
+
+			@media screen and (max-width:400px) {
+				font-size: rem(12);
+			}
 		}
 	}
 
-	
+
 }
