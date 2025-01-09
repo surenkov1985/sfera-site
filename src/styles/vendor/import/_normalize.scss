@@ -41,6 +41,8 @@ body {
 	padding: 0;
 }
 
+
+
 /**
  * Render the `main` element consistently in IE.
  */
@@ -51,7 +53,7 @@ main {
 
 h1,
 .h1 {
-	font-size: rem(58);
+	font-size: clamp(1.875rem, 1.4712rem + 1.7949vw, 3.625rem);
 	line-height: 1.2;
 	margin: 0;
 }

@@ -10,13 +10,18 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
-/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
 function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 
 
-console.log(swiper__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+// console.log(Swiper);
 
 // const firstSlider = new Swiper(".first_slider", {
 // 	speed: 500,
@@ -46,8 +51,8 @@ console.log(swiper__WEBPACK_IMPORTED_MODULE_0__["default"]);
   var gallery = document.querySelector("[data-gallery]");
   var mainSliderNode = gallery.querySelector("[data-main-slider]");
   var sideSliderNodes = gallery.querySelectorAll("[data-side-slider]");
-  var prev = gallery.querySelector("[data-prev]");
-  var next = gallery.querySelector("[data-next]");
+  var prev = gallery.querySelectorAll("[data-prev]");
+  var next = gallery.querySelectorAll("[data-next]");
   var sliderMain = null;
   var sliderSide = null;
   var activeIndex = 0;
@@ -131,6 +136,21 @@ console.log(swiper__WEBPACK_IMPORTED_MODULE_0__["default"]);
     watchSlidesProgress: true,
     preventInteractionOnTransition: true,
     init: false,
+    pagination: {
+      el: '.first__content_slider .swiper-pagination',
+      type: "bullets",
+      clickable: true
+    },
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+    breakpoints: {
+      768: {
+        pagination: {
+          el: '.first_slider_control .swiper-pagination',
+          type: "bullets",
+          clickable: true
+        }
+      }
+    },
     // pagination: {
     // 	el: ".halls__slider_images .pagination_tabs",
     // 	type: "bullets",
@@ -197,6 +217,12 @@ console.log(swiper__WEBPACK_IMPORTED_MODULE_0__["default"]);
         preventInteractionOnTransition: true,
         loop: true,
         init: false,
+        pagination: {
+          el: '.first_slider_control .swiper-pagination',
+          type: "bullets",
+          clickable: true
+        },
+        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
         // pagination: {
         // 	el: ".halls__slider_images .pagination_tabs",
         // 	type: "bullets",
@@ -240,7 +266,7 @@ console.log(swiper__WEBPACK_IMPORTED_MODULE_0__["default"]);
           }
         }
       }));
-      console.log(sideSliderNodes);
+      // console.log(sideSliderNodes);
     }
   } catch (err) {
     _iterator.e(err);
@@ -249,13 +275,23 @@ console.log(swiper__WEBPACK_IMPORTED_MODULE_0__["default"]);
   }
   slidersSide[0].init();
   slidersSide[1].init();
-  console.log(mainSliderNode, sliderSide);
-  prev.addEventListener("click", function () {
-    slideChange("prev");
+  // console.log(mainSliderNode, sliderSide);
+
+  prev.forEach(function (item) {
+    item.addEventListener("click", function () {
+      slideChange("prev");
+    });
   });
-  next.addEventListener("click", function () {
-    slideChange("next");
+  next.forEach(function (item) {
+    item.addEventListener("click", function () {
+      slideChange("next");
+    });
   });
+
+  // next.addEventListener("click", () => {
+  // 	slideChange("next");
+  // });
+
   sliderMain.init();
   return {
     sliderMain: sliderMain,

@@ -420,6 +420,7 @@
 
 	& .btn_burger {
 		display: none;
+		padding: 0;
 
 		@media screen and (max-width: 650px) {
 			display: flex;

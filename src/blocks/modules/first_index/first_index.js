@@ -1,8 +1,10 @@
 import Swiper from "swiper";
+import { Pagination } from 'swiper/modules';
 
 import "swiper/css";
+import 'swiper/css/pagination';
 
-console.log(Swiper);
+// console.log(Swiper);
 
 // const firstSlider = new Swiper(".first_slider", {
 // 	speed: 500,
@@ -30,8 +32,8 @@ console.log(Swiper);
 	const mainSliderNode = gallery.querySelector("[data-main-slider]");
 	const sideSliderNodes = gallery.querySelectorAll("[data-side-slider]");
 
-	const prev = gallery.querySelector("[data-prev]");
-	const next = gallery.querySelector("[data-next]");
+	const prev = gallery.querySelectorAll("[data-prev]");
+	const next = gallery.querySelectorAll("[data-next]");
 
 	let sliderMain = null;
 	let sliderSide = null;
@@ -125,6 +127,21 @@ console.log(Swiper);
 		watchSlidesProgress: true,
 		preventInteractionOnTransition: true,
 		init: false,
+		pagination: {
+			el: '.first__content_slider .swiper-pagination',
+			type: "bullets",
+			clickable: true,
+		},
+		modules: [Pagination],
+		breakpoints: {
+			768: {
+				pagination: {
+					el: '.first_slider_control .swiper-pagination',
+					type: "bullets",
+					clickable: true,
+				},
+			}
+		},
 		// pagination: {
 		// 	el: ".halls__slider_images .pagination_tabs",
 		// 	type: "bullets",
@@ -189,6 +206,12 @@ console.log(Swiper);
 				preventInteractionOnTransition: true,
 				loop: true,
 				init: false,
+				pagination: {
+					el: '.first_slider_control .swiper-pagination',
+					type: "bullets",
+					clickable: true,
+				},
+				modules: [Pagination],
 				// pagination: {
 				// 	el: ".halls__slider_images .pagination_tabs",
 				// 	type: "bullets",
@@ -233,18 +256,28 @@ console.log(Swiper);
 				},
 			})
 		);
-		console.log(sideSliderNodes);
+		// console.log(sideSliderNodes);
 	}
 	slidersSide[0].init();
 	slidersSide[1].init();
-	console.log(mainSliderNode, sliderSide);
-	prev.addEventListener("click", () => {
-		slideChange("prev");
-	});
+	// console.log(mainSliderNode, sliderSide);
 
-	next.addEventListener("click", () => {
-		slideChange("next");
-	});
+
+	prev.forEach(item => {
+		item.addEventListener("click", () => {
+			slideChange("prev");
+		});
+	})
+
+	next.forEach(item => {
+		item.addEventListener("click", () => {
+			slideChange("next");
+		});
+	})
+
+	// next.addEventListener("click", () => {
+	// 	slideChange("next");
+	// });
 
 	sliderMain.init();
 
