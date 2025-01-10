@@ -1,9 +1,9 @@
-<div class='@@classList @@if (with_plus){with_plus} @@if (small){small}'>
-    @@for (var i = 0; i < pictures.length; i++) { <div class="marks__item">
-        <picture>
-            <source srcset=`+pictures[i].webp+` type="image/webp">
-            <img src=`+pictures[i].png+` alt="">
-        </picture>
+<div class='@@classList @@if (with_plus){with_plus} @@if (small){small} @@direction'>
+	@@for (var i = 0; i < pictures.length; i++) { <div class="marks__item">
+		<picture>
+			<source srcset=`+pictures[i].webp+` type="image/webp">
+			<img src=`+pictures[i].png+` alt="">
+		</picture>
 </div>
 }
 </div>

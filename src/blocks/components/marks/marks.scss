@@ -15,6 +15,20 @@
         }
     }
 
+	 &.column {
+		flex-direction: column;
+
+		& .marks__item {
+			width: 32px;
+			height: 32px;
+
+			&:not(:first-child) {
+				 margin-top: -12px;
+				 margin-left: 0;
+			}
+	  }
+	 }
+
     &__item {
         width: 45px;
         height: 45px;

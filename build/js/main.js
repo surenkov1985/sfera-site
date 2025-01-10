@@ -7,15 +7,7 @@
   \**********************************************/
 /***/ (() => {
 
-modules.define('marks', ['i-bem-dom'], function (provide, bemDom) {
-  provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-      js: {
-        inited: function inited() {}
-      }
-    }
-  }));
-});
+
 
 /***/ }),
 
@@ -546,7 +538,32 @@ var ShapeOverlays = /*#__PURE__*/function () {
   \*************************************************/
 /***/ (() => {
 
-
+document.addEventListener('click', function (e) {
+  if (e.target.closest('.dropdown__value')) {
+    var dropdown = e.target.closest('.dropdown');
+    var dropdownList = dropdown.querySelector('.dropdown__list');
+    if (dropdownList.classList.contains('show')) {
+      dropdownList.classList.remove('show');
+    } else {
+      dropdownList.classList.add('show');
+    }
+  }
+  if (e.target.closest('.dropdown__item')) {
+    var _dropdown = e.target.closest('.dropdown');
+    var _dropdownList = _dropdown.querySelector('.dropdown__list');
+    var dropdownItem = e.target.closest('.dropdown__item');
+    var dropdownValue = _dropdown.querySelector('.dropdown__value .value');
+    _dropdownList.classList.remove('show');
+    dropdownValue.textContent = dropdownItem.textContent;
+  }
+  if (!e.target.closest('.dropdown')) {
+    var _dropdown2 = document.querySelectorAll('.dropdown');
+    _dropdown2.forEach(function (item) {
+      var dropdownList = item.querySelector('.dropdown__list');
+      dropdownList.classList.remove('show');
+    });
+  }
+});
 
 /***/ }),
 
