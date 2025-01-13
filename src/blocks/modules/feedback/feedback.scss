@@ -1,0 +1,28 @@
+.feedback {
+	padding-top: 110px;
+	padding-bottom: 122px;
+
+	
+
+	@media screen and (max-width: 991px) {
+		padding-top: 96px;
+		padding-bottom: 112px;
+	}
+
+	@media screen and (max-width: 768px) {
+		padding-top: 82px;
+		padding-bottom: 0;
+		border-radius: 50px;
+	}
+
+	@media screen and (max-width: 576px) {
+		padding-top: 70px;
+		border-radius: 40px;
+		padding-bottom: 0;
+	}
+
+	@media screen and (max-width: 400px) {
+		padding-top: 56px;
+		padding-bottom: 0;
+	}
+}

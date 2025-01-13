@@ -1,0 +1,141 @@
+.docks {
+	margin-top: 120px;
+    margin-bottom: 220px;
+	 overflow: hidden;
+	 
+	 @media screen and (max-width: 1200px) {
+		margin-top: 110px;
+		margin-bottom: 210px;
+	}
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 200px;
+		margin-top: 100px;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 20px 42px;
+		margin-bottom: rem(40);
+	}
+
+	&__list {
+		position: relative;
+
+		& .swiper-pagination {
+			position: static;margin-top: 34px;
+			display: flex;
+			gap: 19px;
+			justify-content: center;
+
+			&-bullet {
+				width: 10px;
+				height: 10px;
+				background: $clrBorder;
+				opacity: 1;
+				margin: 0 !important;
+
+				&-active {
+					background: $clrBlue;
+				}
+			}
+		}
+
+		& .swiper {
+
+			@media screen and (max-width:576px) {
+				overflow: visible;
+			}
+
+			&::after {
+				position: absolute;
+				content: '';
+				background: linear-gradient(90deg, rgba(255, 255, 255, 0) -6.38%, #FFFFFF 63.83%);
+				display: inline-block;
+				height: 100%;
+				width: 100px;
+				right: -50px;
+				top: 0;
+				z-index: 1;
+				pointer-events: none;
+			}
+		}
+	}
+
+	&__slide {
+		display: flex !important;
+		flex-direction: column;
+		gap: rem(28);
+
+		&_preview {
+			height: auto;
+			aspect-ratio: 16 / 23;
+			overflow: hidden;
+			border-radius: rem(10);
+			position: relative;
+			cursor: pointer;
+
+			& img, & picture {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				scale: 1.05;
+			}
+
+			&::after {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				background: rgba($color: #4988D1, $alpha: 0.4);
+				background-image: url(../img/sprites/glassPlus.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.5s;
+			}
+
+			&:hover {
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		gap: rem(18);
+		&_name {
+			font-size: 14px;
+			font-weight: 500;
+			color: $clrDark;
+			transition: all 0.2s;
+		}
+
+		&:hover {
+
+			& .docks__desc_name {
+				color: $clrPink;
+			}
+		}
+
+		&_info {
+			display: flex;
+			gap: 16px;
+			font-size: 14px;
+			color: $clrDarkGray;
+			margin-top: auto;
+		}
+	}
+}

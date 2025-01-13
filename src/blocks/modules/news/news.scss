@@ -1,0 +1,150 @@
+.news {
+	padding-top: 126px;
+	padding-bottom: 82px;
+
+	@media screen and (max-width: 1200px) {
+		padding-top: 106px;
+		padding-bottom: 76px;
+	}
+
+	@media screen and (max-width: 768px) {
+		border-radius: 50px;
+		padding-top: 82px;
+		padding-bottom: 72px;
+	}
+
+	@media screen and (max-width: 576px) {
+		border-radius: 40px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 20px 42px;
+		margin-bottom: rem(40);
+	}
+
+	& .swiper-pagination {
+		position: static;margin-top: 52px;
+		display: flex;
+		gap: 19px;
+		justify-content: center;
+
+		@media screen and (max-width: 768px) {
+			margin-top: 44px;
+		}
+	
+		@media screen and (max-width: 576px) {
+			margin-top: 40px;
+		}
+
+		&-bullet {
+			width: 10px;
+			height: 10px;
+			background: $clrBorder;
+			opacity: 1;
+			margin: 0 !important;
+
+			&-active {
+				background: $clrBlue;
+			}
+		}
+	}
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		border-radius: rem(20);
+		background: $clrWhite;
+
+		&_preview {
+			border-radius: rem(20);
+			overflow: hidden;
+			width: 100%;
+			aspect-ratio: 16 / 9.4;
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: all 0.5s;
+				will-change: transform;
+				transform-origin: center;
+			}
+		}
+
+		&_desc {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			padding: rem(32);
+
+			@media screen and (max-width: 768px) {
+				padding: 24px 28px;
+			}
+		
+			@media screen and (max-width: 576px) {
+				padding: 22px 18px 24px;
+			}
+		}
+
+		&_date {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+			color: $clrDarkGray;
+			font-size: 12px;
+			margin-bottom: 16px;
+		}
+
+		&_title {
+			color: $clrDark;
+			margin-bottom: 18px;
+			transition: all 0.5s
+		}
+
+		&_text {
+			font-size: 12px;
+			line-height: 1.1;
+			color: $clrDarkGray;
+			margin-bottom: 28px;
+		}
+
+		&_more {
+			display: flex;justify-content: flex-start;
+			gap: 10px;
+			align-items: center;
+			color: $clrBlue;
+			margin-top: auto;
+			transition: all 0.5s;
+		}
+		&:hover {
+
+			& .news {
+
+				&__slide {
+					&_preview {
+
+						& img 	{
+							transform: scale(1.05);
+
+						}
+					}
+
+					&_title {
+						color: $clrPink;
+					}
+
+					&_more{
+						color: $clrPink;
+					}
+				}
+
+				
+			}
+		}
+	}
+}
