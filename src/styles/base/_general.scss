@@ -33,6 +33,16 @@ ul {
 		}
 	}
 
+	&_white {
+		background: $clrWhite;
+		color: $clrBlue;
+
+		&:hover {
+			background: $clrPink;
+			color: $clrWhite;
+		}
+	}
+
 	&_circle {
 		width: 54px;
 		height: 54px;
@@ -341,6 +351,10 @@ ul {
 	border-radius: 60px;
 	padding-bottom: 96px;
 
+	&.no_margin {
+		margin-top: 0 !important;
+	}
+
 	@media screen and (max-width: 768px) {
 		border-radius: 0 0 50px 50px;
 		padding-bottom: 82px;
@@ -357,7 +371,10 @@ ul {
 		background: $clrGray;
 	}
 
-
+	&_blue {
+		background: $clrBlue;
+		color: $clrWhite;
+	}
 }
 
 .text_content {
@@ -389,4 +406,8 @@ ul {
 			color: $clrDark;
 		}
 	}
+}
+
+.mt0 {
+	margin-top: 0 !important;
 }
