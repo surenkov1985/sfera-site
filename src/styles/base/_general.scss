@@ -60,6 +60,21 @@ ul {
 		}
 	}
 
+	&_quad {
+		border-radius: 10px;
+		padding: 14px 23px;
+	}
+
+	&_trans {
+		border: 1px solid $clrBorder;
+		background: transparent;
+
+		&:hover {
+			color: $clrBlue;
+			border-color: $clrBlue;
+		}
+	}
+
 	&_primary {
 		color: $clrWhite;
 		background: $clrBlue;

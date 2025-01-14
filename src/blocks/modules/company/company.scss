@@ -11,4 +11,141 @@
 	  margin-bottom: 100px;
 	  margin-top: 100px;
   }
+
+  &__content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	border: 1px solid $clrBorder;
+	border-radius: rem(20);
+	padding-top: 45px;
+	padding-bottom: 58px;
+
+	@media screen and (max-width: 1440px) {
+		padding-left: 44px;
+		padding-right: 44px;
+		align-items: flex-start;
+	}
+
+	@media screen and (max-width: 1200px) {
+		padding: 32px 30px;
+	}
+
+	@media screen and (max-width: 991px) {
+		padding: 24px 20px;
+	}
+
+	@media screen and (max-width: 576px) {
+		padding: 0;
+		border: none;
+		gap: 40px;
+	}
+
+	&_logo {
+		width: calc((100% - 30px) / 12 * 3);
+		display: flex;
+		justify-content: center;
+
+		@media screen and (max-width: 1440px) {
+			// width: calc((100% - 30px) / 12 * 2.5);
+			width: 100%;
+			justify-content: flex-start;
+		}
+
+		@media screen and (max-width: 576px) {
+			justify-content: center;
+		}
+
+		& .logo {
+			display: inline-block;
+			width: 218px;
+
+			& img {
+				width: 100%;
+			}
+
+			@media screen and (max-width: 1440px) {
+				width: 166px;
+			}
+
+			@media screen and (max-width: 576px) {
+				width: 218px;
+			}
+		} 
+	}
+
+	
+  }
+  
+  &__links {
+		// width: calc((100% - 30px) / 12 * 9);
+		padding-right: 44px;
+		flex-grow: 1;
+
+		@media screen and (max-width: 1440px) {
+			padding-right: 0;
+		}
+		&_top {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 30px;
+			// justify-content: space-between;
+			padding-top: 14px;
+			padding-bottom: 50px;
+
+			@media screen and (max-width: 576px) {
+				flex-direction: column;
+			}
+		}
+
+		&_list {
+			padding-top: 50px;
+			border-top: 1px solid $clrBorder;
+			display: flex;
+			// grid-template-columns: 3fr 5.5fr;
+			flex-direction: column;
+			flex-wrap: wrap;
+			max-height: 230px;
+			gap: 24px 30px;
+
+			@media screen and (max-width: 991px) {
+				max-height: none;
+			}
+		}
+
+		&_item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			color: $clrDark;
+			transition: all 0.2s;
+
+			& img {
+				width: 18px;
+			}
+
+			&:hover{
+				color: $clrBlue;
+			}
+
+			@media screen and (max-width: 1200px) {
+				font-size: 14px;
+			}
+
+			@media screen and (max-width: 576px) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__marks {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		@media screen and (max-width: 576px) {
+			flex-direction: column;
+		}
+	}
 }
