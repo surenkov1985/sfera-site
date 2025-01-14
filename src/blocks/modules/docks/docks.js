@@ -1,6 +1,10 @@
 import Swiper from "swiper";
 
+
 import { Navigation, Pagination } from 'swiper/modules';
+
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 import "swiper/css";
 import 'swiper/css/pagination';
@@ -45,3 +49,7 @@ import 'swiper/css/pagination';
 		}
 	})
 })()
+
+Fancybox.bind("[data-fancybox]", {
+	// Your custom options
+});
