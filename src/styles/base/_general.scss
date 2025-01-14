@@ -387,3 +387,88 @@ ul {
 .mt0 {
 	margin-top: 0 !important;
 }
+
+.input {
+	position: relative;
+	display: flex;
+	width: 100%;
+
+	&.error {
+
+			& input {
+				color: $clrPink;
+				border-color: $clrPink;
+
+				&::placeholder {
+					color: $clrPink;
+				}
+			}
+
+		& span.error {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+
+	& input {
+		padding: 20px 32px;
+		border-radius: 60px;
+		border: 1px solid $clrBorder;
+		width: 100%;
+	}
+
+	& span.error {
+		position: absolute;
+		top: calc(100% + 2px);
+		font-size: 14px;
+		color: $clrPink;
+		font-weight: 600;
+		line-height: 1.1;
+		left: 32px;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.label_checkbox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 12px;
+	line-height: 1.1;
+	cursor: pointer;
+
+	input {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+
+		&:checked {
+
+			&+span.checkbox {
+				background: $clrBlue;
+				
+				& svg {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	& span.checkbox {
+		width: 26px;height: 26px;
+		border: 1px solid $clrBorder;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		flex-shrink: 0;
+		
+		& svg {
+			opacity: 0;
+		}
+	}
+}
