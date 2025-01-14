@@ -1641,6 +1641,7 @@ ul {
   flex-direction: column;
   align-items: flex-start;
   gap: 25px;
+  margin-top: 200px;
 }
 
 .services__result_marks-num {
