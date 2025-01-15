@@ -122,7 +122,7 @@ class ShapeOverlays {
 		const mobile = document.querySelector(".mobile");
 		const body = document.body;
 
-		document.addEventListener("click", (e) => {
+		elem.addEventListener("click", (e) => {
 			if (overlay.isAnimating) {
 				return false;
 			}

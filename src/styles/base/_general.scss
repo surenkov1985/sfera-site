@@ -75,6 +75,16 @@ ul {
 		}
 	}
 
+	&_blue {
+		color: $clrBlue;
+		border-color: $clrBlue;
+
+		&:hover {
+			color: $clrPink;
+			border-color: $clrPink;
+		}
+	}
+
 	&_primary {
 		color: $clrWhite;
 		background: $clrBlue;
@@ -356,7 +366,7 @@ ul {
 .text_content {
 
 	& p {
-		color: $clrDark;
+		// color: $clrDark;
 		font-size: 16px;
 		font-weight: 500;
 		line-height: calc(19.2 / 16);

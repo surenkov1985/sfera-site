@@ -603,7 +603,7 @@ var ShapeOverlays = /*#__PURE__*/function () {
     var blackLogo = document.querySelector(".logo_black");
     var mobile = document.querySelector(".mobile");
     var body = document.body;
-    document.addEventListener("click", function (e) {
+    elem.addEventListener("click", function (e) {
       if (overlay.isAnimating) {
         return false;
       }
@@ -750,6 +750,61 @@ document.addEventListener('click', function (e) {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/workers/workers.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/modules/workers/workers.js ***!
+  \***********************************************/
+/***/ (() => {
+
+var menuSelectors = document.querySelectorAll('.aside__nav_link');
+var header = document.querySelector('.head.fixed');
+(function clickAnchors() {
+  on('click', 'a[href^="#"]', function (e) {
+    e.preventDefault();
+    var element = document.getElementById(this.getAttribute('href').substr(1));
+    if (!element) return;
+    var offset = -100; // Смещение на -100px
+
+    // Получаем текущую позицию элемента и добавляем смещение
+    var elementPosition = element.getBoundingClientRect().top + window.scrollY + offset + header.getBoundingClientRect().height;
+
+    // Прокручиваем к рассчитанной позиции с плавной анимацией
+    window.scrollTo({
+      top: elementPosition,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
+})();
+document.addEventListener('scroll', function () {
+  onScroll();
+});
+onScroll();
+function onScroll() {
+  var scroll_top = window.pageYOffset;
+  menuSelectors.forEach(function (link) {
+    var url = new URL(link.href);
+    var hash = url.hash;
+    var target = document.querySelector(hash);
+    link.classList.remove("active");
+    if (target.getBoundingClientRect().top <= 0 && target.getBoundingClientRect().bottom >= 0) {
+      link.classList.add("active");
+    } else {
+      // link.classList.remove("active");
+    }
+  });
+}
+function on(event, object) {
+  var func = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
+  document.addEventListener(event, function (e) {
+    var eTarget = e.target.closest(object);
+    if (eTarget == null) return;
+    func.call(eTarget, e);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/import/components.js":
 /*!*************************************!*\
   !*** ./src/js/import/components.js ***!
@@ -795,10 +850,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_company_company__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/feedback/feedback */ "./src/blocks/modules/feedback/feedback.js");
 /* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! %modules%/workers/workers */ "./src/blocks/modules/workers/workers.js");
+/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_workers_workers__WEBPACK_IMPORTED_MODULE_13__);
 
 
 
 
+
+// import "%modules%/first_about/first_about";
 
 
 
