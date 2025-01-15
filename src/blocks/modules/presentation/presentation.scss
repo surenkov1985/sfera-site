@@ -1,9 +1,35 @@
 .presentation {
 	padding-top: 137px;
 	padding-bottom: 137px;
+	position: relative;
+	overflow: hidden;
 
-	@media screen and (max-width: 1650px) {
-		// background-position: 120% !important;
+	& .container {
+		position: relative;
+		z-index: 1;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -16px;
+		object-fit: contain;
+		left: -35px;
+		width: calc(487 / 1920 * 100%);
+		aspect-ratio: 1 / 1;
+		background-image: url(../img/sprites/blue_decor.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+
+
+		@media screen and (max-width: 1200px) {
+			width: 300px;
+		}
+
+		@media screen and (max-width: 991px) {
+			display: none;
+		}
 	}
 
 	@media screen and (max-width: 1440px) {
@@ -48,6 +74,8 @@
 
 	&__content {
 		width: 50%;
+		position: relative;
+		z-index: 1;
 
 		@media screen and (max-width: 1440px) {
 			width: 65%;
@@ -88,9 +116,6 @@
 			display: flex;
 			align-items: center;
 		}
-	}
-
-	& .marks {
 	}
 
 	& .services__result_marks{

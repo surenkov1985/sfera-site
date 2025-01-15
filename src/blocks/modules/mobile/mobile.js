@@ -111,36 +111,40 @@ class ShapeOverlays {
 }
 
 (function () {
-	const elmHamburger = document.querySelector(".btn_burger");
+	const elmHamburger = document.querySelectorAll(".btn_burger");
 	// const gNavItems = document.querySelectorAll(".global-menu__item");
-	const elmOverlay = document.querySelector(".shape-overlays");
-	const overlay = new ShapeOverlays(elmOverlay);
-	const whiteLogo = document.querySelector(".logo_white");
-	const blackLogo = document.querySelector(".logo_black");
-	const mobile = document.querySelector(".mobile");
-	const body = document.body;
 
-	elmHamburger.addEventListener("click", () => {
-		if (overlay.isAnimating) {
-			return false;
-		}
-		overlay.toggle();
-		if (overlay.isOpened === true) {
-			elmHamburger.classList.add("active");
-			whiteLogo.style.display = "none";
-			blackLogo.style.display = "block";
-			body.classList.add("no-scroll");
-			setTimeout(() => {
-				mobile.classList.add("show");
-			}, 800);
-		} else {
-			elmHamburger.classList.remove("active");
-			whiteLogo.style.display = "block";
-			blackLogo.style.display = "none";
-			mobile.classList.remove("show");
-			body.classList.remove("no-scroll");
-		}
-	});
+	elmHamburger.forEach(elem => {
+		const elmOverlay = document.querySelector(".shape-overlays");
+		const overlay = new ShapeOverlays(elmOverlay);
+		const whiteLogo = document.querySelector(".logo_white");
+		const blackLogo = document.querySelector(".logo_black");
+		const mobile = document.querySelector(".mobile");
+		const body = document.body;
+
+		document.addEventListener("click", (e) => {
+			if (overlay.isAnimating) {
+				return false;
+			}
+			overlay.toggle();
+			if (overlay.isOpened === true) {
+				elem.classList.add("active");
+				whiteLogo.style.display = "none";
+				blackLogo.style.display = "block";
+				body.classList.add("no-scroll");
+				setTimeout(() => {
+					mobile.classList.add("show");
+				}, 800);
+			} else {
+				elem.classList.remove("active");
+				whiteLogo.style.display = "block";
+				blackLogo.style.display = "none";
+				mobile.classList.remove("show");
+				body.classList.remove("no-scroll");
+			}
+		});
+	})
+
 })();
 
 (function () {
