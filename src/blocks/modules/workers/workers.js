@@ -8,7 +8,7 @@ const header = document.querySelector('.head.fixed');
 		const offset = -100 // Смещение на -100px
 
 		// Получаем текущую позицию элемента и добавляем смещение
-		const elementPosition = element.getBoundingClientRect().top + window.scrollY + offset + header.getBoundingClientRect().height
+		const elementPosition = element.getBoundingClientRect().top + window.scrollY - header.getBoundingClientRect().height
 
 		// Прокручиваем к рассчитанной позиции с плавной анимацией
 		window.scrollTo({
@@ -34,7 +34,7 @@ function onScroll() {
 		const target = document.querySelector(hash);
 
 		link.classList.remove("active");
-		if (target.getBoundingClientRect().top <= 0 && target.getBoundingClientRect().bottom >= 0) {
+		if (target.getBoundingClientRect().top <= header.getBoundingClientRect().height && target.getBoundingClientRect().bottom >= header.getBoundingClientRect().height) {
 
 			link.classList.add("active");
 		} else {

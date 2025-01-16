@@ -361,6 +361,29 @@ ul {
 		background: $clrBlue;
 		color: $clrWhite;
 	}
+
+	&_no_bg {
+		margin-top: 120px;
+    margin-bottom: 120px;
+	 overflow: hidden;
+	 
+	 @media screen and (max-width: 1200px) {
+		margin-top: 110px;
+		margin-bottom: 110px;
+	}
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 100px;
+		margin-top: 100px;
+	}
+	}
+	
+}
+
+.no_decor {
+	&::after {
+		display: none !important;
+	}
 }
 
 .text_content {
@@ -487,5 +510,11 @@ ul {
 	width: 1px;
 	height: 1px;
 	position: absolute;
-	top: 900px;
+	top: 700px;
+ }
+
+ .light_text {
+	font-size: 14px;
+	line-height: 1.2;
+	color: $clrDarkGray;
  }

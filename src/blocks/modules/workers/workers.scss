@@ -38,6 +38,9 @@
 
 		&_title {
 			margin-bottom: 40px;
+			display: flex;
+			align-items: center;
+			gap: 2rem;
 		}
 
 		&_list {
@@ -50,6 +53,26 @@
 		&_more {
 			width: 100%;
 			margin-top: 50px;
+		}
+  }
+
+  &__marks {
+	display: flex;
+	align-items: center;
+	gap: 26px;
+
+		&_info {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			& h3 {
+				margin-bottom: 0;
+			}
+
+			& p {
+				line-height: 1.1;
+			}
 		}
   }
 
@@ -121,6 +144,108 @@
 
 			&:hover, &.active {
 				color: $clrBlue;
+			}
+		}
+	}
+
+	&__help {
+		margin-top: 60px;
+		padding: 30px 35px 30px 24px;
+		height: 234px;
+		display: flex;
+		flex-direction: column;
+		border-radius: 20px;
+		overflow: hidden;
+		background: $clrGray;
+		position: relative;
+
+		&_title {
+			margin-bottom: 12px;
+		}
+
+		&_img {
+			position: absolute;
+			bottom: 0;
+			right: 16px;
+			width: 120px;
+			height: 110px;
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__lessons {
+		margin-top: 20px;
+		background: $clrDark;
+		border-radius: 20px;
+		padding: 20px 24px 28px;
+
+		&_title {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			color: $clrWhite;
+			margin-bottom: 22px;
+
+			& img {
+				width: 36px;
+				flex-shrink: 0;
+			}
+		}
+
+		&_list {
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+		}
+	}
+
+	&__lesson {
+		background: $clrWhite;
+		border-radius: 10px;
+		padding: 12px 14px;
+
+		&_info {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			margin-bottom: 16px;
+
+			& .date, & .price {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				font-size: 10px;
+				line-height: 1.1;
+			}
+		}
+
+		&_name {
+			font-size: 14px;
+			line-height: 1.1;
+			color: $clrBlue;
+			margin-bottom: 14px;
+			font-weight: 600;
+		}
+
+		&_link {
+			padding-top: 10px;
+			border-top: 1px solid $clrBorder;
+
+			& a {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				color: $clrDark;
+				transition: all 0.2s;
+
+				&:hover {
+					color: $clrBlue;
+				}
 			}
 		}
 	}

@@ -10,6 +10,8 @@ import "%modules%/advs/advs";
 import "%modules%/presentation/presentation";
 import "%modules%/docks/docks";
 import "%modules%/news/news";
+import "%modules%/etaps/etaps";
+import "%modules%/reviews/reviews";
 import "%modules%/company/company";
 import "%modules%/feedback/feedback";
 import "%modules%/workers/workers";
