@@ -18,6 +18,11 @@
 	align-items: flex-start;
 	justify-content: space-between;
 	position: relative;
+
+	@media screen and (max-width:991px) {
+		flex-direction: column;
+		gap: 60px;
+	}
   }
 
   &__aside {
@@ -25,6 +30,15 @@
 	flex-shrink: 0;
 	position: sticky;
 	top: 170px;
+
+	@media screen and (max-width:1200px) {
+		width: 280px;
+	}
+
+	@media screen and (max-width:991px) {
+		position: static;
+		width: 100%;
+	}
   }
 
   &__content {
@@ -32,15 +46,33 @@
 	display: flex;
 	flex-direction: column;
 	gap: 120px;
+
+	@media screen and (max-width:991px) {
+		width: 100%;
+		gap: 100px;
+	}
+
+	@media screen and (max-width:768px) {
+		gap: 72px;
+	}
   }
 
   &__cards {
 
+	&_item {
+		position: relative;
+	}
+
 		&_title {
 			margin-bottom: 40px;
 			display: flex;
+			flex-wrap: wrap;
 			align-items: center;
 			gap: 2rem;
+
+			@media screen and (max-width:768px) {
+				gap: 1rem;
+			}
 		}
 
 		&_list {
@@ -48,6 +80,14 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		gap: 30px;
+
+		@media screen and (max-width:768px) {
+			gap: 1.5rem;
+		}
+
+		@media screen and (max-width:576px) {
+			gap: 1rem;
+		}
 		}
 
 		&_more {
@@ -82,6 +122,14 @@
 	padding: 20px;
 	border: 1px solid $clrBorder;
 	border-radius: 10px;
+
+	@media screen and (max-width:768px) {
+		padding: 16px;
+	}
+
+	@media screen and (max-width:576px) {
+		gap: 18px;
+	}
 
 	&_img {
 		width: calc(138 / 434 * 100%);
@@ -120,8 +168,89 @@
 		gap: 10px;
 		color: $clrBlue;
 		transition: all 0.2s;
+		cursor: pointer;
 
+		&:hover {
+			color: $clrPink;
+		}
 
+	}
+  }
+
+  &__popup {
+	position: absolute;
+	background: $clrDark;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	gap: 25px;
+	padding: 20px;
+	border: 1px solid $clrBorder;
+	border-radius: 10px;
+	color: $clrWhite;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+
+	@media screen and (max-width:768px) {
+		padding: 16px;
+	}
+
+	@media screen and (max-width:576px) {
+		gap: 18px;
+	}
+
+	&.column {
+		flex-direction: column;
+
+		& .workers__popup {
+			&_left, &_right {
+				width: 100%;
+			}
+		}
+	}
+
+	&_left {
+		width: calc((100% - 13px) / 2);
+		display: flex;
+		gap: 25px;
+	
+		@media screen and (max-width:576px) {
+			gap: 18px;
+		}
+	}
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&_right {
+		overflow: auto;
+		height: 100%;
+
+		width: calc((100% - 13px) / 2);
+
+		&::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+			}
+			
+			/* Define the thumb style */
+			&::-webkit-scrollbar-thumb {
+			background: $clrDarkGray;
+			border-radius: 10px;
+			}
+			
+			/* Define the track style */
+			&::-webkit-scrollbar-track {
+			background-color: #f2f2f2;
+			// border: 1px solid #ccc;
+			border-radius: 10px;
+			}
+			
 	}
   }
 }
@@ -130,13 +259,59 @@
 	display: flex;
 	flex-direction: column;
 
+	& .dropdown {
+		position: relative;
+
+		&__value {
+			display: none;
+			align-items: center;
+			padding: 20px 26px;
+			border-radius: 60px;
+			border: 1px solid $clrBorder;
+			justify-content: space-between;
+			cursor: pointer;
+			transition: all .3s;
+
+			&:hover {
+				color: $clrBlue;
+			}
+
+			@media screen and (max-width: 991px) {
+				display: flex;
+			}
+		}
+
+		&__list {
+
+
+			@media screen and (max-width: 991px) {
+				position: absolute;z-index: 10;
+				background: $clrWhite;
+				width: 100%;
+				border-radius: rem(20);
+				border: 1px solid $clrBorder;
+				top: calc(100% + 10px);
+				overflow: hidden;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.5s;
+
+				&.show {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+		}
+	}
+
 	&__nav {
 		
 
 		&_list {
 			display: flex;
-		flex-direction: column;
-		gap: 20px;
+			flex-direction: column;
+			gap: 20px;
 		}
 
 		&_link {
@@ -146,6 +321,8 @@
 				color: $clrBlue;
 			}
 		}
+
+
 	}
 
 	&__help {
@@ -159,6 +336,22 @@
 		background: $clrGray;
 		position: relative;
 
+		@media screen and (max-width:991px) {
+			height: 170px;
+			margin-top: 50px;
+		}
+
+		@media screen and (max-width:768px) {
+			margin-top: 40px;
+			padding: 20px;
+		}
+
+		@media screen and (max-width:576px) {
+			& .workers__card_more {
+				margin-left: auto;
+			}
+		}
+
 		&_title {
 			margin-bottom: 12px;
 		}
@@ -169,6 +362,10 @@
 			right: 16px;
 			width: 120px;
 			height: 110px;
+
+			@media screen and (max-width:576px) {
+				display: none;
+			}
 
 			& img {
 				width: 100%;
@@ -184,6 +381,11 @@
 		border-radius: 20px;
 		padding: 20px 24px 28px;
 
+		@media screen and (max-width:768px) {
+			margin-top: 40px;
+			padding: 20px;
+		}
+
 		&_title {
 			display: flex;
 			align-items: center;
@@ -198,9 +400,20 @@
 		}
 
 		&_list {
-			display: flex;
-			flex-direction: column;
+			display: grid;
+			// flex-direction: column;
+			grid-template-columns: repeat(1fr);
 			gap: 14px;
+
+			@media screen and (max-width:991px) {
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			// flex-direction: row;
+			}
+
+			@media screen and (max-width:768px) {
+				grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+				// flex-direction: row;
+				}
 		}
 	}
 
@@ -248,5 +461,51 @@
 				}
 			}
 		}
+	}
+}
+
+.dropdown {
+	position: relative;
+
+	&__value {
+		display: none;
+		align-items: center;
+		padding: 20px 26px;
+		border-radius: 60px;
+		border: 1px solid $clrBorder;
+		justify-content: space-between;
+		cursor: pointer;
+		transition: all .3s;
+
+		&:hover {
+			color: $clrBlue;
+		}
+
+		@media screen and (max-width: 991px) {
+			display: flex;
+		}
+	}
+
+	&__list {
+
+
+		@media screen and (max-width: 991px) {
+			position: absolute;z-index: 10;
+			background: $clrWhite;
+			width: 100%;
+			border-radius: rem(20);
+			border: 1px solid $clrBorder;
+			top: calc(100% + 10px);
+			overflow: hidden;
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.5s;
+
+			&.show {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
 	}
 }

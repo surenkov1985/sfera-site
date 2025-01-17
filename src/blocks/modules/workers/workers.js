@@ -50,3 +50,40 @@ function on(event, object, func = function () { }) {
 		func.call(eTarget, e);
 	});
 }
+
+(function () {
+	document.addEventListener('click', function (e) {
+		if (e.target.closest('.workers__card_more')) {
+
+			if (e.target.closest('.workers__card')) {
+				const cardItem = e.target.closest('.workers__cards_item')
+				console.log(cardItem.closest('.workers__cards_list').getBoundingClientRect(), cardItem.getBoundingClientRect(), window.getComputedStyle(cardItem.closest('.workers__cards_list'))['gap']);
+				const popup = cardItem.querySelector('.workers__popup')
+
+				popup.style.width = cardItem.closest('.workers__cards_list').getBoundingClientRect().width + 'px'
+				if (cardItem.closest('.workers__cards_list').getBoundingClientRect().x === cardItem.getBoundingClientRect().x) {
+					popup.style.left = 0
+
+					if (cardItem.closest('.workers__cards_list').getBoundingClientRect().width === cardItem.getBoundingClientRect().width) {
+						const gap = parseInt(window.getComputedStyle(cardItem.closest('.workers__cards_list'))['gap'], 10)
+
+						popup.style.height = cardItem.getBoundingClientRect().height * 2 + gap + 'px'
+
+						popup.classList.add('column')
+					} else {
+						popup.classList.remove('column')
+					}
+
+				} else {
+					popup.style.left = 'auto'
+				}
+				popup.classList.add('show')
+			} else if (e.target.closest('.workers__popup')) {
+				const popup = e.target.closest('.workers__popup')
+
+				popup.classList.remove('show')
+			}
+
+		}
+	})
+})()

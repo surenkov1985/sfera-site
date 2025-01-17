@@ -2,9 +2,19 @@
 	<div class="container">
 		<div class="workers__cols">
 			<div class="workers__aside">
-				<div class="aside__nav">
-					<ul class="aside__nav_list">
-						<li class="aside__nav_item">
+				<div class="aside__nav dropdown">
+					<div class="dropdown__value">
+						<span class="value">Руководство</span>
+						<span class="caret">
+							<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12.5194 6.35378L7.8319 11.3538C7.78837 11.4003 7.73667 11.4372 7.67976 11.4623C7.62286 11.4875 7.56186 11.5004 7.50026 11.5004C7.43866 11.5004 7.37766 11.4875 7.32076 11.4623C7.26385 11.4372 7.21215 11.4003 7.16862 11.3538L2.48112 6.35378C2.39316 6.25996 2.34375 6.13272 2.34375 6.00003C2.34375 5.86735 2.39316 5.7401 2.48112 5.64628C2.56908 5.55246 2.68837 5.49976 2.81276 5.49976C2.93715 5.49976 3.05644 5.55246 3.1444 5.64628L7.50026 10.2932L11.8561 5.64628C11.8997 5.59983 11.9514 5.56298 12.0083 5.53784C12.0652 5.5127 12.1262 5.49976 12.1878 5.49976C12.2494 5.49976 12.3103 5.5127 12.3672 5.53784C12.4241 5.56298 12.4759 5.59983 12.5194 5.64628C12.563 5.69274 12.5975 5.74789 12.6211 5.80859C12.6446 5.86928 12.6568 5.93434 12.6568 6.00003C12.6568 6.06573 12.6446 6.13079 12.6211 6.19148C12.5975 6.25218 12.563 6.30733 12.5194 6.35378Z"
+									fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+					<ul class="aside__nav_list dropdown__list">
+						<li class="aside__nav_item dropdown__item">
 							<a href="#leaders" class="aside__nav_link link">
 								Руководство
 								<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +24,7 @@
 								</svg>
 							</a>
 						</li>
-						<li class="aside__nav_item">
+						<li class="aside__nav_item dropdown__item">
 							<a href="#teachers" class="aside__nav_link link">
 								Преподаватели
 								<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,80 +138,213 @@
 						<h2>Руководство</h2>
 					</div>
 					<div class="workers__cards_list">
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker1.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Аврамова Ольга</h5>
+
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker1.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Аврамова Ольга</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker1.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Аврамова Ольга</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker2.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Дыцкова Инна</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker2.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Дыцкова Инна</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker2.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Дыцкова Инна</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker3.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Панчук Евгений</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker3.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Панчук Евгений</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker3.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Панчук Евгений</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker4.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Сайфутдинов Роман</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker4.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Сайфутдинов Роман</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker4.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Сайфутдинов Роман</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -226,156 +369,420 @@
 						</div>
 					</div>
 					<div class="workers__cards_list">
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker1.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Аврамова Ольга</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker1.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Аврамова Ольга</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker1.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Аврамова Ольга</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker2.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Дыцкова Инна</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker2.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Дыцкова Инна</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker2.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Дыцкова Инна</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker3.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Панчук Евгений</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker3.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Панчук Евгений</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker3.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Панчук Евгений</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker4.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Сайфутдинов Роман</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker4.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Сайфутдинов Роман</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker4.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Сайфутдинов Роман</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker1.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Аврамова Ольга</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker1.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Аврамова Ольга</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker1.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Аврамова Ольга</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker2.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Дыцкова Инна</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker2.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Дыцкова Инна</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker2.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Дыцкова Инна</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker3.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Панчук Евгений</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker3.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Панчук Евгений</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker3.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Панчук Евгений</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker4.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Сайфутдинов Роман</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker4.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Сайфутдинов Роман</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker4.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Сайфутдинов Роман</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
