@@ -470,9 +470,19 @@
 	<div class="container">
 		<div class="workers__cols">
 			<div class="workers__aside">
-				<div class="aside__nav">
-					<ul class="aside__nav_list">
-						<li class="aside__nav_item">
+				<div class="aside__nav dropdown">
+					<div class="dropdown__value">
+						<span class="value">Руководство</span>
+						<span class="caret">
+							<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12.5194 6.35378L7.8319 11.3538C7.78837 11.4003 7.73667 11.4372 7.67976 11.4623C7.62286 11.4875 7.56186 11.5004 7.50026 11.5004C7.43866 11.5004 7.37766 11.4875 7.32076 11.4623C7.26385 11.4372 7.21215 11.4003 7.16862 11.3538L2.48112 6.35378C2.39316 6.25996 2.34375 6.13272 2.34375 6.00003C2.34375 5.86735 2.39316 5.7401 2.48112 5.64628C2.56908 5.55246 2.68837 5.49976 2.81276 5.49976C2.93715 5.49976 3.05644 5.55246 3.1444 5.64628L7.50026 10.2932L11.8561 5.64628C11.8997 5.59983 11.9514 5.56298 12.0083 5.53784C12.0652 5.5127 12.1262 5.49976 12.1878 5.49976C12.2494 5.49976 12.3103 5.5127 12.3672 5.53784C12.4241 5.56298 12.4759 5.59983 12.5194 5.64628C12.563 5.69274 12.5975 5.74789 12.6211 5.80859C12.6446 5.86928 12.6568 5.93434 12.6568 6.00003C12.6568 6.06573 12.6446 6.13079 12.6211 6.19148C12.5975 6.25218 12.563 6.30733 12.5194 6.35378Z"
+									fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+					<ul class="aside__nav_list dropdown__list">
+						<li class="aside__nav_item dropdown__item">
 							<a href="#leaders" class="aside__nav_link link">
 								Руководство
 								<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -482,7 +492,7 @@
 								</svg>
 							</a>
 						</li>
-						<li class="aside__nav_item">
+						<li class="aside__nav_item dropdown__item">
 							<a href="#teachers" class="aside__nav_link link">
 								Преподаватели
 								<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -596,80 +606,213 @@
 						<h2>Руководство</h2>
 					</div>
 					<div class="workers__cards_list">
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker1.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Аврамова Ольга</h5>
+
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker1.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Аврамова Ольга</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker1.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Аврамова Ольга</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker2.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Дыцкова Инна</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker2.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Дыцкова Инна</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker2.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Дыцкова Инна</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker3.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Панчук Евгений</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker3.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Панчук Евгений</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker3.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Панчук Евгений</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker4.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Сайфутдинов Роман</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker4.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Сайфутдинов Роман</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker4.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Сайфутдинов Роман</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -706,156 +849,420 @@
 						</div>
 					</div>
 					<div class="workers__cards_list">
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker1.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Аврамова Ольга</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker1.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Аврамова Ольга</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker1.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Аврамова Ольга</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker2.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Дыцкова Инна</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker2.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Дыцкова Инна</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker2.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Дыцкова Инна</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker3.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Панчук Евгений</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker3.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Панчук Евгений</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker3.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Панчук Евгений</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker4.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Сайфутдинов Роман</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker4.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Сайфутдинов Роман</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker4.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Сайфутдинов Роман</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker1.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Аврамова Ольга</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker1.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Аврамова Ольга</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker1.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Аврамова Ольга</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker2.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Дыцкова Инна</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker2.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Дыцкова Инна</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker2.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Дыцкова Инна</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker3.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Панчук Евгений</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker3.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Панчук Евгений</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker3.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Панчук Евгений</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="workers__cards_item workers__card">
-							<div class="workers__card_img">
-								<img src="/img/worker4.png" alt="">
-							</div>
-							<div class="workers__card_info">
-								<div class="workers__card_name">
-									<h5>Сайфутдинов Роман</h5>
+						<div class="workers__cards_item">
+							<div class="workers__card">
+								<div class="workers__card_img">
+									<img src="/img/worker4.png" alt="">
 								</div>
-								<p class="workers__card_role">Преподаватель курса</p>
-								<button class="workers__card_more">
-									Подробнее
-									<svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
-											fill="currentColor" />
-									</svg>
-								</button>
+								<div class="workers__card_info">
+									<div class="workers__card_name">
+										<h5>Сайфутдинов Роман</h5>
+									</div>
+									<p class="workers__card_role">Преподаватель курса</p>
+									<button class="workers__card_more">
+										Подробнее
+										<svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.85403 6.35354L0.854028 11.3535C0.807573 11.4 0.752423 11.4368 0.691726 11.462C0.63103 11.4871 0.565975 11.5001 0.500278 11.5001C0.434581 11.5001 0.369526 11.4871 0.30883 11.462C0.248133 11.4368 0.192983 11.4 0.146528 11.3535C0.100073 11.3071 0.0632225 11.2519 0.0380812 11.1912C0.0129398 11.1305 0 11.0655 0 10.9998C0 10.9341 0.0129398 10.869 0.0380812 10.8083C0.0632225 10.7476 0.100073 10.6925 0.146528 10.646L4.7934 5.99979L0.146528 1.35354C0.0527074 1.25972 -9.88558e-10 1.13247 0 0.99979C9.88559e-10 0.867108 0.0527074 0.73986 0.146528 0.64604C0.240348 0.552219 0.367596 0.499512 0.500278 0.499512C0.63296 0.499512 0.760208 0.552219 0.854028 0.64604L5.85403 5.64604C5.90052 5.69248 5.9374 5.74762 5.96256 5.80832C5.98772 5.86902 6.00067 5.93408 6.00067 5.99979C6.00067 6.0655 5.98772 6.13056 5.96256 6.19126C5.9374 6.25196 5.90052 6.3071 5.85403 6.35354Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="workers__card_popup workers__popup">
+								<div class="workers__popup_left">
+									<div class="workers__card_img">
+										<img src="/img/worker4.png" alt="">
+									</div>
+									<div class="workers__card_info">
+										<div class="workers__card_name">
+											<h5>Сайфутдинов Роман</h5>
+										</div>
+										<p class="workers__card_role">Преподаватель курса</p>
+										<button class="workers__card_more">
+											Закрыть
+
+										</button>
+									</div>
+								</div>
+								<div class="workers__popup_right">
+									<div class="workers__popup_desc text_content">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum soluta totam
+											molestias sunt explicabo expedita hic tempora nihil? Fugit totam consequuntur ab quidem
+											eum illo dignissimos quia blanditiis voluptate.</p>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus non aut exercitationem
+											similique consectetur debitis dolorem distinctio quisquam ab. Reprehenderit asperiores
+											vel possimus quia autem nostrum rem soluta vero in.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at nihil, velit eligendi
+											odio, incidunt quisquam labore dolore distinctio suscipit similique adipisci nulla
+											corporis recusandae natus rem ab pariatur quis!</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1204,6 +1611,180 @@
 										предприятий</p>
 								</div>
 							</div>
+							<div class="reviews__slide swiper-slide">
+
+								<div class="reviews__slide_top">
+									<div class="reviews__slide_icon">
+										<img src="/img/review.png" alt="">
+									</div>
+
+									<div class="reviews__slide_info">
+										<div class="reviews__slide_name">Варвара К.</div>
+										<div class="reviews__slide_rating">
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide_text text_content">
+									<p>Отличные курсы! Мне понравилось обучение, буду рекомендовать его знакомым руководителям
+										предприятий</p>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+
+								<div class="reviews__slide_top">
+									<div class="reviews__slide_icon">
+										<img src="/img/review.png" alt="">
+									</div>
+
+									<div class="reviews__slide_info">
+										<div class="reviews__slide_name">Варвара К.</div>
+										<div class="reviews__slide_rating">
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide_text text_content">
+									<p>Отличные курсы! Мне понравилось обучение, буду рекомендовать его знакомым руководителям
+										предприятий</p>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+
+								<div class="reviews__slide_top">
+									<div class="reviews__slide_icon">
+										<img src="/img/review.png" alt="">
+									</div>
+
+									<div class="reviews__slide_info">
+										<div class="reviews__slide_name">Варвара К.</div>
+										<div class="reviews__slide_rating">
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+											<span class="star">
+												<svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M5.54894 0.92705C5.8483 0.00573921 7.1517 0.00573993 7.45106 0.927051L8.18386 3.18237C8.31773 3.5944 8.70168 3.87336 9.13491 3.87336L11.5063 3.87336C12.475 3.87336 12.8778 5.11297 12.0941 5.68237L10.1756 7.07624C9.8251 7.33088 9.67845 7.78225 9.81232 8.19427L10.5451 10.4496C10.8445 11.3709 9.78999 12.137 9.00628 11.5676L7.08778 10.1738C6.7373 9.91912 6.2627 9.91912 5.91221 10.1738L3.99372 11.5676C3.21001 12.137 2.15553 11.3709 2.45488 10.4496L3.18768 8.19427C3.32155 7.78225 3.1749 7.33088 2.82441 7.07624L0.905917 5.68237C0.122203 5.11297 0.524979 3.87336 1.4937 3.87336L3.86509 3.87336C4.29832 3.87336 4.68227 3.5944 4.81614 3.18237L5.54894 0.92705Z"
+														fill="#FFCA8C" />
+												</svg>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide_text text_content">
+									<p>Отличные курсы! Мне понравилось обучение, буду рекомендовать его знакомым руководителям
+										предприятий</p>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="reviews__slider_navigation">
@@ -1226,7 +1807,57 @@
 					</div>
 				</div>
 			</div>
-			<div class="reviews__col"></div>
+			<div class="reviews__col">
+				<div class="reviews__nums">
+					<div class="reviews__nums_list">
+						<div class="reviews__nums_item">
+							<div class="reviews__nums_num"><svg width="133" height="62" viewBox="0 0 133 62" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<mask id="path-1-outside-1_331_4578" maskUnits="userSpaceOnUse" x="0" y="0" width="133"
+										height="62" fill="black">
+										<rect fill="white" width="133" height="62" />
+										<path
+											d="M1.16 48.28V37.96L26.28 3H42.68L18.28 37.96L10.76 35.72H54.52V48.28H1.16ZM30.76 59V48.28L31.24 35.72V26.2H46.2V59H30.76ZM67.8581 59.72C65.2981 59.72 63.1381 58.8667 61.3781 57.16C59.6181 55.4533 58.7381 53.2933 58.7381 50.68C58.7381 47.96 59.6181 45.8 61.3781 44.2C63.1381 42.5467 65.2981 41.72 67.8581 41.72C70.4181 41.72 72.5781 42.5467 74.3381 44.2C76.0981 45.8 76.9781 47.96 76.9781 50.68C76.9781 53.2933 76.0981 55.4533 74.3381 57.16C72.5781 58.8667 70.4181 59.72 67.8581 59.72ZM106.736 60.12C101.882 60.12 97.6423 59.4 94.0156 57.96C90.389 56.52 87.5356 54.4933 85.4556 51.88C83.429 49.2133 82.4156 46.0933 82.4156 42.52C82.4156 39 83.429 36.0133 85.4556 33.56C87.5356 31.0533 90.389 29.16 94.0156 27.88C97.6956 26.5467 101.936 25.88 106.736 25.88C111.536 25.88 115.749 26.5467 119.376 27.88C123.056 29.16 125.909 31.0533 127.936 33.56C130.016 36.0133 131.056 39 131.056 42.52C131.056 46.0933 130.042 49.2133 128.016 51.88C125.989 54.4933 123.136 56.52 119.456 57.96C115.829 59.4 111.589 60.12 106.736 60.12ZM106.736 49C109.296 49 111.322 48.3867 112.816 47.16C114.362 45.9333 115.136 44.2267 115.136 42.04C115.136 39.9067 114.362 38.2267 112.816 37C111.322 35.72 109.296 35.08 106.736 35.08C104.176 35.08 102.122 35.72 100.576 37C99.0823 38.2267 98.3356 39.9067 98.3356 42.04C98.3356 44.2267 99.0823 45.9333 100.576 47.16C102.122 48.3867 104.176 49 106.736 49ZM106.736 33.72C102.362 33.72 98.4956 33.1067 95.1356 31.88C91.829 30.6533 89.2156 28.8933 87.2956 26.6C85.3756 24.2533 84.4156 21.4533 84.4156 18.2C84.4156 14.84 85.349 11.96 87.2156 9.56C89.1356 7.16 91.7756 5.29333 95.1356 3.96C98.4956 2.57333 102.362 1.88 106.736 1.88C111.162 1.88 115.029 2.57333 118.336 3.96C121.696 5.29333 124.309 7.16 126.176 9.56C128.096 11.96 129.056 14.84 129.056 18.2C129.056 21.4533 128.096 24.2533 126.176 26.6C124.309 28.8933 121.696 30.6533 118.336 31.88C114.976 33.1067 111.109 33.72 106.736 33.72ZM106.736 24.76C108.762 24.76 110.389 24.2533 111.616 23.24C112.842 22.1733 113.456 20.7333 113.456 18.92C113.456 17 112.816 15.5333 111.536 14.52C110.309 13.5067 108.709 13 106.736 13C104.762 13 103.162 13.5067 101.936 14.52C100.709 15.5333 100.096 17 100.096 18.92C100.096 20.7333 100.709 22.1733 101.936 23.24C103.162 24.2533 104.762 24.76 106.736 24.76Z" />
+									</mask>
+									<path
+										d="M1.16 48.28H0.16V49.28H1.16V48.28ZM1.16 37.96L0.347902 37.3765L0.16 37.638V37.96H1.16ZM26.28 3V2H25.7672L25.4679 2.41648L26.28 3ZM42.68 3L43.5 3.57232L44.5974 2H42.68V3ZM18.28 37.96L17.9945 38.9184L18.6867 39.1246L19.1 38.5323L18.28 37.96ZM10.76 35.72V34.72L10.4745 36.6784L10.76 35.72ZM54.52 35.72H55.52V34.72H54.52V35.72ZM54.52 48.28V49.28H55.52V48.28H54.52ZM30.76 59H29.76V60H30.76V59ZM30.76 48.28L29.7607 48.2418L29.76 48.2609V48.28H30.76ZM31.24 35.72L32.2393 35.7582L32.24 35.7391V35.72H31.24ZM31.24 26.2V25.2H30.24V26.2H31.24ZM46.2 26.2H47.2V25.2H46.2V26.2ZM46.2 59V60H47.2V59H46.2ZM2.16 48.28V37.96H0.16V48.28H2.16ZM1.9721 38.5435L27.0921 3.58352L25.4679 2.41648L0.347902 37.3765L1.9721 38.5435ZM26.28 4H42.68V2H26.28V4ZM41.86 2.42767L17.46 37.3877L19.1 38.5323L43.5 3.57232L41.86 2.42767ZM18.5655 37.0016L11.0455 34.7616L10.4745 36.6784L17.9945 38.9184L18.5655 37.0016ZM10.76 36.72H54.52V34.72H10.76V36.72ZM53.52 35.72V48.28H55.52V35.72H53.52ZM54.52 47.28H1.16V49.28H54.52V47.28ZM31.76 59V48.28H29.76V59H31.76ZM31.7593 48.3182L32.2393 35.7582L30.2407 35.6818L29.7607 48.2418L31.7593 48.3182ZM32.24 35.72V26.2H30.24V35.72H32.24ZM31.24 27.2H46.2V25.2H31.24V27.2ZM45.2 26.2V59H47.2V26.2H45.2ZM46.2 58H30.76V60H46.2V58ZM61.3781 57.16L62.0743 56.4421L61.3781 57.16ZM61.3781 44.2L62.0508 44.9399L62.0568 44.9344L62.0628 44.9288L61.3781 44.2ZM74.3381 44.2L73.6535 44.9288L73.6594 44.9344L73.6655 44.9399L74.3381 44.2ZM74.3381 57.16L73.642 56.4421L74.3381 57.16ZM67.8581 58.72C65.5453 58.72 63.6387 57.9592 62.0743 56.4421L60.682 57.8779C62.6375 59.7742 65.051 60.72 67.8581 60.72V58.72ZM62.0743 56.4421C60.5223 54.9372 59.7381 53.0427 59.7381 50.68H57.7381C57.7381 53.544 58.7139 55.9695 60.682 57.8779L62.0743 56.4421ZM59.7381 50.68C59.7381 48.1971 60.5301 46.3223 62.0508 44.9399L60.7055 43.4601C58.7061 45.2776 57.7381 47.7229 57.7381 50.68H59.7381ZM62.0628 44.9288C63.6255 43.4609 65.5357 42.72 67.8581 42.72V40.72C65.0605 40.72 62.6508 41.6324 60.6935 43.4712L62.0628 44.9288ZM67.8581 42.72C70.1805 42.72 72.0908 43.4609 73.6535 44.9288L75.0228 43.4712C73.0655 41.6324 70.6557 40.72 67.8581 40.72V42.72ZM73.6655 44.9399C75.1861 46.3223 75.9781 48.1971 75.9781 50.68H77.9781C77.9781 47.7229 77.0101 45.2776 75.0108 43.4601L73.6655 44.9399ZM75.9781 50.68C75.9781 53.0427 75.1939 54.9372 73.642 56.4421L75.0343 57.8779C77.0023 55.9695 77.9781 53.544 77.9781 50.68H75.9781ZM73.642 56.4421C72.0775 57.9592 70.171 58.72 67.8581 58.72V60.72C70.6653 60.72 73.0787 59.7742 75.0343 57.8779L73.642 56.4421ZM94.0156 57.96L93.6466 58.8894L94.0156 57.96ZM85.4556 51.88L84.6595 52.4851L84.6662 52.494L84.6732 52.5027L85.4556 51.88ZM85.4556 33.56L84.6861 32.9214L84.6847 32.9231L85.4556 33.56ZM94.0156 27.88L94.3485 28.823L94.3563 28.8202L94.0156 27.88ZM119.376 27.88L119.031 28.8186L119.039 28.8216L119.047 28.8245L119.376 27.88ZM127.936 33.56L127.158 34.1887L127.165 34.1978L127.173 34.2067L127.936 33.56ZM128.016 51.88L128.806 52.4929L128.812 52.4851L128.016 51.88ZM119.456 57.96L119.091 57.0287L119.087 57.0306L119.456 57.96ZM112.816 47.16L112.194 46.3765L112.188 46.3818L112.181 46.3873L112.816 47.16ZM112.816 37L112.165 37.7593L112.179 37.7717L112.194 37.7835L112.816 37ZM100.576 37L101.21 37.7727L101.213 37.7704L100.576 37ZM100.576 47.16L99.9409 47.9327L99.9475 47.9382L99.9542 47.9435L100.576 47.16ZM95.1356 31.88L94.7878 32.8176L94.7927 32.8194L95.1356 31.88ZM87.2956 26.6L86.5216 27.2333L86.5289 27.2419L87.2956 26.6ZM87.2156 9.56L86.4347 8.93524L86.4263 8.94606L87.2156 9.56ZM95.1356 3.96L95.5045 4.88958L95.5171 4.88437L95.1356 3.96ZM118.336 3.96L117.949 4.88219L117.958 4.88593L117.967 4.88949L118.336 3.96ZM126.176 9.56L125.386 10.174L125.395 10.1847L126.176 9.56ZM126.176 26.6L125.402 25.9668L125.4 25.9687L126.176 26.6ZM118.336 31.88L117.993 30.9406L118.336 31.88ZM111.616 23.24L112.253 24.011L112.262 24.0029L112.272 23.9946L111.616 23.24ZM111.536 14.52L110.899 15.291L110.907 15.2976L110.915 15.304L111.536 14.52ZM101.936 14.52L101.299 13.749V13.749L101.936 14.52ZM101.936 23.24L101.279 23.9946L101.289 24.0029L101.299 24.011L101.936 23.24ZM106.736 59.12C101.979 59.12 97.8691 58.4141 94.3847 57.0306L93.6466 58.8894C97.4155 60.3859 101.786 61.12 106.736 61.12V59.12ZM94.3847 57.0306C90.8927 55.6441 88.1923 53.7126 86.2381 51.2573L84.6732 52.5027C86.8789 55.2741 89.8853 57.3959 93.6466 58.8894L94.3847 57.0306ZM86.2518 51.2749C84.3665 48.7943 83.4156 45.8904 83.4156 42.52H81.4156C81.4156 46.2963 82.4914 49.6324 84.6595 52.4851L86.2518 51.2749ZM83.4156 42.52C83.4156 39.2061 84.3639 36.4517 86.2266 34.1969L84.6847 32.9231C82.494 35.575 81.4156 38.7939 81.4156 42.52H83.4156ZM86.2252 34.1986C88.1704 31.8543 90.8611 30.0538 94.3484 28.823L93.6828 26.937C89.9168 28.2662 86.9008 30.2523 84.6861 32.9214L86.2252 34.1986ZM94.3563 28.8202C97.9055 27.5342 102.026 26.88 106.736 26.88V24.88C101.845 24.88 97.4857 25.5591 93.675 26.9398L94.3563 28.8202ZM106.736 26.88C111.445 26.88 115.538 27.5344 119.031 28.8186L119.721 26.9414C115.96 25.559 111.626 24.88 106.736 24.88V26.88ZM119.047 28.8245C122.588 30.0561 125.271 31.8549 127.158 34.1887L128.713 32.9313C126.547 30.2518 123.523 28.2639 119.704 26.9355L119.047 28.8245ZM127.173 34.2067C129.085 36.4618 130.056 39.2128 130.056 42.52H132.056C132.056 38.7872 130.946 35.5648 128.698 32.9133L127.173 34.2067ZM130.056 42.52C130.056 45.8904 129.105 48.7943 127.219 51.2749L128.812 52.4851C130.98 49.6324 132.056 46.2963 132.056 42.52H130.056ZM127.225 51.2672C125.329 53.7123 122.636 55.6416 119.091 57.0288L119.82 58.8912C123.635 57.3984 126.649 55.2744 128.806 52.4928L127.225 51.2672ZM119.087 57.0306C115.602 58.4141 111.492 59.12 106.736 59.12V61.12C111.686 61.12 116.056 60.3859 119.825 58.8894L119.087 57.0306ZM106.736 50C109.451 50 111.727 49.3481 113.45 47.9327L112.181 46.3873C110.917 47.4252 109.14 48 106.736 48V50ZM113.437 47.9435C115.251 46.505 116.136 44.4944 116.136 42.04H114.136C114.136 43.9589 113.474 45.3617 112.194 46.3765L113.437 47.9435ZM116.136 42.04C116.136 39.6297 115.244 37.6498 113.437 36.2165L112.194 37.7835C113.48 38.8036 114.136 40.1836 114.136 42.04H116.136ZM113.466 36.2407C111.743 34.7635 109.461 34.08 106.736 34.08V36.08C109.13 36.08 110.902 36.6765 112.165 37.7593L113.466 36.2407ZM106.736 34.08C104.008 34.08 101.709 34.7643 99.9381 36.2296L101.213 37.7704C102.536 36.6757 104.343 36.08 106.736 36.08V34.08ZM99.9409 36.2273C98.1904 37.6652 97.3356 39.6427 97.3356 42.04H99.3356C99.3356 40.1707 99.9742 38.7881 101.21 37.7727L99.9409 36.2273ZM97.3356 42.04C97.3356 44.4816 98.1841 46.4897 99.9409 47.9327L101.21 46.3873C99.9805 45.377 99.3356 43.9717 99.3356 42.04H97.3356ZM99.9542 47.9435C101.724 49.3473 104.018 50 106.736 50V48C104.334 48 102.52 47.4261 101.197 46.3765L99.9542 47.9435ZM106.736 32.72C102.454 32.72 98.7073 32.1194 95.4786 30.9406L94.7927 32.8194C98.284 34.094 102.27 34.72 106.736 34.72V32.72ZM95.4834 30.9424C92.3104 29.7653 89.8523 28.096 88.0624 25.9581L86.5289 27.2419C88.579 29.6907 91.3475 31.5413 94.7878 32.8176L95.4834 30.9424ZM88.0696 25.9668C86.3068 23.8123 85.4156 21.2406 85.4156 18.2H83.4156C83.4156 21.6661 84.4444 24.6944 86.5217 27.2332L88.0696 25.9668ZM85.4156 18.2C85.4156 15.0376 86.2893 12.3798 88.005 10.1739L86.4263 8.94606C84.4086 11.5402 83.4156 14.6424 83.4156 18.2H85.4156ZM87.9965 10.1847C89.7902 7.94253 92.2773 6.1701 95.5045 4.88949L94.7668 3.03051C91.2739 4.41656 88.481 6.37746 86.4348 8.9353L87.9965 10.1847ZM95.5171 4.88437C98.7342 3.55668 102.467 2.88 106.736 2.88V0.879996C102.257 0.879996 98.257 1.58998 94.7541 3.03562L95.5171 4.88437ZM106.736 2.88C111.06 2.88 114.79 3.5574 117.949 4.88219L118.722 3.0378C115.268 1.58926 111.265 0.879996 106.736 0.879996V2.88ZM117.967 4.88949C121.192 6.16953 123.648 7.93928 125.386 10.1739L126.965 8.94606C124.97 6.38071 122.199 4.41714 118.704 3.03051L117.967 4.88949ZM125.395 10.1847C127.159 12.3905 128.056 15.0445 128.056 18.2H130.056C130.056 14.6355 129.032 11.5295 126.956 8.9353L125.395 10.1847ZM128.056 18.2C128.056 21.2406 127.164 23.8123 125.402 25.9668L126.95 27.2332C129.027 24.6944 130.056 21.6661 130.056 18.2H128.056ZM125.4 25.9687C123.669 28.0956 121.219 29.7628 117.993 30.9406L118.679 32.8194C122.172 31.5438 124.949 29.6911 126.951 27.2313L125.4 25.9687ZM117.993 30.9406C114.764 32.1194 111.017 32.72 106.736 32.72V34.72C111.201 34.72 115.187 34.094 118.679 32.8194L117.993 30.9406ZM106.736 25.76C108.93 25.76 110.802 25.209 112.253 24.011L110.979 22.469C109.976 23.2976 108.595 23.76 106.736 23.76V25.76ZM112.272 23.9946C113.744 22.7148 114.456 20.9853 114.456 18.92H112.456C112.456 20.4813 111.941 21.6319 110.959 22.4854L112.272 23.9946ZM114.456 18.92C114.456 16.7547 113.719 14.9735 112.156 13.736L110.915 15.304C111.912 16.0932 112.456 17.2453 112.456 18.92H114.456ZM112.173 13.749C110.727 12.5547 108.884 12 106.736 12V14C108.534 14 109.891 14.4586 110.899 15.291L112.173 13.749ZM106.736 12C104.587 12 102.744 12.5547 101.299 13.749L102.573 15.291C103.58 14.4586 104.937 14 106.736 14V12ZM101.299 13.749C99.7944 14.9918 99.0956 16.7697 99.0956 18.92H101.096C101.096 17.2303 101.624 16.0749 102.573 15.291L101.299 13.749ZM99.0956 18.92C99.0956 20.9853 99.8076 22.7148 101.279 23.9946L102.592 22.4854C101.61 21.6319 101.096 20.4813 101.096 18.92H99.0956ZM101.299 24.011C102.744 25.2053 104.587 25.76 106.736 25.76V23.76C104.937 23.76 103.58 23.3014 102.573 22.469L101.299 24.011Z"
+										fill="#78213A" mask="url(#path-1-outside-1_331_4578)" />
+								</svg>
+							</div>
+							<p class="reviews__nums_text">Средняя оценка на основании более 1000 отзывов на Яндекс</p>
+						</div>
+						<div class="reviews__nums_item">
+							<div class="reviews__nums_num">
+								<svg width="170" height="62" viewBox="0 0 170 62" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<mask id="path-1-outside-1_516_5470" maskUnits="userSpaceOnUse" x="0.280273" y="0.879883"
+										width="170" height="61" fill="black">
+										<rect fill="white" x="0.280273" y="0.879883" width="170" height="61" />
+										<path
+											d="M23.2003 1.87988C28.4803 1.87988 33.0403 2.91988 36.8803 4.99989C40.7736 7.07988 43.7869 10.1732 45.9203 14.2799C48.1069 18.3332 49.2003 23.3999 49.2003 29.4799C49.2003 35.9866 47.9203 41.5332 45.3603 46.1199C42.8536 50.6532 39.3603 54.1199 34.8803 56.5199C30.4536 58.9199 25.2803 60.1199 19.3603 60.1199C16.2669 60.1199 13.2803 59.7466 10.4003 58.9999C7.52027 58.3066 5.04027 57.3199 2.96027 56.0399L8.72027 44.6799C10.3203 45.7999 11.9736 46.5732 13.6803 46.9999C15.4403 47.3732 17.2269 47.5599 19.0403 47.5599C23.3603 47.5599 26.8003 46.2532 29.3603 43.6399C31.9203 41.0266 33.2003 37.2132 33.2003 32.1999C33.2003 31.2932 33.2003 30.3599 33.2003 29.3999C33.2003 28.3866 33.1203 27.3732 32.9603 26.3599L36.8803 29.6399C35.9203 31.6132 34.6669 33.2666 33.1203 34.5999C31.5736 35.9332 29.7603 36.9466 27.6803 37.6399C25.6003 38.3332 23.2269 38.6799 20.5603 38.6799C17.0403 38.6799 13.8136 37.9599 10.8803 36.5199C8.00027 35.0266 5.68027 32.9732 3.92027 30.3599C2.16027 27.6932 1.28027 24.5732 1.28027 20.9999C1.28027 17.1066 2.26694 13.7466 4.24027 10.9199C6.21361 8.03988 8.85361 5.82655 12.1603 4.27989C15.4669 2.67988 19.1469 1.87988 23.2003 1.87988ZM24.2403 13.1599C22.7469 13.1599 21.4403 13.4532 20.3203 14.0399C19.2003 14.6266 18.2936 15.4532 17.6003 16.5199C16.9603 17.5332 16.6403 18.7866 16.6403 20.2799C16.6403 22.4132 17.3336 24.1199 18.7203 25.3999C20.1603 26.6799 22.0269 27.3199 24.3203 27.3199C25.8669 27.3199 27.2269 27.0266 28.4003 26.4399C29.5736 25.8532 30.4803 25.0266 31.1203 23.9599C31.7603 22.8932 32.0803 21.6399 32.0803 20.1999C32.0803 18.8132 31.7603 17.6132 31.1203 16.5999C30.4803 15.5332 29.5736 14.7066 28.4003 14.1199C27.2269 13.4799 25.8403 13.1599 24.2403 13.1599ZM72.6122 60.1199C68.7188 60.1199 64.8255 59.6399 60.9321 58.6799C57.0921 57.7199 53.7322 56.3599 50.8521 54.5999L56.6121 42.6799C58.8521 44.1732 61.3322 45.3199 64.0522 46.1199C66.8255 46.9199 69.5188 47.3199 72.1321 47.3199C74.8521 47.3199 77.0122 46.8132 78.6122 45.7999C80.2122 44.7866 81.0122 43.3466 81.0122 41.4799C81.0122 39.8266 80.3455 38.5199 79.0122 37.5599C77.6788 36.5466 75.4921 36.0399 72.4521 36.0399H65.8121V26.0399L80.8521 9.79989L82.3721 15.2399H53.7321V2.99988H94.2122V12.9199L79.1721 29.1599L71.4121 24.7599H75.7321C82.7188 24.7599 87.9988 26.3332 91.5722 29.4799C95.1988 32.5732 97.0121 36.5732 97.0121 41.4799C97.0121 44.6799 96.1321 47.6932 94.3721 50.5199C92.6655 53.3466 90.0255 55.6666 86.4521 57.4799C82.8788 59.2399 78.2655 60.1199 72.6122 60.1199ZM109.554 58.9999L147.794 2.99988H159.314L121.074 58.9999H109.554ZM114.674 33.3199C111.954 33.3199 109.501 32.7066 107.314 31.4799C105.127 30.2532 103.421 28.4932 102.194 26.1999C100.967 23.8532 100.354 21.0532 100.354 17.7999C100.354 14.5466 100.967 11.7732 102.194 9.47989C103.421 7.18655 105.127 5.42655 107.314 4.19988C109.501 2.91988 111.954 2.27988 114.674 2.27988C117.447 2.27988 119.901 2.91988 122.034 4.19988C124.221 5.42655 125.927 7.18655 127.154 9.47989C128.434 11.7732 129.074 14.5466 129.074 17.7999C129.074 20.9999 128.434 23.7732 127.154 26.1199C125.927 28.4666 124.221 30.2532 122.034 31.4799C119.901 32.7066 117.447 33.3199 114.674 33.3199ZM114.754 25.7199C116.087 25.7199 117.181 25.1066 118.034 23.8799C118.941 22.6532 119.394 20.6266 119.394 17.7999C119.394 14.9732 118.941 12.9466 118.034 11.7199C117.181 10.4932 116.087 9.87988 114.754 9.87988C113.421 9.87988 112.274 10.4932 111.314 11.7199C110.407 12.9466 109.954 14.9732 109.954 17.7999C109.954 20.6266 110.407 22.6532 111.314 23.8799C112.274 25.1066 113.421 25.7199 114.754 25.7199ZM154.194 59.7199C151.421 59.7199 148.941 59.1066 146.754 57.8799C144.621 56.6532 142.941 54.8932 141.714 52.5999C140.487 50.2532 139.874 47.4532 139.874 44.1999C139.874 40.9466 140.487 38.1732 141.714 35.8799C142.941 33.5866 144.621 31.8266 146.754 30.5999C148.941 29.3199 151.421 28.6799 154.194 28.6799C156.967 28.6799 159.421 29.3199 161.554 30.5999C163.741 31.8266 165.447 33.5866 166.674 35.8799C167.954 38.1732 168.594 40.9466 168.594 44.1999C168.594 47.4532 167.954 50.2532 166.674 52.5999C165.447 54.8932 163.741 56.6532 161.554 57.8799C159.421 59.1066 156.967 59.7199 154.194 59.7199ZM154.194 52.1199C155.527 52.1199 156.647 51.5066 157.554 50.2799C158.461 49.0532 158.914 47.0266 158.914 44.1999C158.914 41.3732 158.461 39.3466 157.554 38.1199C156.647 36.8932 155.527 36.2799 154.194 36.2799C152.914 36.2799 151.794 36.8932 150.834 38.1199C149.927 39.3466 149.474 41.3732 149.474 44.1999C149.474 47.0266 149.927 49.0532 150.834 50.2799C151.794 51.5066 152.914 52.1199 154.194 52.1199Z" />
+									</mask>
+									<path
+										d="M23.2003 1.87988C28.4803 1.87988 33.0403 2.91988 36.8803 4.99989C40.7736 7.07988 43.7869 10.1732 45.9203 14.2799C48.1069 18.3332 49.2003 23.3999 49.2003 29.4799C49.2003 35.9866 47.9203 41.5332 45.3603 46.1199C42.8536 50.6532 39.3603 54.1199 34.8803 56.5199C30.4536 58.9199 25.2803 60.1199 19.3603 60.1199C16.2669 60.1199 13.2803 59.7466 10.4003 58.9999C7.52027 58.3066 5.04027 57.3199 2.96027 56.0399L8.72027 44.6799C10.3203 45.7999 11.9736 46.5732 13.6803 46.9999C15.4403 47.3732 17.2269 47.5599 19.0403 47.5599C23.3603 47.5599 26.8003 46.2532 29.3603 43.6399C31.9203 41.0266 33.2003 37.2132 33.2003 32.1999C33.2003 31.2932 33.2003 30.3599 33.2003 29.3999C33.2003 28.3866 33.1203 27.3732 32.9603 26.3599L36.8803 29.6399C35.9203 31.6132 34.6669 33.2666 33.1203 34.5999C31.5736 35.9332 29.7603 36.9466 27.6803 37.6399C25.6003 38.3332 23.2269 38.6799 20.5603 38.6799C17.0403 38.6799 13.8136 37.9599 10.8803 36.5199C8.00027 35.0266 5.68027 32.9732 3.92027 30.3599C2.16027 27.6932 1.28027 24.5732 1.28027 20.9999C1.28027 17.1066 2.26694 13.7466 4.24027 10.9199C6.21361 8.03988 8.85361 5.82655 12.1603 4.27989C15.4669 2.67988 19.1469 1.87988 23.2003 1.87988ZM24.2403 13.1599C22.7469 13.1599 21.4403 13.4532 20.3203 14.0399C19.2003 14.6266 18.2936 15.4532 17.6003 16.5199C16.9603 17.5332 16.6403 18.7866 16.6403 20.2799C16.6403 22.4132 17.3336 24.1199 18.7203 25.3999C20.1603 26.6799 22.0269 27.3199 24.3203 27.3199C25.8669 27.3199 27.2269 27.0266 28.4003 26.4399C29.5736 25.8532 30.4803 25.0266 31.1203 23.9599C31.7603 22.8932 32.0803 21.6399 32.0803 20.1999C32.0803 18.8132 31.7603 17.6132 31.1203 16.5999C30.4803 15.5332 29.5736 14.7066 28.4003 14.1199C27.2269 13.4799 25.8403 13.1599 24.2403 13.1599ZM72.6122 60.1199C68.7188 60.1199 64.8255 59.6399 60.9321 58.6799C57.0921 57.7199 53.7322 56.3599 50.8521 54.5999L56.6121 42.6799C58.8521 44.1732 61.3322 45.3199 64.0522 46.1199C66.8255 46.9199 69.5188 47.3199 72.1321 47.3199C74.8521 47.3199 77.0122 46.8132 78.6122 45.7999C80.2122 44.7866 81.0122 43.3466 81.0122 41.4799C81.0122 39.8266 80.3455 38.5199 79.0122 37.5599C77.6788 36.5466 75.4921 36.0399 72.4521 36.0399H65.8121V26.0399L80.8521 9.79989L82.3721 15.2399H53.7321V2.99988H94.2122V12.9199L79.1721 29.1599L71.4121 24.7599H75.7321C82.7188 24.7599 87.9988 26.3332 91.5722 29.4799C95.1988 32.5732 97.0121 36.5732 97.0121 41.4799C97.0121 44.6799 96.1321 47.6932 94.3721 50.5199C92.6655 53.3466 90.0255 55.6666 86.4521 57.4799C82.8788 59.2399 78.2655 60.1199 72.6122 60.1199ZM109.554 58.9999L147.794 2.99988H159.314L121.074 58.9999H109.554ZM114.674 33.3199C111.954 33.3199 109.501 32.7066 107.314 31.4799C105.127 30.2532 103.421 28.4932 102.194 26.1999C100.967 23.8532 100.354 21.0532 100.354 17.7999C100.354 14.5466 100.967 11.7732 102.194 9.47989C103.421 7.18655 105.127 5.42655 107.314 4.19988C109.501 2.91988 111.954 2.27988 114.674 2.27988C117.447 2.27988 119.901 2.91988 122.034 4.19988C124.221 5.42655 125.927 7.18655 127.154 9.47989C128.434 11.7732 129.074 14.5466 129.074 17.7999C129.074 20.9999 128.434 23.7732 127.154 26.1199C125.927 28.4666 124.221 30.2532 122.034 31.4799C119.901 32.7066 117.447 33.3199 114.674 33.3199ZM114.754 25.7199C116.087 25.7199 117.181 25.1066 118.034 23.8799C118.941 22.6532 119.394 20.6266 119.394 17.7999C119.394 14.9732 118.941 12.9466 118.034 11.7199C117.181 10.4932 116.087 9.87988 114.754 9.87988C113.421 9.87988 112.274 10.4932 111.314 11.7199C110.407 12.9466 109.954 14.9732 109.954 17.7999C109.954 20.6266 110.407 22.6532 111.314 23.8799C112.274 25.1066 113.421 25.7199 114.754 25.7199ZM154.194 59.7199C151.421 59.7199 148.941 59.1066 146.754 57.8799C144.621 56.6532 142.941 54.8932 141.714 52.5999C140.487 50.2532 139.874 47.4532 139.874 44.1999C139.874 40.9466 140.487 38.1732 141.714 35.8799C142.941 33.5866 144.621 31.8266 146.754 30.5999C148.941 29.3199 151.421 28.6799 154.194 28.6799C156.967 28.6799 159.421 29.3199 161.554 30.5999C163.741 31.8266 165.447 33.5866 166.674 35.8799C167.954 38.1732 168.594 40.9466 168.594 44.1999C168.594 47.4532 167.954 50.2532 166.674 52.5999C165.447 54.8932 163.741 56.6532 161.554 57.8799C159.421 59.1066 156.967 59.7199 154.194 59.7199ZM154.194 52.1199C155.527 52.1199 156.647 51.5066 157.554 50.2799C158.461 49.0532 158.914 47.0266 158.914 44.1999C158.914 41.3732 158.461 39.3466 157.554 38.1199C156.647 36.8932 155.527 36.2799 154.194 36.2799C152.914 36.2799 151.794 36.8932 150.834 38.1199C149.927 39.3466 149.474 41.3732 149.474 44.1999C149.474 47.0266 149.927 49.0532 150.834 50.2799C151.794 51.5066 152.914 52.1199 154.194 52.1199Z"
+										stroke="#78213A" stroke-width="2" mask="url(#path-1-outside-1_516_5470)" />
+								</svg>
+							</div>
+							<p class="reviews__nums_text">выпускников отмечают, что АНО «Сфера» помогло достичь поставленной
+								цели</p>
+						</div>
+						<div class="reviews__nums_item">
+							<div class="reviews__nums_num">
+								<svg width="175" height="62" viewBox="0 0 175 62" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M4.04231 52.1824L4.04221 52.1825L4.04918 52.1913C6.19205 54.8836 9.12187 56.9579 12.8159 58.4246C16.5137 59.8928 20.8187 60.6199 25.7204 60.6199C30.6213 60.6199 34.9258 59.893 38.6233 58.4252C42.3705 56.9588 45.3037 54.8836 47.3955 52.1863L47.3985 52.1824C49.4958 49.4228 50.5404 46.1947 50.5404 42.5199C50.5404 38.8956 49.467 35.7926 47.3056 33.241C46.1138 31.7682 44.6503 30.5059 42.9206 29.4513C43.9125 28.6933 44.7889 27.8484 45.5481 26.9156C47.5462 24.473 48.5404 21.5592 48.5404 18.1999C48.5404 14.7389 47.5492 11.7468 45.553 9.25022C43.623 6.76994 40.9331 4.8563 37.5093 3.49693C34.1299 2.08057 30.1964 1.37988 25.7204 1.37988C21.296 1.37988 17.3635 2.08112 13.9328 3.4964C10.5079 4.85602 7.79248 6.76938 5.80996 9.24754L5.80992 9.24751L5.80571 9.25291C3.86356 11.75 2.90039 14.7411 2.90039 18.1999C2.90039 21.5596 3.89479 24.4737 5.89341 26.9165L5.89339 26.9165L5.89701 26.9209C6.66674 27.8403 7.54261 28.6746 8.52326 29.4246C6.77822 30.4849 5.28739 31.7561 4.05561 33.2406L4.05491 33.2414C1.94625 35.794 0.900391 38.8968 0.900391 42.5199C0.900391 46.1947 1.94496 49.4228 4.04231 52.1824ZM31.4897 46.7681L31.4896 46.7681L31.483 46.7735C30.1046 47.9058 28.2025 48.4999 25.7204 48.4999C23.2413 48.4999 21.3091 47.9072 19.8744 46.7708C18.515 45.6525 17.8204 44.0974 17.8204 42.0399C17.8204 40.0385 18.513 38.5073 19.8778 37.3862L19.8792 37.3851C21.3139 36.1978 23.2441 35.5799 25.7204 35.5799C28.1977 35.5799 30.0967 36.1981 31.475 37.3795L31.4822 37.3857L31.4897 37.3916C32.9061 38.515 33.6204 40.045 33.6204 42.0399C33.6204 44.0927 32.9028 45.6474 31.4897 46.7681ZM30.202 14.9054L30.2019 14.9054L30.21 14.9119C31.3485 15.8132 31.9404 17.1225 31.9404 18.9199C31.9404 20.6048 31.378 21.8987 30.2771 22.8584C29.1627 23.7768 27.6605 24.2599 25.7204 24.2599C23.8372 24.2599 22.3602 23.7786 21.2437 22.8584C20.1428 21.8987 19.5804 20.6048 19.5804 18.9199C19.5804 17.115 20.151 15.804 21.2388 14.9054C22.356 13.9825 23.8345 13.4999 25.7204 13.4999C27.6063 13.4999 29.0848 13.9825 30.202 14.9054ZM63.2576 58.8003L62.953 59.4999H63.716H80.996H81.3256L81.4556 59.1969L101.216 13.1169L101.256 13.0226V12.9199V2.99988V2.49988H100.756H54.356H53.856V2.99988V24.1999V24.6999H54.356H67.876H68.376V24.1999V16.0599H81.867L63.2576 58.8003ZM114.157 58.7179L113.623 59.4999H114.57H126.09H126.354L126.503 59.2818L164.743 3.28184L165.277 2.49988H164.33H152.81H152.546L152.397 2.71792L114.157 58.7179ZM106.767 26.4315L106.769 26.4357C108.039 28.8098 109.812 30.6408 112.085 31.916C114.353 33.1881 116.892 33.8199 119.69 33.8199C122.538 33.8199 125.079 33.1894 127.297 31.9147C129.57 30.6386 131.342 28.7803 132.611 26.3554C133.937 23.9229 134.59 21.0654 134.59 17.7999C134.59 14.4831 133.937 11.6227 132.608 9.23986C131.34 6.86997 129.569 5.04158 127.301 3.76735C125.082 2.43806 122.54 1.77988 119.69 1.77988C116.889 1.77988 114.349 2.43943 112.081 3.76597C109.81 5.04101 108.038 6.87127 106.769 9.24406C105.495 11.6259 104.87 14.4845 104.87 17.7999C104.87 21.1157 105.495 23.9988 106.767 26.4315ZM122.648 23.5827L122.643 23.5885L122.639 23.5944C121.866 24.7055 120.918 25.2199 119.77 25.2199C118.619 25.2199 117.61 24.7019 116.728 23.5772C115.922 22.4828 115.47 20.5939 115.47 17.7999C115.47 15.0059 115.922 13.117 116.728 12.0226C117.61 10.8979 118.619 10.3799 119.77 10.3799C120.918 10.3799 121.866 10.8942 122.639 12.0054L122.643 12.0113L122.648 12.0171C123.456 13.1106 123.91 15.0011 123.91 17.7999C123.91 20.5986 123.456 22.4891 122.648 23.5827ZM151.521 58.3134L151.525 58.316C153.794 59.5889 156.36 60.2199 159.21 60.2199C162.058 60.2199 164.599 59.5894 166.816 58.3148C169.088 57.0402 170.86 55.2104 172.129 52.8382C173.457 50.404 174.11 47.5184 174.11 44.1999C174.11 40.8831 173.457 38.0227 172.128 35.6398C170.86 33.27 169.089 31.4416 166.821 30.1674C164.602 28.8381 162.06 28.1799 159.21 28.1799C156.357 28.1799 153.789 28.8391 151.519 30.1675C149.3 31.4435 147.557 33.2738 146.289 35.6441C145.015 38.0259 144.39 40.8845 144.39 44.1999C144.39 47.5157 145.015 50.3988 146.287 52.8315L146.289 52.8357C147.557 55.2067 149.301 57.0373 151.521 58.3134ZM162.168 49.9827C161.34 51.1028 160.36 51.6199 159.21 51.6199C158.119 51.6199 157.135 51.1081 156.248 49.9771C155.442 48.8827 154.99 46.9939 154.99 44.1999C154.99 41.4059 155.442 39.517 156.248 38.4226C157.135 37.2917 158.119 36.7799 159.21 36.7799C160.36 36.7799 161.34 37.2969 162.168 38.4171C162.976 39.5106 163.43 41.4011 163.43 44.1999C163.43 46.9986 162.976 48.8891 162.168 49.9827Z"
+										stroke="#78213A" />
+								</svg>
+							</div>
+							<p class="reviews__nums_text">выпускников готовы рекомендовать обучение в АНО «Сфера»</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
