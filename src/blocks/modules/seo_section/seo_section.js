@@ -24,33 +24,37 @@ import 'swiper/css/pagination';
 	// 		},
 	// 	},
 	// });
-	const seo = document.querySelector('.seo__swiper')
+	const seoSwipers = document.querySelectorAll('.seo__slider')
 
-	if (!seo) return;
-	const seoSwiper = new Swiper(seo, {
-		slidesPerView: 1,
-		slidesPerGroup: 1,
-		speed: 600,
-		spaceBetween: 0,
-		initialSlide: 0,
-		loop: true,
-		modules: [Pagination, Navigation],
-		navigation: {
-			nextEl: ".seo__slider_navigation .next_btn",
-			prevEl: ".seo__slider_navigation .prev_btn",
-		},
+	if (!seoSwipers.length) return;
 
-		pagination: {
-			el: ".seo__slider_pagination",
-			type: "bullets",
-			clickable: true,
-			bulletClass: "seo_pagination_tab",
-			bulletActiveClass: "active",
-			renderBullet: function (current, total) {
-				return `<div class="seo_pagination_tab">
-						<img src="${Array.from(document.querySelectorAll(".seo__swiper .swiper-slide:not(.swiper-slide-duplicate)"))[current].dataset.image}" alt="">
-					</div>`;
+	seoSwipers.forEach(seo => {
+		const seoSwiper = new Swiper(seo.querySelector('.seo__swiper'), {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			speed: 600,
+			spaceBetween: 0,
+			initialSlide: 0,
+			loop: true,
+			modules: [Pagination, Navigation],
+			navigation: {
+				nextEl: seo.querySelector(".seo__slider_navigation .next_btn"),
+				prevEl: seo.querySelector(".seo__slider_navigation .prev_btn"),
 			},
-		},
-	});
+
+			pagination: {
+				el: seo.querySelector(".seo__slider_pagination"),
+				type: "bullets",
+				clickable: true,
+				bulletClass: "seo_pagination_tab",
+				bulletActiveClass: "active",
+				renderBullet: function (current, total) {
+					return `<div class="seo_pagination_tab">
+						<img src="${Array.from(seo.querySelectorAll(".swiper-slide:not(.swiper-slide-duplicate)"))[current].dataset.image}" alt="">
+					</div>`;
+				},
+			},
+		});
+	})
+
 })()

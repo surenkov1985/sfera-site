@@ -320,6 +320,15 @@
 			&:hover, &.active {
 				color: $clrBlue;
 			}
+
+			@media screen and (max-width:991px) {
+				padding: 18px 34px 18px 26px;
+				border-radius: 20px;
+
+				&:hover, &.active {
+					background: $clrLightBlue;
+				}
+			}
 		}
 
 

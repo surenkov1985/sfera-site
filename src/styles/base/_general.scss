@@ -415,10 +415,19 @@ ul {
 			color: $clrDark;
 		}
 	}
+
+	&_services {
+		font-size: inherit;
+		color: inherit;
+	}
 }
 
 .mt0 {
 	margin-top: 0 !important;
+}
+
+.mb0 {
+	margin-bottom: 0 !important;
 }
 
 .input {
