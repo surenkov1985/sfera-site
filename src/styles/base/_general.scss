@@ -24,6 +24,10 @@ ul {
 		width: 100%;
 	}
 
+	&_small {
+		padding: 15px 38px;
+	}
+
 	&_light {
 		background: $clrLightBlue;
 
@@ -91,6 +95,17 @@ ul {
 
 		&:hover {
 			background: $clrPink;
+			// color: $clrDarkGray;
+		}
+	}
+
+	&_pink {
+		color: $clrWhite;
+		background: $clrPink;
+
+		&:hover {
+			background: rgba($color: $clrPink, $alpha: 0.6);
+			// opacity: 0.6;
 			// color: $clrDarkGray;
 		}
 	}
@@ -400,6 +415,10 @@ ul {
 	}
 }
 
+.text_center {
+	text-align: center;
+}
+
 .link {
 	display: flex;
 	align-items: center;
@@ -413,6 +432,14 @@ ul {
 
 		&:hover {
 			color: $clrDark;
+		}
+	}
+
+	&_dark {
+		color: $clrDark;
+
+		&:hover {
+			color: $clrBlue;
 		}
 	}
 
@@ -524,6 +551,11 @@ ul {
 
  .light_text {
 	font-size: 14px;
+	line-height: 1.2;
+	color: $clrDarkGray;
+ }
+ .small_text {
+	font-size: 12px;
 	line-height: 1.2;
 	color: $clrDarkGray;
  }

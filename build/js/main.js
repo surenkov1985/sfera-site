@@ -506,6 +506,59 @@ scrollObserver.observe(document.querySelector(".obs-target"));
 
 /***/ }),
 
+/***/ "./src/blocks/modules/managers/managers.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/managers/managers.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
+
+
+
+
+(function () {
+  var managers = document.querySelector('.managers__slider');
+  if (!managers) return;
+  var managersSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](managers, {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    loop: true,
+    spaceBetween: 20,
+    speed: 700,
+    navigation: {
+      prevEl: '.managers .swiper_prev',
+      nextEl: '.managers .swiper_next'
+    },
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
+    pagination: {
+      el: '.managers .swiper-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      },
+      991: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 34
+      }
+    }
+  });
+})();
+
+/***/ }),
+
 /***/ "./src/blocks/modules/mobile/mobile.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/mobile/mobile.js ***!
@@ -917,6 +970,74 @@ document.addEventListener('click', function (e) {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/why_works/why_works.js":
+/*!***************************************************!*\
+  !*** ./src/blocks/modules/why_works/why_works.js ***!
+  \***************************************************/
+/***/ (() => {
+
+// import Swiper from "swiper";
+// import { Navigation, Pagination } from 'swiper/modules';
+
+// import "swiper/css";
+// import 'swiper/css/pagination';
+
+// (function () {
+// 	// const seoThumbs = new Swiper(".specialists-thumbs", {
+// 	// 	spaceBetween: 0,
+// 	// 	slidesPerView: 10,
+// 	// 	freeMode: true,
+// 	// 	watchSlidesProgress: true,
+
+// 	// 	breakpoints: {
+// 	// 		320: {
+// 	// 			slidesPerView: 5,
+// 	// 		},
+// 	// 		768: {
+// 	// 			slidesPerView: 7,
+// 	// 		},
+// 	// 		1024: {
+// 	// 			slidesPerView: 10,
+// 	// 		},
+// 	// 	},
+// 	// });
+// 	const seoSwipers = document.querySelectorAll('.seo__slider')
+
+// 	if (!seoSwipers.length) return;
+
+// 	seoSwipers.forEach(seo => {
+// 		const seoSwiper = new Swiper(seo.querySelector('.seo__swiper'), {
+// 			slidesPerView: 1,
+// 			slidesPerGroup: 1,
+// 			speed: 600,
+// 			spaceBetween: 0,
+// 			initialSlide: 0,
+// 			loop: true,
+// 			modules: [Pagination, Navigation],
+// 			navigation: {
+// 				nextEl: seo.querySelector(".seo__slider_navigation .next_btn"),
+// 				prevEl: seo.querySelector(".seo__slider_navigation .prev_btn"),
+// 			},
+
+// 			pagination: {
+// 				el: seo.querySelector(".seo__slider_pagination"),
+// 				type: "bullets",
+// 				clickable: true,
+// 				bulletClass: "seo_pagination_tab",
+// 				bulletActiveClass: "active",
+// 				renderBullet: function (current, total) {
+// 					return `<div class="seo_pagination_tab">
+// 						<img src="${Array.from(seo.querySelectorAll(".swiper-slide:not(.swiper-slide-duplicate)"))[current].dataset.image}" alt="">
+// 					</div>`;
+// 				},
+// 			},
+// 		});
+// 	})
+
+// })()
+
+/***/ }),
+
 /***/ "./src/blocks/modules/workers/workers.js":
 /*!***********************************************!*\
   !*** ./src/blocks/modules/workers/workers.js ***!
@@ -973,6 +1094,11 @@ function on(event, object) {
   document.addEventListener('click', function (e) {
     if (e.target.closest('.workers__card_more')) {
       if (e.target.closest('.workers__card')) {
+        var workers = document.querySelectorAll('.workers__cards_item');
+        workers.forEach(function (worker) {
+          var popup = worker.querySelector('.workers__popup');
+          popup.classList.remove('show');
+        });
         var cardItem = e.target.closest('.workers__cards_item');
         console.log(cardItem.closest('.workers__cards_list').getBoundingClientRect(), cardItem.getBoundingClientRect(), window.getComputedStyle(cardItem.closest('.workers__cards_list'))['gap']);
         var popup = cardItem.querySelector('.workers__popup');
@@ -1042,18 +1168,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_news_news__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! %modules%/news/news */ "./src/blocks/modules/news/news.js");
 /* harmony import */ var _modules_etaps_etaps__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! %modules%/etaps/etaps */ "./src/blocks/modules/etaps/etaps.js");
 /* harmony import */ var _modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/reviews/reviews */ "./src/blocks/modules/reviews/reviews.js");
-/* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! %modules%/company/company */ "./src/blocks/modules/company/company.js");
-/* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_company_company__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! %modules%/feedback/feedback */ "./src/blocks/modules/feedback/feedback.js");
-/* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! %modules%/workers/workers */ "./src/blocks/modules/workers/workers.js");
-/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_workers_workers__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _modules_managers_managers__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! %modules%/managers/managers */ "./src/blocks/modules/managers/managers.js");
+/* harmony import */ var _modules_why_works_why_works__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! %modules%/why_works/why_works */ "./src/blocks/modules/why_works/why_works.js");
+/* harmony import */ var _modules_why_works_why_works__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_why_works_why_works__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! %modules%/company/company */ "./src/blocks/modules/company/company.js");
+/* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_company_company__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! %modules%/feedback/feedback */ "./src/blocks/modules/feedback/feedback.js");
+/* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! %modules%/workers/workers */ "./src/blocks/modules/workers/workers.js");
+/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_workers_workers__WEBPACK_IMPORTED_MODULE_17__);
 
 
 
 
 
 // import "%modules%/first_about/first_about";
+
+
 
 
 

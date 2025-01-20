@@ -56,6 +56,13 @@ function on(event, object, func = function () { }) {
 		if (e.target.closest('.workers__card_more')) {
 
 			if (e.target.closest('.workers__card')) {
+				const workers = document.querySelectorAll('.workers__cards_item')
+
+				workers.forEach(worker => {
+					const popup = worker.querySelector('.workers__popup')
+
+					popup.classList.remove('show')
+				})
 				const cardItem = e.target.closest('.workers__cards_item')
 				console.log(cardItem.closest('.workers__cards_list').getBoundingClientRect(), cardItem.getBoundingClientRect(), window.getComputedStyle(cardItem.closest('.workers__cards_list'))['gap']);
 				const popup = cardItem.querySelector('.workers__popup')
