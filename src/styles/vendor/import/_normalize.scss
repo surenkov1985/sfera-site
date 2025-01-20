@@ -59,11 +59,23 @@ h1,
 }
 
 h2,
-.h2 {
+.h2, h1.h2 {
 	font-size: clamp(1.875rem, 1.7rem + 0.6667vw, 2.5rem);
 	line-height: 1.2;
 	margin: 0;
 	font-weight: 700;
+}
+h1.h2 {
+	font-size: clamp(2.25rem, 2.075rem + 0.6667vw, 2.875rem);
+	line-height: 1.2;
+	margin: 0;
+	font-weight: 700;
+}
+
+h1.h1-lg {
+	font-size: clamp(2.25rem, 1.65rem + 2.9333vw, 5.25rem);
+	line-height: 1.2;
+	margin: 0;
 }
 
 h3,
