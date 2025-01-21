@@ -169,7 +169,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 /**
@@ -530,6 +530,7 @@ ul {
   gap: 10px;
   border-radius: 3.75rem;
   padding: 20px 38px;
+  white-space: nowrap;
 }
 
 .btn_small {
@@ -1808,12 +1809,17 @@ ul {
 }
 
 .first_course .first__cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   flex-wrap: wrap;
 }
 
 .first_course .first__col {
-  width: calc((100% - 30px) / 2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .first_course .first__title {
@@ -1821,7 +1827,6 @@ ul {
 }
 
 .first_course .first__img {
-  width: calc((100% - 30px) / 2);
   aspect-ratio: 16/8;
   border-radius: 20px;
   overflow: hidden;
@@ -1832,6 +1837,90 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.first_course .first__price {
+  padding: 44px 38px;
+  border-radius: 20px;
+  height: 100%;
+  color: #FFFFFF;
+}
+
+.first_course .first__price .light_text {
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.first_course .first__price .small_text {
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.first_course .first__price .num {
+  font-size: clamp(1.875rem, 1.7rem + 0.6667vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.first_course .first__price.price-individual {
+  background: #4988D1;
+  position: relative;
+  background-image: url(../img/sprites/price_decor_blue.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: top left;
+}
+
+.first_course .first__price.price-company {
+  background: #0383B5;
+  position: relative;
+  background-image: url(../img/sprites/price_decor_company.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: top left;
+}
+
+.first_course .first__price.price-company .first__price_desc {
+  background: #006D97;
+}
+
+.first_course .first__price_cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 24px;
+  height: 100%;
+}
+
+.first_course .first__price_col {
+  width: calc((100% - 24px) / 2);
+  display: flex;
+  flex-direction: column;
+}
+
+.first_course .first__price_col .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.first_course .first__price_desc {
+  gap: 28px;
+  padding: 24px;
+  border-radius: 10px;
+  background: #3171BC;
+}
+
+.first_course .first__price_title {
+  margin-bottom: 24px;
+}
+
+.first_course .first__price_sum {
+  margin-top: auto;
+}
+
+.first_course .first__price_sum i {
+  font-size: 11px;
+  margin-top: 9px;
+  font-style: normal;
 }
 
 .seo {
@@ -1881,6 +1970,7 @@ ul {
 .seo__more {
   display: flex;
   margin-top: 3.75rem;
+  gap: 24px;
 }
 
 .seo__slider {
@@ -4246,6 +4336,10 @@ ul {
     margin-bottom: 90px;
   }
 
+  .first_course .first__price {
+    padding: 40px 24px;
+  }
+
   .services__content {
     padding: 64px 0 56px 56px;
     gap: 25px;
@@ -4468,6 +4562,25 @@ ul {
 
   .first_course .first__img {
     width: 100%;
+    height: 100%;
+  }
+
+  .first_course .first__price_cols {
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  .first_course .first__price_col {
+    width: 100%;
+  }
+
+  .first_course .first__price_info {
+    flex-grow: 1;
+  }
+
+  .first_course .first__price_desc {
+    margin-top: auto;
+    flex-grow: 1;
   }
 
   .seo::after {
@@ -4701,6 +4814,23 @@ ul {
 
   .first .first_with_advs .first__advs_list {
     gap: 24px;
+  }
+
+  .first_course .first__cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .first_course .first__img {
+    order: -1;
+  }
+
+  .first_course .first__price_cols {
+    gap: 16px;
+    flex-direction: row;
+  }
+
+  .first_course .first__price_col {
+    width: calc((100% - 16px) / 2);
   }
 
   .seo__cols {
@@ -5096,6 +5226,19 @@ ul {
     flex-basis: 250px;
   }
 
+  .first_course .first__price {
+    padding: 32px 20px;
+  }
+
+  .first_course .first__price_cols {
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  .first_course .first__price_col {
+    width: 100%;
+  }
+
   .seo::after {
     width: 300px;
   }
@@ -5437,6 +5580,10 @@ ul {
 
   .first .first_with_advs .first__links .btn {
     width: 100%;
+  }
+
+  .first_course .first__price {
+    padding: 30px 16px;
   }
 
   .seo::after {
