@@ -29,6 +29,15 @@ ul {
 		padding: 15px 38px;
 	}
 
+	&_lg {
+	padding: 20px 88px;
+
+		@media screen and (max-width:1440px) {
+			padding: 20px 40px;
+		}
+
+	}
+
 	&_light {
 		background: $clrLightBlue;
 
@@ -548,15 +557,25 @@ ul {
 	height: 1px;
 	position: absolute;
 	top: 700px;
- }
+}
 
- .light_text {
-	font-size: 14px;
-	line-height: 1.2;
-	color: $clrDarkGray;
- }
- .small_text {
-	font-size: 12px;
-	line-height: 1.2;
-	color: $clrDarkGray;
- }
+.light_text {
+font-size: 14px;
+line-height: 1.2;
+color: $clrDarkGray;
+}
+.small_text {
+font-size: 12px;
+line-height: 1.2;
+color: $clrDarkGray;
+}
+
+.flex {
+	display: flex;
+}
+.flex-column {
+	flex-direction: column;
+}
+.mt-auto {
+	margin-top: auto !important;
+}

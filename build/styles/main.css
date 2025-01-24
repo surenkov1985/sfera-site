@@ -537,6 +537,10 @@ ul {
   padding: 15px 38px;
 }
 
+.btn_lg {
+  padding: 20px 88px;
+}
+
 .btn_light {
   background: #E5F8FF;
 }
@@ -958,6 +962,18 @@ ul {
   font-size: 12px;
   line-height: 1.2;
   color: #6B91A0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.mt-auto {
+  margin-top: auto !important;
 }
 
 .head {
@@ -1963,6 +1979,10 @@ ul {
   margin-bottom: 30px;
 }
 
+.seo__title:not(:first-child) {
+  margin-top: 66px;
+}
+
 .seo__text {
   width: 92%;
 }
@@ -1971,6 +1991,7 @@ ul {
   display: flex;
   margin-top: 3.75rem;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .seo__slider {
@@ -2072,6 +2093,14 @@ ul {
 
 .seo__swiper .swiper-slide-prev img {
   transform: translateX(50%);
+}
+
+.seo__advs {
+  margin-top: 100px;
+}
+
+.seo__advs .advs__list {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
 .nums__list {
@@ -2428,9 +2457,33 @@ ul {
   border-radius: 1.25rem;
 }
 
+.advs__item-white {
+  border: none;
+  background: #FFFFFF;
+}
+
+.advs__item-sm {
+  align-items: center;
+}
+
+.advs__item-sm .advs__item_title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
 .advs__item_icon {
   width: auto;
   height: 50px;
+}
+
+.advs__item_icon img {
+  width: auto;
+  height: 100%;
+}
+
+.advs__item_icon-sm {
+  height: 24px;
 }
 
 .advs__item_title {
@@ -3671,6 +3724,91 @@ ul {
   text-shadow: -1px 1px 0px #78213A, 1px 1px 0px #78213A, 1px -1px 0 #78213A, -1px -1px 0 #78213A;
 }
 
+.programm {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  overflow: hidden;
+}
+
+.programm__title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 42px;
+  margin-bottom: 2.5rem;
+}
+
+.programm__item {
+  border: 1px solid #E6E6E6;
+  border-radius: 20px;
+}
+
+.programm__item_top {
+  padding: 32px 33px 33px 104px;
+}
+
+.programm__item_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(1.25rem, 1.11rem + 0.5333vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.2142857143;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.programm__item_title::before {
+  content: attr(data-num);
+  font-size: 18px;
+  color: #6B91A0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: #F2F2F2;
+  position: absolute;
+  right: calc(100% + 40px);
+}
+
+.programm__item_body {
+  padding: 32px 33px 33px 104px;
+}
+
+.programm__item_tags {
+  display: flex;
+  gap: 1rem;
+}
+
+.programm__item_tag {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px 15px;
+  border-radius: 30px;
+  gap: 13px;
+  color: #FFFFFF;
+}
+
+.programm__item_tag img {
+  height: 24px;
+  width: auto;
+}
+
+.programm__item_tag.tag_lecture {
+  background: #4988D1;
+}
+
+.programm__item_tag.tag_webinar {
+  background: #78213A;
+}
+
+.programm__item_tag.tag_homework {
+  background: #6B91A0;
+}
+
 .feedback {
   padding-top: 110px;
   padding-bottom: 122px;
@@ -4270,6 +4408,10 @@ ul {
     padding-right: 30px;
   }
 
+  .btn_lg {
+    padding: 20px 40px;
+  }
+
   .head__top_contacts {
     gap: 100px;
   }
@@ -4587,9 +4729,17 @@ ul {
     width: 460px;
   }
 
+  .seo__title:not(:first-child) {
+    margin-top: 56px;
+  }
+
   .seo__slider {
     width: 100%;
     gap: 30px;
+  }
+
+  .seo__advs {
+    margin-top: 72px;
   }
 
   .nums__item {
@@ -4717,6 +4867,11 @@ ul {
     gap: 24px;
   }
 
+  .programm {
+    margin-top: 110px;
+    margin-bottom: 110px;
+  }
+
   .feedback::after {
     width: 650px;
   }
@@ -4840,6 +4995,14 @@ ul {
 
   .seo__col {
     width: 100%;
+  }
+
+  .seo__more {
+    margin-top: 56px !important;
+  }
+
+  .seo__advs {
+    margin-top: 56px;
   }
 
   .nums__list {
@@ -5243,6 +5406,10 @@ ul {
     width: 300px;
   }
 
+  .seo__title:not(:first-child) {
+    margin-top: 42px;
+  }
+
   .seo__slider {
     flex-direction: column-reverse;
   }
@@ -5436,6 +5603,11 @@ ul {
 
   .why-works .advs__item_icon {
     font-size: 36px;
+  }
+
+  .programm {
+    margin-bottom: 100px;
+    margin-top: 100px;
   }
 
   .feedback::after {

@@ -1,0 +1,100 @@
+.programm {
+	margin-top: 120px;
+    margin-bottom: 120px;
+	 overflow: hidden;
+	 
+	@media screen and (max-width: 1200px) {
+		margin-top: 110px;
+		margin-bottom: 110px;
+	}
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 100px;
+		margin-top: 100px;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 20px 42px;
+		margin-bottom: rem(40);
+	}
+
+	&__list {
+	}
+
+	&__item {
+		border: 1px solid $clrBorder;
+		border-radius: 20px;
+
+		&_top {
+			padding: 32px 33px 33px 104px;
+		}
+
+		&_title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: clamp(1.25rem, 1.11rem + 0.5333vw, 1.75rem);
+			font-weight: 600;
+			line-height: calc(34 / 28);
+			margin-bottom: 20px;
+			position: relative;
+
+			&::before {
+				content: attr(data-num);
+				font-size: 18px;
+				color: $clrDarkGray;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 43px;
+				height: 43px;
+				border-radius: 50%;
+				background: $clrGray;
+				position: absolute;
+				right: calc(100% + 40px);
+			}
+		}
+
+		&_body {
+			padding: 32px 33px 33px 104px;
+		}
+
+		&_tags {
+			display: flex;
+			gap: 1rem;
+		}
+
+		&_tag {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 6px 15px;
+			border-radius: 30px;
+			gap: 13px;
+			color: $clrWhite;
+
+			& img {
+				height: 24px;
+				width: auto;
+			}
+
+			&.tag {
+
+				&_lecture {
+					background: $clrBlue;
+				}
+
+				&_webinar {
+					background: $clrPink;
+				}
+
+				&_homework {
+					background: $clrDarkGray;
+				}
+			}
+		}
+	}
+}

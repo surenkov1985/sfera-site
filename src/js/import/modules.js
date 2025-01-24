@@ -14,6 +14,7 @@ import "%modules%/etaps/etaps";
 import "%modules%/reviews/reviews";
 import "%modules%/managers/managers";
 import "%modules%/why_works/why_works";
+import "%modules%/programm/programm";
 import "%modules%/company/company";
 import "%modules%/feedback/feedback";
 import "%modules%/workers/workers";
