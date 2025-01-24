@@ -1,55 +1,23 @@
-import Swiper from "swiper";
-
-
-import { Navigation, Pagination } from 'swiper/modules';
-
-import { Fancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
-
-import "swiper/css";
-import 'swiper/css/pagination';
-
+import { gsap } from "gsap"
 
 (function () {
-	const docks = document.querySelector('.docks__slider')
+	document.addEventListener('click', function (e) {
 
-	if (!docks) return;
+		const gs = gsap.timeline()
+		if (e.target.closest('.accordion_title')) {
+			const accordion = e.target.closest('.accordion')
+			const accordionBody = accordion.querySelector('.accordion_body')
+			const accordionContent = accordionBody.querySelector('.accordion_content')
 
-	const docksSlider = new Swiper(docks, {
-		slidesPerView: 1.2,
-		slidesPerGroup: 1,
-		loop: true,
-		spaceBetween: 20,
-		speed: 700,
-		navigation: {
-			prevEl: '.docks .swiper_prev',
-			nextEl: '.docks .swiper_next'
-		}, modules: [Pagination, Navigation],
-		pagination: {
-			el: '.docks .swiper-pagination',
-			clickable: true
-		},
-		breakpoints: {
-			420: {
-				slidesPerView: 1.4,
-				spaceBetween: 35
-			},
-			576: {
-				slidesPerView: 2,
-			},
-			768: {
-				slidesPerView: 3,
-			},
-			991: {
-				slidesPerView: 4,
-			},
-			1200: {
-				slidesPerView: 5,
-			},
+			if (accordion.classList.contains('active')) {
+				accordion.classList.remove('active')
+				// accordionBody.style.maxHeight = 0
+				gsap.to(accordionBody, { maxHeight: 0 })
+			} else {
+				accordion.classList.add('active')
+				gsap.to(accordionBody, { maxHeight: accordionContent.getBoundingClientRect().height })
+				// accordionBody.style.maxHeight = accordionContent.getBoundingClientRect().height + 'px'
+			}
 		}
 	})
 })()
-
-Fancybox.bind("[data-fancybox]", {
-	// Your custom options
-});

@@ -7813,6 +7813,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.12.7":
+  version: 3.12.7
+  resolution: "gsap@npm:3.12.7"
+  checksum: 10c0/48691602da4c0aaa61a8fe7426e5e2f873e9edb4b7e732b90928c815a47dd1e94d05174bd6f04e73a11184cb0df8c0d2b98d58cd1cbd2df01e33769f6aa8ff11
+  languageName: node
+  linkType: hard
+
 "gulp-autoprefixer@npm:^8.0.0":
   version: 8.0.0
   resolution: "gulp-autoprefixer@npm:8.0.0"
@@ -13960,6 +13967,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     dev: "npm:^0.1.3"
     eslint: "npm:^8.11.0"
     gh-pages: "npm:^6.2.0"
+    gsap: "npm:^3.12.7"
     gulp: "npm:^4.0.2"
     gulp-autoprefixer: "npm:^8.0.0"
     gulp-clean-css: "npm:^4.3.0"

@@ -816,59 +816,31 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
-/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/index.esm.js");
-/* harmony import */ var _fancyapps_ui_dist_fancybox_fancybox_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fancyapps/ui/dist/fancybox/fancybox.css */ "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css");
-/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
-/* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
-
-
-
-
-
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
 (function () {
-  var docks = document.querySelector('.docks__slider');
-  if (!docks) return;
-  var docksSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](docks, {
-    slidesPerView: 1.2,
-    slidesPerGroup: 1,
-    loop: true,
-    spaceBetween: 20,
-    speed: 700,
-    navigation: {
-      prevEl: '.docks .swiper_prev',
-      nextEl: '.docks .swiper_next'
-    },
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
-    pagination: {
-      el: '.docks .swiper-pagination',
-      clickable: true
-    },
-    breakpoints: {
-      420: {
-        slidesPerView: 1.4,
-        spaceBetween: 35
-      },
-      576: {
-        slidesPerView: 2
-      },
-      768: {
-        slidesPerView: 3
-      },
-      991: {
-        slidesPerView: 4
-      },
-      1200: {
-        slidesPerView: 5
+  document.addEventListener('click', function (e) {
+    var gs = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline();
+    if (e.target.closest('.accordion_title')) {
+      var accordion = e.target.closest('.accordion');
+      var accordionBody = accordion.querySelector('.accordion_body');
+      var accordionContent = accordionBody.querySelector('.accordion_content');
+      if (accordion.classList.contains('active')) {
+        accordion.classList.remove('active');
+        // accordionBody.style.maxHeight = 0
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(accordionBody, {
+          maxHeight: 0
+        });
+      } else {
+        accordion.classList.add('active');
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(accordionBody, {
+          maxHeight: accordionContent.getBoundingClientRect().height
+        });
+        // accordionBody.style.maxHeight = accordionContent.getBoundingClientRect().height + 'px'
       }
     }
   });
 })();
-_fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__.Fancybox.bind("[data-fancybox]", {
-  // Your custom options
-});
 
 /***/ }),
 
