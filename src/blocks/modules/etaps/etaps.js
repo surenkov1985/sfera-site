@@ -1,13 +1,12 @@
 import Swiper from "swiper";
 
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
-import 'swiper/css/pagination';
-
+import "swiper/css/pagination";
 
 (function () {
-	const etaps = document.querySelector('.etaps__slider')
+	const etaps = document.querySelector(".etaps__slider");
 
 	if (!etaps) return;
 
@@ -18,15 +17,15 @@ import 'swiper/css/pagination';
 		spaceBetween: 20,
 		speed: 700,
 		navigation: {
-			prevEl: '.etaps .swiper_prev',
-			nextEl: '.etaps .swiper_next'
-		}, modules: [Pagination, Navigation],
+			prevEl: ".etaps .swiper_prev",
+			nextEl: ".etaps .swiper_next",
+		},
+		modules: [Pagination, Navigation],
 		pagination: {
-			el: '.etaps .swiper-pagination',
-			clickable: true
+			el: ".etaps .swiper-pagination",
+			clickable: true,
 		},
 		breakpoints: {
-
 			768: {
 				slidesPerView: 2,
 			},
@@ -34,8 +33,8 @@ import 'swiper/css/pagination';
 				slidesPerView: 2,
 			},
 			1200: {
-				slidesPerView: 3,
+				slidesPerView: etaps.dataset.desctopSlides ? etaps.dataset.desctopSlides : 3,
 			},
-		}
-	})
-})()
+		},
+	});
+})();

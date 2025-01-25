@@ -1,0 +1,256 @@
+.sample {
+	margin-top: 120px;
+	margin-bottom: 120px;
+	overflow: hidden;
+
+	@media screen and (max-width: 1200px) {
+		margin-top: 110px;
+		margin-bottom: 110px;
+	}
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 100px;
+		margin-top: 100px;
+	}
+
+	&__title {
+		margin-bottom: rem(60);
+
+		@media screen and (max-width: 1440px) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__cols {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+		align-items: flex-start;
+
+		@media screen and (max-width: 1200px) {
+			flex-direction: column;
+			gap: 60px;
+		}
+	}
+
+	&__slide {
+		display: flex !important;
+		flex-direction: column;
+		gap: rem(28);
+
+		&_preview {
+			height: auto;
+			aspect-ratio: 16 / 23;
+			overflow: hidden;
+			border-radius: rem(10);
+			position: relative;
+			cursor: pointer;
+
+			& img,
+			& picture {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				scale: 1.05;
+			}
+
+			&::after {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				background: rgba($color: #4988D1, $alpha: 0.4);
+				background-image: url(../img/sprites/glassPlus.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.5s;
+			}
+
+			&:hover {
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	&__desc {
+		width: calc((100% - 30px) / 12 * 5);
+		background: $clrGray;
+		border-radius: 20px;
+		padding: 50px 42px;
+
+		@media screen and (max-width: 1440px) {
+			padding: 40px 36px;
+		}
+
+		@media screen and (max-width: 1200px) {
+			width: 100%;
+		}
+	}
+
+	&__docks {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: calc((100% - 30px) / 2);
+
+		@media screen and (max-width: 1650px) {
+			width: calc((100% - 30px) / 12 * 7);
+			gap: 30px;
+		}
+
+		@media screen and (max-width: 1200px) {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&_next,
+		&_prev {
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid $clrBorder;
+			border-radius: 50%;
+			transition: all .3s;
+			cursor: pointer;
+			position: absolute;
+			flex-shrink: 0;
+
+			@media screen and (max-width: 1650px) {
+				position: static;
+			}
+
+			&:hover {
+				// background: $clrBlue;
+				color: $clrBlue;
+				border-color: $clrBlue;
+			}
+
+			&:disabled {
+				pointer-events: none;
+				color: $clrGray;
+			}
+		}
+
+		&_prev {
+			right: calc(100% + 40px);
+		}
+
+		&_next {
+			left: calc(100% + 40px);
+		}
+
+		&_slider {
+			width: 100%;
+
+
+		}
+
+		&_slide {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			gap: 50px 28px;
+
+			@media screen and (max-width: 1440px) {
+				gap: 32px 16px;
+			}
+
+			@media screen and (max-width: 1200px) {
+				gap: 20px;
+			}
+
+			@media screen and (max-width: 576px) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		&_img {
+			position: relative;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: rgba($color: #4988D1, $alpha: 0.5);
+				background-image: url(../img/sprites/glassPlus.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.5s;
+				cursor: pointer;
+			}
+
+			&:hover {
+
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			&:first-child {
+				grid-area: 1 / 1 / 2 / 3;
+
+				@media screen and (max-width: 1200px) {
+					// grid-area: auto;
+					// flex-grow: 1;
+				}
+			}
+		}
+
+		& .swiper-pagination {
+			position: static;
+			margin-top: 40px;
+			display: flex;
+			gap: 19px;
+			justify-content: center;
+
+			@media screen and (max-width: 768px) {
+				margin-top: 44px;
+			}
+
+			@media screen and (max-width: 576px) {
+				margin-top: 40px;
+			}
+
+			&-bullet {
+				width: 10px;
+				height: 10px;
+				background: $clrBorder;
+				opacity: 1;
+				margin: 0 !important;
+
+				&-active {
+					background: $clrBlue;
+				}
+			}
+		}
+	}
+}
