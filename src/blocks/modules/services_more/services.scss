@@ -399,22 +399,6 @@
 			}
 		}
 	 }
-
-	 &__more {
-
-		&_title {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: rem(2);
-			margin-bottom: 45px;
-		}
-	 }
-
-	 &__list {
-		display: flex;
-		gap: 30px;
-	 }
 }
 
 .service {
@@ -423,12 +407,6 @@
 	flex-direction: column;
 	background: $clrWhite;
 	border-radius: rem(20);
-	border: 1px solid $clrBorder;
-
-	&.swiper-slide {
-		display: flex;
-		height: auto;
-	}
 
 	&__preview {
 		width: 100%;
@@ -468,7 +446,6 @@
 	&__title {
 		margin-bottom: 14px;
 		color: $clrDark;
-		width: 90%;
 	}
 
 	&__text {

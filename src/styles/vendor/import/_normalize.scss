@@ -80,7 +80,7 @@ h1.h1-lg {
 
 h3,
 .h3 {
-	font-size: 1.625rem;
+	font-size: clamp(1.25rem, 1.145rem + 0.4vw, 1.625rem);
 	line-height: 1.1;
 	margin: 0;
 	font-weight: 700;

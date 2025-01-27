@@ -16,6 +16,8 @@ import "%modules%/managers/managers";
 import "%modules%/why_works/why_works";
 import "%modules%/sample/sample";
 import "%modules%/programm/programm";
+import "%modules%/buy/buy";
+import "%modules%/tarifs/tarifs";
 import "%modules%/company/company";
 import "%modules%/feedback/feedback";
 import "%modules%/workers/workers";
