@@ -1,0 +1,75 @@
+.projects {
+
+	&__filter {
+		margin-bottom: 67px;
+
+		&_tags {
+			display: flex;
+			align-items: center;
+			gap: rem(24);
+		}
+
+		&_tag {
+			padding: 20px 38px;
+			border-radius: 60px;
+			border: 2px solid $clrBlue;
+			color: $clrBlue;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.3s;
+
+			&:hover {
+				background: $clrBlue;
+				color: $clrWhite;
+			}
+
+			&.active {
+				background: $clrBlue;
+				color: $clrWhite;
+			}
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	}
+}
+
+.project {
+	padding: 42px 35px 47px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+
+	&__top {
+		display: flex; 
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__bottom {
+		width: calc(100% - 70px);
+	}
+
+	&__company {
+		color: $clrWhite;
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		color: $white;
+	}
+
+	&__more {
+		position: absolute;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;justify-content: center;background: $clrBlue;
+		right: 35px;
+		bottom: 50;
+	}
+}

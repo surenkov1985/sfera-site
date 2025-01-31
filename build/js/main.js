@@ -854,6 +854,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/modules/projects/projects.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/projects/projects.js ***!
+  \*************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./src/blocks/modules/reviews/reviews.js":
 /*!***********************************************!*\
   !*** ./src/blocks/modules/reviews/reviews.js ***!
@@ -1417,17 +1427,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_buy_buy__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_buy_buy__WEBPACK_IMPORTED_MODULE_17__);
 /* harmony import */ var _modules_tarifs_tarifs__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! %modules%/tarifs/tarifs */ "./src/blocks/modules/tarifs/tarifs.js");
 /* harmony import */ var _modules_tarifs_tarifs__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_modules_tarifs_tarifs__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/company/company */ "./src/blocks/modules/company/company.js");
-/* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_company_company__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! %modules%/feedback/feedback */ "./src/blocks/modules/feedback/feedback.js");
-/* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/workers/workers */ "./src/blocks/modules/workers/workers.js");
+/* harmony import */ var _modules_projects_projects__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/projects/projects */ "./src/blocks/modules/projects/projects.js");
+/* harmony import */ var _modules_projects_projects__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_projects_projects__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! %modules%/company/company */ "./src/blocks/modules/company/company.js");
+/* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_company_company__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/feedback/feedback */ "./src/blocks/modules/feedback/feedback.js");
+/* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! %modules%/workers/workers */ "./src/blocks/modules/workers/workers.js");
 
 
 
 
 
 // import "%modules%/first_about/first_about";
+
 
 
 
