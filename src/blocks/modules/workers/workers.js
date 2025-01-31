@@ -44,7 +44,7 @@ function onScroll() {
 	});
 }
 
-function on(event, object, func = function () {}) {
+function on(event, object, func = function () { }) {
 	document.addEventListener(event, function (e) {
 		const eTarget = e.target.closest(object);
 		if (eTarget == null) return;
@@ -105,35 +105,81 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 (function () {
-	const who = document.querySelector(".who__slider");
+	const who = document.querySelectorAll(".who");
 
-	if (!who) return;
+	if (!who.length) return;
 
-	const whoSlider = new Swiper(who, {
-		slidesPerView: 1,
-		slidesPerGroup: 1,
-		loop: true,
-		spaceBetween: 20,
-		speed: 700,
-		navigation: {
-			prevEl: ".who .swiper_prev",
-			nextEl: ".who .swiper_next",
-		},
-		modules: [Pagination, Navigation],
-		pagination: {
-			el: ".who .swiper-pagination",
-			clickable: true,
-		},
-		breakpoints: {
-			768: {
-				slidesPerView: 2,
+	who.forEach(elem => {
+		const slider = elem.querySelector('.swiper')
+
+		if (!slider) return
+		const whoSlider = new Swiper(slider, {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			loop: true,
+			spaceBetween: 20,
+			speed: 700,
+			navigation: {
+				prevEl: elem.querySelector(".swiper_prev"),
+				nextEl: elem.querySelector(".swiper_next"),
 			},
-			991: {
-				slidesPerView: 2,
+			modules: [Pagination, Navigation],
+			pagination: {
+				el: elem.querySelector(".swiper-pagination"),
+				clickable: true,
 			},
-			1200: {
-				slidesPerView: who.dataset.desctopSlides ? who.dataset.desctopSlides : 3,
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+				},
+				991: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: slider.dataset.desctopSlides ? +slider.dataset.desctopSlides : 3,
+				},
 			},
-		},
-	});
+		});
+	})
+
+})();
+
+(function () {
+	const gallery = document.querySelectorAll(".gallery");
+
+	if (!gallery.length) return;
+
+	gallery.forEach(elem => {
+		const slider = elem.querySelector('.swiper')
+
+		if (!slider) return
+		const gallerySlider = new Swiper(slider, {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			loop: true,
+			spaceBetween: 20,
+			speed: 700,
+			navigation: {
+				prevEl: elem.querySelector(".swiper_prev"),
+				nextEl: elem.querySelector(".swiper_next"),
+			},
+			modules: [Pagination, Navigation],
+			pagination: {
+				el: elem.querySelector(".swiper-pagination"),
+				clickable: true,
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+				},
+				991: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: slider.dataset.desctopSlides ? +slider.dataset.desctopSlides : 3,
+				},
+			},
+		});
+	})
+
 })();

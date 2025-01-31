@@ -429,6 +429,7 @@
 		aspect-ratio: 1 / 1;
 		border-radius: 20px;
 		overflow: hidden;
+		position: relative;
 
 		@media screen and (max-width: 1200px) {
 			width: 100%;

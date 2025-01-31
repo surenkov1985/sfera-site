@@ -51,6 +51,50 @@
 		@media screen and (max-width: 400px) {}
 	}
 
+	&.buy_course {
+		padding-top: 300px;
+
+		@media screen and (max-width: 576px) {
+			padding-top: 140px;
+		}
+
+		&::after {
+			// content:  url(../img/dark_decor.png);
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -77px;
+			object-fit: contain;
+			left: calc(1200 / 1920 * 100%);
+			width: 845px;
+			aspect-ratio: 1 / 1;
+			background-image: url(../img/wave_decor.png);
+			background-size: contain;
+	
+	
+			@media screen and (max-width: 1200px) {
+				width: 760px;
+			}
+	
+			@media screen and (max-width: 768px) {
+				width: 600px;
+				bottom: 0;
+				left: 30%;
+	
+			}
+	
+			@media screen and (max-width: 576px) {
+				width: 110%;
+				// height: 500px;
+				bottom: 0%;
+				left: -5%;
+			}
+	
+	
+			@media screen and (max-width: 400px) {}
+		}
+	}
+
 	// @media screen and (max-width: 1440px) {
 	// 	padding-top: 360px;
 	// 	padding-bottom: 76px;
@@ -100,9 +144,14 @@
 
 	&__title {
 		margin-bottom: rem(36);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
 
 		@media screen and (max-width: 1200px) {
 			margin-bottom: 32px;
+			flex-wrap: wrap;
 		}
 	}
 
@@ -433,6 +482,19 @@
 				@media screen and (max-width: 576px) {
 					padding: 30px 16px;
 				}
+
+				&_buttons {
+					display: flex;gap: 30px;
+					flex-wrap: wrap;
+
+					& .buy__price_col {
+						width: 280px;
+
+						@media screen and (max-width: 768px) {
+							flex-grow: 1;
+						}
+					}
+				}
 				
 
 				& .light_text {
@@ -555,6 +617,16 @@
 						font-size: 11px;
 						margin-top: 9px;
 						font-style: normal;
+					}
+
+					&-title {
+						font-size: clamp(1.125rem, 1.09rem + 0.1333vw, 1.25rem);
+						color: $clrBlue;
+					}
+
+					& .num {
+						font-size: clamp(1.5rem, 1.29rem + 0.8vw, 2.25rem);
+						font-weight: 700;
 					}
 				}
 			}

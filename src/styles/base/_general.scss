@@ -20,6 +20,7 @@ ul {
 	border-radius: rem(60);
 	padding: 20px 38px;
 	white-space: nowrap;
+	line-height: (19.2 / 16);
 
 	@media screen and (max-width:500px) {
 		width: 100%;
@@ -36,6 +37,11 @@ ul {
 			padding: 20px 40px;
 		}
 
+	}
+
+	&_xs {
+		padding: 10px 22px;
+		font-size: 16px;
 	}
 
 	&_light {
@@ -82,6 +88,17 @@ ul {
 	&_trans {
 		border: 1px solid $clrBorder;
 		background: transparent;
+
+		&:hover {
+			color: $clrBlue;
+			border-color: $clrBlue;
+		}
+	}
+
+	&_trans_white {
+		border: 1px solid $clrWhite;
+		background: transparent;
+		color: $clrWhite;
 
 		&:hover {
 			color: $clrBlue;
@@ -611,4 +628,55 @@ color: $clrDarkGray;
 }
 .mt-auto {
 	margin-top: auto !important;
+}
+
+.w100 {
+	width: 100% !important;
+}
+
+.play_btn {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: $clrWhite;
+	cursor: pointer;
+	transition: all 0.3s;
+	will-change: scale;
+
+	&:hover {
+		background: $clrPink;
+	}
+
+	&:active {
+		scale: 0.9;
+	}
+
+	@media screen and (max-width: 1440px) {
+		width: 72px;
+		height: 72px;
+	}
+
+	@media screen and (max-width: 1200px) {
+		width: 64px;
+		height: 64px;
+
+		& svg {
+			width: auto;
+			height: 20px;
+		}
+	}
+
+	@media screen and (max-width: 576px) {
+		width: 50px;
+		height: 50px;
+
+		& svg {
+			width: auto;
+			height: 18px;
+		}
+	}
 }

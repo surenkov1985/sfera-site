@@ -531,6 +531,7 @@ ul {
   border-radius: 3.75rem;
   padding: 20px 38px;
   white-space: nowrap;
+  line-height: 1.2;
 }
 
 .btn_small {
@@ -539,6 +540,11 @@ ul {
 
 .btn_lg {
   padding: 20px 88px;
+}
+
+.btn_xs {
+  padding: 10px 22px;
+  font-size: 16px;
 }
 
 .btn_light {
@@ -578,6 +584,17 @@ ul {
 }
 
 .btn_trans:hover {
+  color: #4988D1;
+  border-color: #4988D1;
+}
+
+.btn_trans_white {
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.btn_trans_white:hover {
   color: #4988D1;
   border-color: #4988D1;
 }
@@ -998,6 +1015,32 @@ ul {
 
 .mt-auto {
   margin-top: auto !important;
+}
+
+.w100 {
+  width: 100% !important;
+}
+
+.play_btn {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s;
+  will-change: scale;
+}
+
+.play_btn:hover {
+  background: #78213A;
+}
+
+.play_btn:active {
+  scale: 0.9;
 }
 
 .head {
@@ -1759,6 +1802,13 @@ ul {
   gap: 30px;
 }
 
+.first__buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: auto;
+}
+
 .first__col_img {
   width: calc((100% - 30px) / 12 * 5);
   flex-shrink: 0;
@@ -1867,16 +1917,29 @@ ul {
 }
 
 .first_course .first__img {
-  aspect-ratio: 16/8;
+  aspect-ratio: 16/9;
   border-radius: 20px;
   overflow: hidden;
   height: auto;
+  position: relative;
 }
 
 .first_course .first__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.first_course .first__img .play_btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.first_course .first__img .anons_btn {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
 }
 
 .first_course .first__price {
@@ -1961,6 +2024,31 @@ ul {
   font-size: 11px;
   margin-top: 9px;
   font-style: normal;
+}
+
+.first__text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.first__advs {
+  margin-top: 100px;
+}
+
+.first__advs_list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.first__advs_list .advs__item {
+  align-items: center;
+  color: #1B2A3B;
+  background: #FFFFFF;
+}
+
+.first__advs_list .advs__item_title {
+  margin-bottom: 0;
 }
 
 .seo {
@@ -3127,6 +3215,31 @@ ul {
   border-radius: 10px;
 }
 
+.workers__targets_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 26px;
+}
+
+.workers__targets_list .advs__item {
+  background: #F2F2F2;
+  border: none;
+  flex-direction: column;
+}
+
+.workers__targets_list .advs__item_text {
+  color: #1B2A3B;
+}
+
+.workers__targets_list .advs__item_icon {
+  color: #F2F2F2;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: -1px 1px 0px #78213A, 1px 1px 0px #78213A, 1px -1px 0 #78213A, -1px -1px 0 #78213A;
+}
+
 .aside {
   display: flex;
   flex-direction: column;
@@ -3294,6 +3407,74 @@ ul {
   font-size: 19px;
   font-weight: 800;
   line-height: 1.4;
+}
+
+.when__item {
+  background: #F2F2F2;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 130px 24px 30px;
+  aspect-ratio: 16/8;
+}
+
+.when__item_icon {
+  width: auto;
+  height: 85px;
+}
+
+.when__item_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.when__item_title {
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.gallery .swiper-slide {
+  height: auto;
+}
+
+.gallery__item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  aspect-ratio: 16/10.8;
+  cursor: pointer;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__item::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(73, 136, 209, 0.4);
+  background-image: url(../img/sprites/glassPlus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.gallery__item:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .dropdown {
@@ -3502,6 +3683,11 @@ ul {
 
 .reviews__nums_num {
   margin-bottom: 12px;
+}
+
+.managers.no_margin {
+  padding-top: 126px;
+  padding-bottom: 82px;
 }
 
 .managers__title {
@@ -4120,6 +4306,23 @@ ul {
   background-size: contain;
 }
 
+.buy.buy_course {
+  padding-top: 300px;
+}
+
+.buy.buy_course::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -77px;
+  object-fit: contain;
+  left: 62.5%;
+  width: 845px;
+  aspect-ratio: 1/1;
+  background-image: url(../img/wave_decor.png);
+  background-size: contain;
+}
+
 .buy .container {
   position: relative;
   z-index: 1;
@@ -4133,6 +4336,10 @@ ul {
 
 .buy__title {
   margin-bottom: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
 .buy__subtitle {
@@ -4331,6 +4538,16 @@ ul {
   color: #FFFFFF;
 }
 
+.buy_course .buy__price_buttons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.buy_course .buy__price_buttons .buy__price_col {
+  width: 280px;
+}
+
 .buy_course .buy__price .light_text {
   color: #FFFFFF;
   margin-bottom: 10px;
@@ -4406,6 +4623,16 @@ ul {
   font-size: 11px;
   margin-top: 9px;
   font-style: normal;
+}
+
+.buy_course .buy__price_sum-title {
+  font-size: clamp(1.125rem, 1.09rem + 0.1333vw, 1.25rem);
+  color: #4988D1;
+}
+
+.buy_course .buy__price_sum .num {
+  font-size: clamp(1.5rem, 1.29rem + 0.8vw, 2.25rem);
+  font-weight: 700;
 }
 
 .tarifs {
@@ -5250,6 +5477,11 @@ ul {
     padding: 20px 40px;
   }
 
+  .play_btn {
+    width: 72px;
+    height: 72px;
+  }
+
   .head__top_contacts {
     gap: 100px;
   }
@@ -5320,6 +5552,15 @@ ul {
     padding: 40px 24px;
   }
 
+  .first__text {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .first__advs {
+    margin-top: 90px;
+  }
+
   .services__content {
     padding: 64px 0 56px 56px;
     gap: 25px;
@@ -5367,6 +5608,10 @@ ul {
 
   .company__links {
     padding-right: 0;
+  }
+
+  .when__item {
+    aspect-ratio: 16/9;
   }
 
   .reviews__content_title {
@@ -5480,6 +5725,16 @@ ul {
 
   .text_content ul {
     padding-left: 20px;
+  }
+
+  .play_btn {
+    width: 64px;
+    height: 64px;
+  }
+
+  .play_btn svg {
+    width: auto;
+    height: 20px;
   }
 
   .head .container {
@@ -5626,6 +5881,15 @@ ul {
     flex-grow: 1;
   }
 
+  .first__text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .first__advs {
+    margin-top: 80px;
+  }
+
   .seo::after {
     width: 460px;
   }
@@ -5716,6 +5980,14 @@ ul {
     width: 280px;
   }
 
+  .workers__targets_list {
+    gap: 16px;
+  }
+
+  .when__item {
+    aspect-ratio: 16/11;
+  }
+
   .etaps {
     margin-top: 110px;
     margin-bottom: 110px;
@@ -5747,6 +6019,11 @@ ul {
   .reviews__nums_num svg {
     width: auto;
     height: 50px;
+  }
+
+  .managers.no_margin {
+    padding-top: 106px;
+    padding-bottom: 76px;
   }
 
   .why-works::after {
@@ -5789,8 +6066,13 @@ ul {
     width: 760px;
   }
 
+  .buy.buy_course::after {
+    width: 760px;
+  }
+
   .buy__title {
     margin-bottom: 32px;
+    flex-wrap: wrap;
   }
 
   .buy__subtitle {
@@ -6032,6 +6314,15 @@ ul {
     width: calc((100% - 16px) / 2);
   }
 
+  .first__text {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .first__advs {
+    margin-top: 72px;
+  }
+
   .seo__cols {
     flex-direction: column-reverse;
     gap: 5rem;
@@ -6213,6 +6504,10 @@ ul {
 
   .aside__lessons_list {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .when__item {
+    aspect-ratio: 16/9;
   }
 
   .dropdown__value {
@@ -6640,6 +6935,19 @@ ul {
     padding: 16px;
   }
 
+  .workers__targets_list {
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .workers__targets_list .advs__item {
+    gap: 8px;
+  }
+
+  .workers__targets_list .advs__item_icon {
+    font-size: 36px;
+  }
+
   .aside__help {
     margin-top: 40px;
     padding: 20px;
@@ -6662,6 +6970,18 @@ ul {
     font-size: 16px;
   }
 
+  .when__item {
+    aspect-ratio: 16/7;
+  }
+
+  .when__item_icon {
+    height: 64px;
+  }
+
+  .when__item_title {
+    font-size: 16px;
+  }
+
   .etaps {
     margin-bottom: 100px;
     margin-top: 100px;
@@ -6680,8 +7000,10 @@ ul {
     padding: 30px 24px;
   }
 
-  .managers {
+  .managers.no_margin {
     border-radius: 50px;
+    padding-top: 82px;
+    padding-bottom: 72px;
   }
 
   .managers .swiper-pagination {
@@ -6746,6 +7068,12 @@ ul {
     left: 30%;
   }
 
+  .buy.buy_course::after {
+    width: 600px;
+    bottom: 0;
+    left: 30%;
+  }
+
   .buy__pretitle {
     font-size: 18px;
   }
@@ -6778,6 +7106,10 @@ ul {
 
   .buy_course .buy__price {
     padding: 32px 20px;
+  }
+
+  .buy_course .buy__price_buttons .buy__price_col {
+    flex-grow: 1;
   }
 
   .buy_course .buy__price_cols {
@@ -6958,6 +7290,16 @@ ul {
     padding-bottom: 65px;
   }
 
+  .play_btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play_btn svg {
+    width: auto;
+    height: 18px;
+  }
+
   .first::after {
     width: 110%;
     bottom: 25%;
@@ -6982,6 +7324,14 @@ ul {
     font-size: 0.8125rem;
   }
 
+  .first__buttons {
+    flex-wrap: wrap;
+  }
+
+  .first__buttons .btn {
+    width: 100%;
+  }
+
   .first .first_with_advs .first__links {
     margin-top: 56px;
   }
@@ -6992,6 +7342,10 @@ ul {
 
   .first_course .first__price {
     padding: 30px 16px;
+  }
+
+  .first__advs {
+    margin-top: 56px;
   }
 
   .seo::after {
@@ -7096,6 +7450,10 @@ ul {
     display: none;
   }
 
+  .when__item {
+    aspect-ratio: 16/9;
+  }
+
   .etaps .swiper-pagination {
     margin-top: 40px;
   }
@@ -7111,8 +7469,10 @@ ul {
     display: none;
   }
 
-  .managers {
+  .managers.no_margin {
     border-radius: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .managers .swiper-pagination {
@@ -7148,6 +7508,16 @@ ul {
     width: 110%;
     bottom: 25%;
     left: 12%;
+  }
+
+  .buy.buy_course {
+    padding-top: 140px;
+  }
+
+  .buy.buy_course::after {
+    width: 110%;
+    bottom: 0%;
+    left: -5%;
   }
 
   .buy__nums_list {
@@ -7355,6 +7725,16 @@ ul {
     font-size: 0.75rem;
   }
 
+  .first_course .first__img .play_btn {
+    top: 16px;
+    left: 16px;
+  }
+
+  .first_course .first__img .anons_btn {
+    bottom: 16px;
+    left: 16px;
+  }
+
   .nums__item {
     flex: 1 1 150px;
   }
@@ -7371,6 +7751,10 @@ ul {
 
   .presentation {
     padding-bottom: 300px;
+  }
+
+  .when__item {
+    aspect-ratio: 16/9.5;
   }
 
   .buy__content_slider_control {
