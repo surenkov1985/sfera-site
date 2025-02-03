@@ -1,0 +1,117 @@
+.cart {
+    margin-top: 40px;
+    margin-bottom: 200px;
+
+    @media screen and (max-width: 1200px) {
+        // margin-top: 110px;
+        margin-bottom: 190px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 164px;
+        // margin-top: 100px;
+    }
+
+    &__form {
+        &_cols {
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+
+        }
+
+        &_content {
+            width: calc((100% - 30px) / 12 * 8);
+        }
+
+        &_top {
+            width: calc((100% - 30px) / 12 * 8);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &_aside {
+            width: calc((100% - 30px) / 12 * 3);
+        }
+
+        &_promo {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            font-size: 14px;
+            line-height: 1.1;
+
+        }
+
+        &_reset {
+            font-size: 14px;
+            color: $clrPink;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                color: $clrDark;
+            }
+        }
+    }
+}
+
+.label {
+
+    &_promo {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+
+        & input {
+            padding: 24px 50px 24px 25px;
+            background: $clrGray;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.1;
+        }
+
+        & .icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            right: 12px;
+            color: $clrWhite;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.1s ease-in-out;
+
+
+        }
+
+        &.error {
+            & .icon {
+                background: $clrPink;
+                opacity: 1;
+                visibility: visible;
+
+                & svg.ok {
+                    display: none;
+                }
+            }
+        }
+
+        &.ok {
+            & .icon {
+                background: #63D27B;
+                opacity: 1;
+                visibility: visible;
+
+                & svg.error {
+                    display: none;
+                }
+            }
+        }
+    }
+}
