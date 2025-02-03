@@ -689,6 +689,34 @@ ul {
   flex-shrink: 0;
 }
 
+.btn_pagination {
+  padding: 0;
+  background: #F2F2F2;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.btn_pagination.disabled {
+  pointer-events: none !important;
+}
+
+.btn_pagination.disabled:hover {
+  background: #F2F2F2;
+  color: #1B2A3B;
+  cursor: inherit;
+}
+
+.btn_pagination:hover {
+  background: #78213A;
+  color: #FFFFFF;
+}
+
+.btn_pagination.active {
+  background: #78213A;
+  color: #FFFFFF;
+}
+
 .phone_link {
   color: #FFFFFF;
   font-size: 1.5rem;
@@ -4785,6 +4813,7 @@ ul {
 .projects__filter_tags {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -4811,6 +4840,7 @@ ul {
 .projects__list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 3.75rem 1.875rem;
 }
 
 .project {
@@ -4818,13 +4848,43 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 24px;
   position: relative;
+  aspect-ratio: 16/9.5;
+  border-radius: 1.25rem;
+  background-blend-mode: color;
+}
+
+.project__tag {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 10px 16px;
+  border-radius: 30px;
+  background: #FFFFFF;
+  color: #1B2A3B;
+}
+
+.project__logo {
+  background: #FFFFFF;
+  border-radius: 1.25rem;
+  width: 30.0751879699%;
+  aspect-ratio: 20/15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.project__logo img {
+  max-width: 85%;
 }
 
 .project__top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .project__bottom {
@@ -4838,11 +4898,12 @@ ul {
 
 .project__title {
   color: #FFFFFF;
+  transition: all 0.3s;
 }
 
 .project__more {
   position: absolute;
-  border-radius: 50%;
+  border-radius: 20px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -4850,7 +4911,37 @@ ul {
   justify-content: center;
   background: #4988D1;
   right: 35px;
-  bottom: 50;
+  bottom: 50px;
+  color: #FFFFFF;
+  transition: all 0.3s;
+}
+
+.project:hover .project__title {
+  color: #4988D1;
+}
+
+.project:hover .project__more {
+  width: 60px;
+}
+
+.pagination {
+  display: flex;
+  gap: 12px;
+  margin-top: 60px;
+}
+
+.pagination_list {
+  display: flex;
+  gap: 12px;
+}
+
+.pagination_item {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.pagination_prev svg {
+  transform: scaleX(-1);
 }
 
 .about {
@@ -5752,6 +5843,26 @@ ul {
     padding: 24px 48px;
   }
 
+  .projects__filter {
+    margin-bottom: 60px;
+  }
+
+  .projects__filter_tag {
+    padding: 16px 32px;
+  }
+
+  .projects__list {
+    gap: 3.5rem 1.875rem;
+  }
+
+  .project {
+    padding: 36px 30px 42px;
+  }
+
+  .pagination {
+    margin-top: 56px;
+  }
+
   .about__after {
     padding-top: 2.625rem;
     margin-top: 2.625rem;
@@ -6257,6 +6368,27 @@ ul {
     padding-left: 20px;
   }
 
+  .projects__filter {
+    margin-bottom: 56px;
+  }
+
+  .projects__filter_tags {
+    gap: 20px;
+  }
+
+  .projects__filter_tag {
+    font-size: 14px;
+  }
+
+  .projects__list {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2.8125rem 1.5rem;
+  }
+
+  .pagination {
+    margin-top: 45px;
+  }
+
   .about {
     margin-top: 110px;
     margin-bottom: 110px;
@@ -6689,6 +6821,11 @@ ul {
     flex-grow: 0;
   }
 
+  .projects__list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.875rem 1.25rem;
+  }
+
   .about__cols {
     flex-direction: column-reverse;
     gap: 5rem;
@@ -6763,6 +6900,11 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
+  .btn_pagination {
+    width: 50px !important;
+    height: 50px;
+  }
+
   .min768 {
     display: none !important;
   }
@@ -7228,6 +7370,14 @@ ul {
     width: calc((100% - 30px) / 10 * 8);
   }
 
+  .projects__filter {
+    margin-bottom: 45px;
+  }
+
+  .projects__filter_tags {
+    gap: 16px;
+  }
+
   .about {
     margin-bottom: 100px;
     margin-top: 100px;
@@ -7641,6 +7791,24 @@ ul {
     width: 100%;
   }
 
+  .projects__filter_tag {
+    font-size: 12px;
+    padding: 12px 28px;
+  }
+
+  .project {
+    padding: 30px 24px 32px;
+  }
+
+  .project__more {
+    bottom: 32px;
+    right: 24px;
+  }
+
+  .pagination_list {
+    gap: 8px;
+  }
+
   .nums__item {
     flex: 1 1 180px;
   }
@@ -7711,6 +7879,12 @@ ul {
 @media screen and (max-width: 500px) {
   .btn {
     width: 100%;
+  }
+
+  .btn_pagination {
+    width: 45px !important;
+    height: 45px;
+    font-size: 14px;
   }
 
   .foot__contacts_item {
@@ -7842,6 +8016,10 @@ ul {
 
   .buy__nums_item-desc {
     font-size: 0.75rem;
+  }
+
+  .project {
+    padding: 30px 16px 32px;
   }
 
   .nums__item {

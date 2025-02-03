@@ -31,7 +31,7 @@ ul {
 	}
 
 	&_lg {
-	padding: 20px 88px;
+		padding: 20px 88px;
 
 		@media screen and (max-width:1440px) {
 			padding: 20px 40px;
@@ -202,6 +202,45 @@ ul {
 
 	& svg {
 		flex-shrink: 0;
+	}
+
+	&_pagination {
+		padding: 0;
+		background: $clrGray;
+		width: 60px;
+		height: 60px;
+		border-radius: 10px;
+
+		@media screen and (max-width: 768px) {
+			width: 50px !important;
+			height: 50px;
+		}
+
+		@media screen and (max-width: 500px) {
+			width: 45px !important;
+			height: 45px;
+			font-size: 14px;
+		}
+
+		&.disabled {
+			pointer-events: none !important;
+
+			&:hover {
+				background: $clrGray;
+				color: $clrDark;
+				cursor: inherit;
+			}
+		}
+
+		&:hover {
+			background: $clrPink;
+			color: $clrWhite;
+		}
+
+		&.active {
+			background: $clrPink;
+			color: $clrWhite;
+		}
 	}
 }
 
@@ -411,20 +450,20 @@ ul {
 
 	&_no_bg {
 		margin-top: 120px;
-    margin-bottom: 120px;
-	 overflow: hidden;
-	 
-	 @media screen and (max-width: 1200px) {
-		margin-top: 110px;
-		margin-bottom: 110px;
+		margin-bottom: 120px;
+		overflow: hidden;
+
+		@media screen and (max-width: 1200px) {
+			margin-top: 110px;
+			margin-bottom: 110px;
+		}
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 100px;
+			margin-top: 100px;
+		}
 	}
 
-	@media screen and (max-width: 768px) {
-		margin-bottom: 100px;
-		margin-top: 100px;
-	}
-	}
-	
 }
 
 .no_decor {
@@ -524,14 +563,14 @@ ul {
 
 	&.error {
 
-			& input {
-				color: $clrPink;
-				border-color: $clrPink;
+		& input {
+			color: $clrPink;
+			border-color: $clrPink;
 
-				&::placeholder {
-					color: $clrPink;
-				}
+			&::placeholder {
+				color: $clrPink;
 			}
+		}
 
 		& span.error {
 			opacity: 1;
@@ -578,7 +617,7 @@ ul {
 
 			&+span.checkbox {
 				background: $clrBlue;
-				
+
 				& svg {
 					opacity: 1;
 				}
@@ -587,7 +626,8 @@ ul {
 	}
 
 	& span.checkbox {
-		width: 26px;height: 26px;
+		width: 26px;
+		height: 26px;
 		border: 1px solid $clrBorder;
 		border-radius: 4px;
 		display: flex;
@@ -595,7 +635,7 @@ ul {
 		justify-content: center;
 		position: relative;
 		flex-shrink: 0;
-		
+
 		& svg {
 			opacity: 0;
 		}
@@ -610,22 +650,25 @@ ul {
 }
 
 .light_text {
-font-size: 14px;
-line-height: 1.2;
-color: $clrDarkGray;
+	font-size: 14px;
+	line-height: 1.2;
+	color: $clrDarkGray;
 }
+
 .small_text {
-font-size: 12px;
-line-height: 1.2;
-color: $clrDarkGray;
+	font-size: 12px;
+	line-height: 1.2;
+	color: $clrDarkGray;
 }
 
 .flex {
 	display: flex;
 }
+
 .flex-column {
 	flex-direction: column;
 }
+
 .mt-auto {
 	margin-top: auto !important;
 }
