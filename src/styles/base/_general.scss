@@ -512,6 +512,35 @@ ul {
 			}
 		}
 	}
+
+	& blockquote {
+		padding-left: 55px;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 32px;
+			height: 32px;
+			background: url(../img/sprites/quote-left.svg);
+			background-size: contain;
+
+			@media screen and (max-width:1200px) {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@media screen and (max-width:1200px) {
+			padding-left: 40px;
+		}
+
+		@media screen and (max-width:576px) {
+			padding-left: 32px;
+		}
+	}
 }
 
 .text_center {

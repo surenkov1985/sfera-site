@@ -858,9 +858,51 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************************!*\
   !*** ./src/blocks/modules/projects/projects.js ***!
   \*************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
 
 
+
+
+(function () {
+  var projects = document.querySelector(".projects__slider");
+  if (!projects) return;
+  var projectsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](projects, {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    // loop: true,
+    spaceBetween: 20,
+    createElements: true,
+    speed: 1000,
+    // centeredSlides: true,
+    navigation: {
+      prevEl: ".projects .swiper_prev",
+      nextEl: ".projects .swiper_next"
+    },
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
+    pagination: {
+      el: ".projects .swiper-pagination",
+      clickable: true
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      991: {
+        slidesPerView: 2
+      },
+      1200: {
+        slidesPerView: 2
+      }
+    }
+  });
+})();
 
 /***/ }),
 
@@ -1428,7 +1470,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tarifs_tarifs__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! %modules%/tarifs/tarifs */ "./src/blocks/modules/tarifs/tarifs.js");
 /* harmony import */ var _modules_tarifs_tarifs__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_modules_tarifs_tarifs__WEBPACK_IMPORTED_MODULE_18__);
 /* harmony import */ var _modules_projects_projects__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/projects/projects */ "./src/blocks/modules/projects/projects.js");
-/* harmony import */ var _modules_projects_projects__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_projects_projects__WEBPACK_IMPORTED_MODULE_19__);
 /* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! %modules%/company/company */ "./src/blocks/modules/company/company.js");
 /* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_company_company__WEBPACK_IMPORTED_MODULE_20__);
 /* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/feedback/feedback */ "./src/blocks/modules/feedback/feedback.js");
