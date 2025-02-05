@@ -68,12 +68,13 @@
 			background: $clrWhite;
 			flex-direction: column;
 			border: none;
+			transition: all .3s;
 
 			@media screen and (max-width: 768px) {
 				gap: 8px;
 			}
 
-			&:last-child {
+			&:hover {
 				background: $clrBlue;
 				color: $clrWhite;
 				position: relative;
@@ -83,12 +84,12 @@
 					text-shadow: -1px 1px 0px $clrWhite, 1px 1px 0px $clrWhite, 1px -1px 0 $clrWhite, -1px -1px 0 $clrWhite;
 				}
 
-				&::after {
-					content: url(../img/sprites/CheckCircle.svg);
-					position: absolute;
-					top: 10px;
-					right: 12px;
-				}
+				// &::after {
+				// 	content: url(../img/sprites/CheckCircle.svg);
+				// 	position: absolute;
+				// 	top: 10px;
+				// 	right: 12px;
+				// }
 			}
 
 			&_title {
@@ -101,7 +102,8 @@
 				font-weight: 900;
 				line-height: 1.2;
 				text-transform: uppercase;
-				text-shadow: -1px 1px 0px $clrPink, 1px 1px 0px $clrPink, 1px -1px 0 $clrPink, -1px -1px 0 $clrPink;
+				text-shadow: -1px 1px 0px $clrPink, 1px 1px 0px $clrPink, 1px -1px 0 $clrPink, -1px -1px 0 $clrPink; 
+				transition: all 0.3s;
 
 				@media screen and (max-width: 768px) {
 					font-size: 36px;

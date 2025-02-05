@@ -499,7 +499,7 @@
 				display: flex;
 				align-items: center;
 				gap: 4px;
-				font-size: 10px;
+				font-size: 12px;
 				line-height: 1.1;
 			}
 		}
@@ -515,6 +515,7 @@
 		&_link {
 			padding-top: 10px;
 			border-top: 1px solid $clrBorder;
+			font-size: 14px;
 
 			& a {
 				display: flex;

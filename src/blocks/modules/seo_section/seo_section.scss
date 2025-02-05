@@ -322,6 +322,10 @@
 
 		&_title {
 			margin-bottom: 10px;
+
+			& h3 {
+				font-size: clamp(1.5rem, 1.29rem + 0.8vw, 2.25rem);
+			}
 		}
 
 		&_text {

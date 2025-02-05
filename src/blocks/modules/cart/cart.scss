@@ -29,6 +29,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+				margin-bottom: 36px;
         }
 
         &_aside {
@@ -55,8 +56,90 @@
             }
         }
     }
-}
 
+	 &__item {
+		padding: 28px 40px 46px 35px;
+		background: $clrGray;
+		border-radius: rem(20);
+
+		&_top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 15px;
+		}
+
+		&_reset {
+			& .btn {
+				background: $clrWhite;
+				color: $clrPink;
+
+				&:hover {
+					background: $clrLightBlue;
+				}
+			}
+		}
+
+		&_title {
+			font-size: clamp(1.5rem, 1.395rem + 0.4vw, 1.875rem);
+			font-weight: 600;
+			line-height: 1.1;
+			margin-bottom: 40px;
+			width: calc(100% - 135px);
+		}
+
+		&_settings {
+			display: flex;
+			width: calc(100% - 135px);
+			align-items: flex-end;
+		}
+
+		&_counter {
+
+			&-title {
+				margin-bottom: 12px;
+			}
+		}
+
+		&_sum {
+			margin-left: 90px;
+
+			& .sum {
+				white-space: nowrap;
+			}
+
+			& .num {
+				font-size: clamp(1.875rem, 1.7rem + 0.6667vw, 2.5rem);
+				font-weight: 700;
+			}
+
+			& .valute {
+				font-size: clamp(1.125rem, 1.02rem + 0.4vw, 1.5rem);
+				font-weight: 700;
+			}
+		}
+
+		&_trust {
+			margin-left: 46px;
+			line-height: 1.1;
+			margin-bottom: 10px;
+
+			& .pay {
+				font-size: 14px;
+				line-height: 1.1;
+				font-weight: 700;
+				color: $clrDark;
+			}
+		}
+	 }
+}
+.tag {
+	font-size: 14px;
+	line-height: 1.4;
+	padding: 8px 16px;
+	border-radius: 30px;
+	background: $clrWhite;
+}
 .label {
 
     &_promo {

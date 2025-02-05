@@ -1527,6 +1527,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/components */ "./src/js/import/components.js");
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  var numberLabels = document.querySelectorAll('.label_number');
+  if (numberLabels.length) {
+    numberLabels.forEach(function (label) {
+      var input = label.querySelector('input'),
+        decBtn = label.querySelector('.dec'),
+        incBtn = label.querySelector('.inc');
+    });
+  }
+});
 
 /***/ }),
 
