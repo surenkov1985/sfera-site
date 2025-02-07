@@ -2944,7 +2944,7 @@ ul {
   width: 318px;
   flex-shrink: 0;
   position: sticky;
-  top: 170px;
+  top: 110px;
 }
 
 .workers__content {
@@ -4994,6 +4994,8 @@ ul {
   display: flex;
   gap: 30px;
   justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
 }
 
 .cart__form_content {
@@ -5120,6 +5122,12 @@ ul {
   font-weight: 700;
   color: #1B2A3B;
   white-space: nowrap;
+}
+
+.cart__aside {
+  position: sticky;
+  top: 20px;
+  transition: all 0.5s;
 }
 
 .cart__installment {
@@ -6392,7 +6400,7 @@ ul {
   }
 
   .workers__aside {
-    width: 280px;
+    width: 110px;
   }
 
   .workers__targets_list {
