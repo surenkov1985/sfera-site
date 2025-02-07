@@ -654,6 +654,13 @@ ul {
 		}
 	}
 
+	&.label_checkbox_white {
+
+		& span.checkbox {
+			color: $clrWhite;
+		}
+	}
+
 	& span.checkbox {
 		width: 26px;
 		height: 26px;
@@ -698,6 +705,13 @@ ul {
 		&:hover {
 			background: $clrDarkGray;
 			color: $clrWhite;
+		} 
+
+		&:disabled {
+			pointer-events: none;
+			opacity: 0.8;
+			background: $clrGray;
+			color: $clrDarkGray;
 		}
 	}
 }
