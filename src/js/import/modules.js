@@ -20,6 +20,7 @@ import "%modules%/buy/buy";
 import "%modules%/tarifs/tarifs";
 import "%modules%/projects/projects";
 import "%modules%/cart/cart";
+import "%modules%/contacts/contacts";
 import "%modules%/company/company";
 import "%modules%/feedback/feedback";
 import "%modules%/workers/workers";

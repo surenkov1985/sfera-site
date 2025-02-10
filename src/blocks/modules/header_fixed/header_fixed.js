@@ -8,12 +8,18 @@ const scrollCallback = (entries, observer) => {
 		if (entry.boundingClientRect.y < 0) {
 			document.querySelector(".head.fixed").classList.add("show");
 			document.querySelector("body").classList.add("is-scrolled");
+			if (document.querySelector('.cart__aside')) {
+				document.querySelector('.cart__aside').style.top = '110px';
+			}
 
-			document.querySelector('.cart__aside').style.top = '110px';
 		} else {
 			document.querySelector("body").classList.remove("is-scrolled");
 			document.querySelector(".head.fixed").classList.remove("show");
-			document.querySelector('.cart__aside').style.top = '20px';
+
+			if (document.querySelector('.cart__aside')) {
+				document.querySelector('.cart__aside').style.top = '20px';
+			}
+
 		}
 	});
 };
