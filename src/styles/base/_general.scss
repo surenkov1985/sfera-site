@@ -80,6 +80,31 @@ ul {
 		}
 	}
 
+	&_close {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		padding: 0;
+		background: $clrGray;
+		color: $clrDark;
+
+		@media screen and (max-width:1200px) {
+			width: 40px !important;
+			height: 40px;
+
+			& svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		&:hover {
+			background: $clrDarkGray;
+			color: $clrWhite;
+		}
+	}
+
+
 	&_quad {
 		border-radius: 10px;
 		padding: 14px 23px;
@@ -716,11 +741,50 @@ ul {
 	}
 }
 
+.label_radio {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+	color: $clrDarkGray;
+
+	& input {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+
+		&:checked {
+
+			&+span.radio {
+				border-width: 6px;
+				border-color: $clrBlue;
+				& + span {
+					color:$clrBlue;
+				}
+			}
+		}
+	}
+
+	& span.radio {
+		display: flex;
+		width: 22px;height: 22px;
+		border-radius: 50%;
+		background: $clrWhite;
+		border: 4px solid $clrDarkGray;
+		transition: all .2s;
+
+		&+span {
+			transition: all .2s;
+		}
+	}
+}
+
 .obs-target {
 	width: 1px;
 	height: 1px;
 	position: absolute;
-	top: 700px;
+	top: 500px;
 }
 
 .light_text {

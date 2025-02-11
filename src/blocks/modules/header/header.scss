@@ -6,8 +6,8 @@
 	&.fixed {
 		position: fixed;
 		transform: translateY(-100%);
-		transition: all 1s;
-		backdrop-filter: blur(10px);
+		transition: all 0.3s;
+		// backdrop-filter: blur(10px);
 
 		&.show {
 			transform: translateY(0);
@@ -27,51 +27,51 @@
 
 			&__navigation {
 				&_btn {
-					padding: 20px 32px;
+					padding: 16px 32px;
 					font-size: 16px;
 		
 					&:last-child {
-						padding: 20px 32px 20px 66px;
+						padding: 16px 32px 16px 66px;
 						margin-left: -42px;
 		
 						@media screen and (max-width: 1440px) {
-							padding: 20px 22px 20px 60px;
+							padding: 16px 22px 16px 60px;
 						}
 		
 						@media screen and (max-width: 1200px) {
-							padding: 20px 28px 20px 65px;
+							padding: 16px 28px 16px 65px;
 						}
 		
 						@media screen and (max-width: 991px) {
-							padding: 20px 25px 20px 60px;
+							padding: 16px 25px 16px 60px;
 						}
 		
 						@media screen and (max-width: 768px) {
-							padding: 20px 30px 20px 65px;
+							padding: 14px 30px 14px 65px;
 							border-radius: 10px;
 						}
 					}
 		
 					@media screen and (max-width: 1440px) {
-						padding: 20px 22px;
+						padding: 16px 22px;
 					}
 		
 					@media screen and (max-width: 1200px) {
-						padding: 20px 30px;
+						padding:16px 30px;
 					}
 		
 					@media screen and (max-width: 991px) {
-						padding: 20px 25px;
+						padding: 16px 25px;
 					}
 		
 					@media screen and (max-width: 768px) {
-						padding: 16px 30px;
+						padding: 14px 30px;
 						border-radius: 10px;
 						width: 50%;
 					}
 		
 					@media screen and (max-width: 419px) {
-						padding: 16px 20px;
+						padding: 14px 20px;
 						font-size: rem(16);
 						width: auto;
 						flex-grow: 1;
@@ -229,6 +229,7 @@
 				color: $clrWhite;
 				display: inline;
 				transition: all 0.3s;
+				font-size: 16px;
 
 				&:hover {
 					color: $clrBlue;

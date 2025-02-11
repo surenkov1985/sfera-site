@@ -9,7 +9,7 @@ const scrollCallback = (entries, observer) => {
 			document.querySelector(".head.fixed").classList.add("show");
 			document.querySelector("body").classList.add("is-scrolled");
 			if (document.querySelector('.cart__aside')) {
-				document.querySelector('.cart__aside').style.top = '110px';
+				document.querySelector('.cart__aside').style.top = '90px';
 			}
 
 		} else {

@@ -669,7 +669,7 @@ var scrollCallback = function scrollCallback(entries, observer) {
       document.querySelector(".head.fixed").classList.add("show");
       document.querySelector("body").classList.add("is-scrolled");
       if (document.querySelector('.cart__aside')) {
-        document.querySelector('.cart__aside').style.top = '110px';
+        document.querySelector('.cart__aside').style.top = '90px';
       }
     } else {
       document.querySelector("body").classList.remove("is-scrolled");
@@ -974,6 +974,16 @@ __webpack_require__.r(__webpack_exports__);
     }
   });
 })();
+
+/***/ }),
+
+/***/ "./src/blocks/modules/popup/popup.js":
+/*!*******************************************!*\
+  !*** ./src/blocks/modules/popup/popup.js ***!
+  \*******************************************/
+/***/ (() => {
+
+
 
 /***/ }),
 
@@ -1647,13 +1657,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_company_company__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_modules_company_company__WEBPACK_IMPORTED_MODULE_22__);
 /* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/feedback/feedback */ "./src/blocks/modules/feedback/feedback.js");
 /* harmony import */ var _modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_modules_feedback_feedback__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/workers/workers */ "./src/blocks/modules/workers/workers.js");
+/* harmony import */ var _modules_popup_popup__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/popup/popup */ "./src/blocks/modules/popup/popup.js");
+/* harmony import */ var _modules_popup_popup__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_modules_popup_popup__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _modules_workers_workers__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! %modules%/workers/workers */ "./src/blocks/modules/workers/workers.js");
 
 
 
 
 
 // import "%modules%/first_about/first_about";
+
 
 
 

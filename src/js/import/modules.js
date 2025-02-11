@@ -23,4 +23,5 @@ import "%modules%/cart/cart";
 import "%modules%/contacts/contacts";
 import "%modules%/company/company";
 import "%modules%/feedback/feedback";
+import "%modules%/popup/popup";
 import "%modules%/workers/workers";
