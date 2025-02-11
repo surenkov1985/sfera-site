@@ -454,9 +454,12 @@
 
 			
 		}
-& .projects__filter_tag {
-				font-size: 14px;
-				padding: 12px 20px;
+			& .projects__filter_tag {
+				font-size: 12px;
+				padding: 10px 16px;
+				color: $clrWhite;
+				border-color: $clrWhite;
+				pointer-events: none;
 
 				&:not(:last-child) {
 					margin-bottom: 20px;

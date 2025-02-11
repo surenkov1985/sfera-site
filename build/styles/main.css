@@ -1771,8 +1771,11 @@ ul {
 }
 
 .first__project .projects__filter_tag {
-  font-size: 14px;
-  padding: 12px 20px;
+  font-size: 12px;
+  padding: 10px 16px;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  pointer-events: none;
 }
 
 .first__project .projects__filter_tag:not(:last-child) {
