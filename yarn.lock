@@ -1129,6 +1129,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@barba/core@npm:^2.10.3":
+  version: 2.10.3
+  resolution: "@barba/core@npm:2.10.3"
+  dependencies:
+    is-promise: "npm:^4.0.0"
+    path-to-regexp: "npm:^6.2.2"
+  checksum: 10c0/8ee44a88cc6f8b58a82825cd8d8cc55773769c81aafb9ee9a85a5bb88361df586da6e43e6bf97579bfdb6e82d28e76c78f3706abb7f669c35750d064f63571bf
+  languageName: node
+  linkType: hard
+
 "@bem/cell@npm:0.2.5":
   version: 0.2.5
   resolution: "@bem/cell@npm:0.2.5"
@@ -9389,6 +9399,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"is-promise@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "is-promise@npm:4.0.0"
+  checksum: 10c0/ebd5c672d73db781ab33ccb155fb9969d6028e37414d609b115cc534654c91ccd061821d5b987eefaa97cf4c62f0b909bb2f04db88306de26e91bfe8ddc01503
+  languageName: node
+  linkType: hard
+
 "is-redirect@npm:^1.0.0":
   version: 1.0.0
   resolution: "is-redirect@npm:1.0.0"
@@ -10119,6 +10136,21 @@ bem-tools-create@bem-tools/bem-tools-create:
   dependencies:
     flush-write-stream: "npm:^1.0.2"
   checksum: 10c0/355fa4cce74a62cec9d4dc4520a8a6a3bd0472e88e070208a895aa1d144bd5f35a099e0f0d4938f4bc909b6a40fb64cc389e0ec32cc86471540e7a643ffe0519
+  languageName: node
+  linkType: hard
+
+"lenis@npm:^1.1.20":
+  version: 1.1.20
+  resolution: "lenis@npm:1.1.20"
+  peerDependencies:
+    react: ">=17.0.0"
+    vue: ">=3.0.0"
+  peerDependenciesMeta:
+    react:
+      optional: true
+    vue:
+      optional: true
+  checksum: 10c0/23e99e3d762d8899dcf0fd84c86d5f711678a0f748e21ca7d12b236c3c7195064ee7a4b3924e782e974bd7eaa64098b73cd37070271da7c669ea296ee1b89c5b
   languageName: node
   linkType: hard
 
@@ -12238,6 +12270,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"path-to-regexp@npm:^6.2.2":
+  version: 6.3.0
+  resolution: "path-to-regexp@npm:6.3.0"
+  checksum: 10c0/73b67f4638b41cde56254e6354e46ae3a2ebc08279583f6af3d96fe4664fc75788f74ed0d18ca44fa4a98491b69434f9eee73b97bb5314bd1b5adb700f5c18d6
+  languageName: node
+  linkType: hard
+
 "path-type@npm:^1.0.0":
   version: 1.1.0
   resolution: "path-type@npm:1.1.0"
@@ -13957,6 +13996,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     "@babel/eslint-parser": "npm:^7.17.0"
     "@babel/preset-env": "npm:^7.16.11"
     "@babel/register": "npm:^7.17.0"
+    "@barba/core": "npm:^2.10.3"
     "@fancyapps/ui": "npm:^5.0.36"
     babel-loader: "npm:^8.2.3"
     bem-tools-core: "npm:^0.0.3"
@@ -13993,6 +14033,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     imagemin-pngquant: "npm:^9.0.0"
     imagemin-webp: "npm:^6.0.0"
     imagemin-zopfli: "npm:^7.0.0"
+    lenis: "npm:^1.1.20"
     lint-staged: "npm:^12.3.5"
     postcss: "npm:^8.4.8"
     postcss-scss: "npm:^4.0.3"

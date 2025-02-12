@@ -409,6 +409,35 @@ textarea {
 	/* 2 */
 }
 
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background-color: $clrGray;
+	border-radius: 6px;
+	transition: all 0.2s;
+	/* ширина scrollbar */
+
+	&:hover {
+		background-color: $clrBorder;
+	}
+}
+
+::-webkit-scrollbar-track {
+	background-color: $clrGray;
+	/* цвет дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $clrBorder;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		background-color: $clrDarkGray;
+	}
+}
+
 /* Interactive
    ========================================================================== */
 

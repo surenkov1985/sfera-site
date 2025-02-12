@@ -30,11 +30,18 @@
 </head>
 
 <body>
-	<div id="wrapper" class="wrapper">
+
+
+	<svg class="page-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path class="shape-overlays__path"></path>
+		<!-- <path class="shape-overlays__path"></path>
+	<path class="shape-overlays__path"></path> -->
+	</svg>
+	<div id="wrapper" class="wrapper" data-barba="wrapper">
 		@@include("../../../blocks/modules/header/header.html")
 		@@include("../../../blocks/modules/header_fixed/header_fixed.html")
 		<div class="obs-target"></div>
-		<main class="main">
+		<main class="main" data-barba="container" data-barba-namespace="home">
 			@@include("../../../blocks/modules/first_with_title/first_with_title.html")
 			@@include("../../../blocks/modules/contacts/contacts.html")
 			@@include("../../../blocks/modules/feedback/feedback.html")
