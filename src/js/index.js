@@ -219,9 +219,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			async enter(data) {
 
-
+				window.scrollTo(scrollX, scrollY);
 				await tl.from(data.next.container, {
-					opacity: 1, duration: 0
+					opacity: 1, duration: 0.1
 				});
 				pageOverlay.toggle()
 
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	barba.hooks.enter(() => {
 
-		window.scrollTo(scrollX, scrollY);
+
 	});
 })
 

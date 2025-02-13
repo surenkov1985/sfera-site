@@ -2002,14 +2002,15 @@ document.addEventListener('DOMContentLoaded', function () {
           return _regeneratorRuntime().wrap(function _callee2$(_context2) {
             while (1) switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
+                window.scrollTo(scrollX, scrollY);
+                _context2.next = 3;
                 return tl.from(data.next.container, {
                   opacity: 1,
-                  duration: 0
+                  duration: 0.1
                 });
-              case 2:
-                pageOverlay.toggle();
               case 3:
+                pageOverlay.toggle();
+              case 4:
               case "end":
                 return _context2.stop();
             }
@@ -2030,9 +2031,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     ;
   });
-  _barba_core___WEBPACK_IMPORTED_MODULE_2___default().hooks.enter(function () {
-    window.scrollTo(scrollX, scrollY);
-  });
+  _barba_core___WEBPACK_IMPORTED_MODULE_2___default().hooks.enter(function () {});
 });
 
 /***/ }),
