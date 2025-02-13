@@ -5,25 +5,7 @@ import "swiper/css";
 import 'swiper/css/pagination';
 
 
-(function () {
-	// const seoThumbs = new Swiper(".specialists-thumbs", {
-	// 	spaceBetween: 0,
-	// 	slidesPerView: 10,
-	// 	freeMode: true,
-	// 	watchSlidesProgress: true,
-
-	// 	breakpoints: {
-	// 		320: {
-	// 			slidesPerView: 5,
-	// 		},
-	// 		768: {
-	// 			slidesPerView: 7,
-	// 		},
-	// 		1024: {
-	// 			slidesPerView: 10,
-	// 		},
-	// 	},
-	// });
+export function seoSliders() {
 	const seoSwipers = document.querySelectorAll('.seo__slider')
 
 	if (!seoSwipers.length) return;
@@ -57,4 +39,4 @@ import 'swiper/css/pagination';
 		});
 	})
 
-})()
+}

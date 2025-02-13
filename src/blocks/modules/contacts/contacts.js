@@ -1,5 +1,5 @@
 
-function setMap() {
+export function setMap() {
 	let mapContainers = document.querySelectorAll(".map");
 
 	if (mapContainers.length === 0) return;
@@ -86,12 +86,12 @@ function setMap() {
 	}
 }
 
-async function loadScript(src, func = false) {
+export async function loadScript(src, func = false) {
 	const script = document.createElement("script");
 	script.src = src;
 	document.body.append(script);
 	if (func) script.onload = () => func();
 }
 document.addEventListener('DOMContentLoaded', function () {
-	loadScript(window.location.protocol + "//api-maps.yandex.ru/2.1.79/?lang=ru_RU", setMap);
+	// loadScript(window.location.protocol + "//api-maps.yandex.ru/2.1.79/?lang=ru_RU", setMap);
 })

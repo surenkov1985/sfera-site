@@ -5,7 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-(function () {
+export function projectsSlider() {
 	const projects = document.querySelector(".projects__slider");
 
 	if (!projects) return;
@@ -39,4 +39,4 @@ import "swiper/css/pagination";
 			},
 		},
 	});
-})();
+}

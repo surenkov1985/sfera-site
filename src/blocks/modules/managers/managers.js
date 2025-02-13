@@ -6,7 +6,7 @@ import "swiper/css";
 import 'swiper/css/pagination';
 
 
-(function () {
+export function managersSlider() {
 	const managers = document.querySelector('.managers__slider')
 
 	if (!managers) return;
@@ -41,4 +41,4 @@ import 'swiper/css/pagination';
 			},
 		}
 	})
-})()
+}

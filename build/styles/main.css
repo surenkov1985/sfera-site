@@ -1460,7 +1460,7 @@ ul {
   color: #4988D1;
 }
 
-.head__menu_item .caret:hover + .head__submenu {
+.head__menu_item:hover > .head__submenu {
   visibility: visible;
   opacity: 1;
 }
@@ -1534,7 +1534,7 @@ ul {
   color: #4988D1;
 }
 
-.head__services_item .caret:hover + .head__submenu {
+.head__services_item:hover > .head__submenu {
   visibility: visible;
   opacity: 1;
 }
@@ -1561,7 +1561,7 @@ ul {
 }
 
 .page-overlays path:nth-of-type(1) {
-  fill: #FFFFFF;
+  fill: #E5F8FF;
 }
 
 .menu_link {
@@ -4303,6 +4303,12 @@ ul {
   margin-bottom: 2.5rem;
 }
 
+.programm__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .programm__item {
   border: 1px solid #E6E6E6;
   border-radius: 20px;
@@ -4328,12 +4334,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: clamp(1.25rem, 1.11rem + 0.5333vw, 1.75rem);
+  font-size: clamp(1.125rem, 1.1rem + 0.4vw, 1.75rem);
   font-weight: 600;
   line-height: 1.2142857143;
   margin-bottom: 20px;
   position: relative;
   cursor: pointer;
+  gap: 1rem;
   transition: all 0.3s;
 }
 
@@ -4362,7 +4369,8 @@ ul {
 
 .programm__item_tags {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 }
 
 .programm__item_tag {
@@ -4401,6 +4409,7 @@ ul {
   transition: all 0.3s;
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
 }
 
 .accordion_title .icon svg {
@@ -6919,6 +6928,18 @@ ul {
     margin-bottom: 110px;
   }
 
+  .programm__list {
+    gap: 24px;
+  }
+
+  .programm__item_top {
+    padding: 24px 32px 24px 96px;
+  }
+
+  .programm__item_content {
+    padding: 24px 32px 64px 96px;
+  }
+
   .buy::after {
     width: 760px;
   }
@@ -8172,6 +8193,25 @@ ul {
     margin-top: 100px;
   }
 
+  .programm__item_top {
+    padding: 24px 24px 24px 72px;
+  }
+
+  .programm__item_content {
+    padding: 24px 24px 48px 72px;
+  }
+
+  .programm__item_title::before {
+    right: calc(100% + 20px);
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .programm__item_title {
+    align-items: flex-start;
+  }
+
   .buy::after {
     width: 600px;
     bottom: 0;
@@ -8729,6 +8769,18 @@ ul {
 
   .sample__docks .swiper-pagination {
     margin-top: 40px;
+  }
+
+  .programm__item_top {
+    padding: 24px 16px 16px 16px;
+  }
+
+  .programm__item_content {
+    padding: 24px 16px 32px 16px;
+  }
+
+  .programm__item_title::before {
+    display: none;
   }
 
   .buy::after {

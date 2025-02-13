@@ -9801,6 +9801,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"jquery@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "jquery@npm:3.7.1"
+  checksum: 10c0/808cfbfb758438560224bf26e17fcd5afc7419170230c810dd11f5c1792e2263e2970cca8d659eb84fcd9acc301edb6d310096e450277d54be4f57071b0c82d9
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -14033,6 +14040,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     imagemin-pngquant: "npm:^9.0.0"
     imagemin-webp: "npm:^6.0.0"
     imagemin-zopfli: "npm:^7.0.0"
+    jquery: "npm:^3.7.1"
     lenis: "npm:^1.1.20"
     lint-staged: "npm:^12.3.5"
     postcss: "npm:^8.4.8"

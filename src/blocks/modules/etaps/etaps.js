@@ -5,7 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-(function () {
+export function etapsSlider() {
 	const etaps = document.querySelector(".etaps__slider");
 
 	if (!etaps) return;
@@ -37,4 +37,4 @@ import "swiper/css/pagination";
 			},
 		},
 	});
-})();
+}

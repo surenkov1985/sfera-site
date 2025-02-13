@@ -6,7 +6,7 @@ import "swiper/css";
 import 'swiper/css/pagination';
 
 
-(function () {
+export function newsSlider() {
 	const news = document.querySelector('.news__slider')
 
 	if (!news) return;
@@ -38,4 +38,4 @@ import 'swiper/css/pagination';
 			},
 		}
 	})
-})()
+}

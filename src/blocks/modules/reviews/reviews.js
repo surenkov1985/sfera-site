@@ -5,7 +5,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import "swiper/css";
 import 'swiper/css/pagination';
 
-(function () {
+export function reviewsSlider() {
 
 	const reviews = document.querySelector('.reviews__slider .swiper')
 
@@ -48,4 +48,4 @@ import 'swiper/css/pagination';
 			}
 		}
 	})
-})()
+}

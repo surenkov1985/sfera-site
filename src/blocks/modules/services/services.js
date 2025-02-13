@@ -43,7 +43,7 @@ import "swiper/css";
 import 'swiper/css/pagination';
 
 
-(function () {
+export function serviceSliders() {
 	const services = document.querySelector('.services__slider')
 
 	if (!services) return;
@@ -75,4 +75,4 @@ import 'swiper/css/pagination';
 			},
 		}
 	})
-})()
+}

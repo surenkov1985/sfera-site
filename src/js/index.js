@@ -4,6 +4,20 @@ import barba from '@barba/core/';
 import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
 import { gsap } from "gsap";
+import { docksSlider } from "../blocks/modules/docks/docks";
+import { initCounters } from "../blocks/modules/cart/cart";
+import { loadScript, setMap } from "../blocks/modules/contacts/contacts";
+import { etapsSlider } from "../blocks/modules/etaps/etaps";
+import { firstSliders } from "../blocks/modules/first_index/first_index";
+import { managersSlider } from "../blocks/modules/managers/managers";
+import { newsSlider } from "../blocks/modules/news/news";
+import { projectsSlider } from "../blocks/modules/projects/projects";
+import { reviewsSlider } from "../blocks/modules/reviews/reviews";
+import { sampleSlider } from "../blocks/modules/sample/sample";
+import { seoSliders } from "../blocks/modules/seo_section/seo_section";
+import { serviceSliders } from "../blocks/modules/services/services";
+import { gallerySliders, whoSliders } from "../blocks/modules/workers/workers";
+import { closeMobile } from "../blocks/modules/mobile/mobile";
 
 const ease = {
 	exponentialIn: (t) => {
@@ -120,7 +134,26 @@ class PageOverlays {
 	}
 }
 
+function initScripts() {
+	docksSlider()
+	initCounters()
+	setMap()
+	etapsSlider()
+	firstSliders()
+	managersSlider()
+	newsSlider()
+	projectsSlider()
+	reviewsSlider()
+	sampleSlider()
+	seoSliders()
+	serviceSliders()
+	whoSliders()
+	gallerySliders()
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+	loadScript(window.location.protocol + "//api-maps.yandex.ru/2.1.79/?lang=ru_RU", setMap);
+	initScripts()
 
 	const numberLabels = document.querySelectorAll('.label_number');
 	const tl = gsap.timeline();
@@ -161,54 +194,54 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 		prevent: (node) => node.closest(".mobile") || window.getComputedStyle(node).overflow === "auto" || window.getComputedStyle(node).overflow === "scroll" || node.closest(".fancybox__container"),
 	})
+
+	let scrollX = 0
+	let scrollY = 0
+
 	barba.init({
+		preventRunning: true,
 		transitions: [{
 			name: 'opacity-transition',
 			async leave(data) {
+
+				if (data.trigger === 'back' || data.trigger === 'popstate') {
+					scrollX = barba.history.previous.scroll.x;
+					scrollY = barba.history.previous.scroll.y;
+				} else {
+					scrollX = 0
+					scrollY = 0
+				}
 				pageOverlay.toggle()
 				await tl.to(data.current.container, {
 					opacity: 1, duration: 0.6
-
 				});
 
 			},
 			async enter(data) {
+
+
 				await tl.from(data.next.container, {
 					opacity: 1, duration: 0
-					// setTimeout(() => {
-					// 
-					// }, 1000)
-
 				});
 				pageOverlay.toggle()
+
 			}
 		}]
 	})
+	barba.hooks.beforeEnter(({ current, next }) => {
+		initScripts()
+		if (document.querySelector('.mobile').classList.contains('show')) {
+			const burgerBtn = document.querySelector('.btn_burger.active')
+			document.querySelector('.mobile').style.opacity = 0
+			document.querySelector('.shape-overlays').style.opacity = 0
+			closeMobile(burgerBtn)
+		};
+
+	});
+
+	barba.hooks.enter(() => {
+
+		window.scrollTo(scrollX, scrollY);
+	});
 })
 
-
-
-// (function () {
-// 	const elmHamburger = document.querySelector('.hamburger');
-// 	const gNavItems = document.querySelectorAll('.global-menu__item');
-// 	const elmOverlay = document.querySelector('.shape-overlays');
-// 	const overlay = new ShapeOverlays(elmOverlay);
-
-// 	elmHamburger.addEventListener('click', () => {
-// 		if (overlay.isAnimating) {
-// 			return false;
-// 		}
-// 		overlay.toggle();
-// 		if (overlay.isOpened === true) {
-// 			elmHamburger.classList.add('is-opened-navi');
-// 			for (var i = 0; i < gNavItems.length; i++) {
-// 				gNavItems[i].classList.add('is-opened');
-// 			}
-// 		} else {
-// 			elmHamburger.classList.remove('is-opened-navi');
-// 			for (var i = 0; i < gNavItems.length; i++) {
-// 				gNavItems[i].classList.remove('is-opened');
-// 			}
-// 		}
-// 	});
-// }());

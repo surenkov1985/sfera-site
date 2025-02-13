@@ -22,6 +22,13 @@
 	}
 
 	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+
+		@media screen and (max-width:1200px) {
+			gap: 24px;
+		}
 	}
 
 	&__item {
@@ -30,10 +37,34 @@
 
 		&_top {
 			padding: 32px 33px 33px 104px;
+
+			@media screen and (max-width:1200px) {
+				padding: 24px 32px 24px 96px;
+			}
+
+			@media screen and (max-width:768px) {
+				padding: 24px 24px 24px 72px;
+			}
+
+			@media screen and (max-width:576px) {
+				padding: 24px 16px 16px 16px;
+			}
 		}
 
 		&_content {
 			padding: 33px 33px 70px 104px;
+
+			@media screen and (max-width:1200px) {
+				padding: 24px 32px 64px 96px;
+			}
+
+			@media screen and (max-width:768px) {
+				padding: 24px 24px 48px 72px;
+			}
+
+			@media screen and (max-width:576px) {
+				padding: 24px 16px 32px 16px;
+			}
 
 			& p {
 				font-weight: 400;
@@ -48,12 +79,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			font-size: clamp(1.25rem, 1.11rem + 0.5333vw, 1.75rem);
+			font-size: clamp(1.125rem, 1.1rem + 0.4vw, 1.75rem);
 			font-weight: 600;
 			line-height: calc(34 / 28);
 			margin-bottom: 20px;
 			position: relative;
 			cursor: pointer;
+			gap: 1rem;
 
 			transition: all 0.3s;
 
@@ -74,6 +106,22 @@
 				background: $clrGray;
 				position: absolute;
 				right: calc(100% + 40px);
+
+				@media screen and (max-width:768px) {
+					right: calc(100% + 20px);
+					width: 36px;
+					height: 36px;
+					font-size: 16px;
+
+				}
+
+				@media screen and (max-width:576px) {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width:768px) {
+				align-items: flex-start;
 			}
 		}
 
@@ -83,7 +131,8 @@
 
 		&_tags {
 			display: flex;
-			gap: 1rem;
+			flex-wrap: wrap;
+			gap: 0.5rem 1rem;
 		}
 
 		&_tag {
@@ -140,6 +189,7 @@
 			transition: all .3s;
 			width: 24px;
 			height: 24px;
+			flex-shrink: 0;
 
 			& svg {
 				width: 100%;

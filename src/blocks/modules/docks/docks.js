@@ -10,7 +10,7 @@ import "swiper/css";
 import 'swiper/css/pagination';
 
 
-(function () {
+export function docksSlider() {
 	const docks = document.querySelector('.docks__slider')
 
 	if (!docks) return;
@@ -48,7 +48,7 @@ import 'swiper/css/pagination';
 			},
 		}
 	})
-})()
+}
 
 Fancybox.bind("[data-fancybox]", {
 	// Your custom options

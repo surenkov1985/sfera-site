@@ -1,6 +1,6 @@
 const menuSelectors = document.querySelectorAll(".aside__nav_link");
 const header = document.querySelector(".head.fixed");
-(function clickAnchors() {
+export function clickAnchors() {
 	on("click", 'a[href^="#"]', function (e) {
 		e.preventDefault();
 		const element = document.getElementById(this.getAttribute("href").substr(1));
@@ -17,7 +17,7 @@ const header = document.querySelector(".head.fixed");
 			behavior: "smooth",
 		});
 	});
-})();
+}
 
 document.addEventListener("scroll", function () {
 	onScroll();
@@ -32,14 +32,16 @@ function onScroll() {
 
 		const target = document.querySelector(hash);
 
-		link.classList.remove("active");
-		if (
-			target.getBoundingClientRect().top <= header.getBoundingClientRect().height &&
-			target.getBoundingClientRect().bottom >= header.getBoundingClientRect().height
-		) {
-			link.classList.add("active");
-		} else {
-			// link.classList.remove("active");
+		if (target) {
+			link.classList.remove("active");
+			if (
+				target.getBoundingClientRect().top <= header.getBoundingClientRect().height &&
+				target.getBoundingClientRect().bottom >= header.getBoundingClientRect().height
+			) {
+				link.classList.add("active");
+			} else {
+				// link.classList.remove("active");
+			}
 		}
 	});
 }
@@ -94,6 +96,11 @@ function on(event, object, func = function () { }) {
 				popup.classList.remove("show");
 			}
 		}
+
+		if (!!e.target.closest('a')) {
+			if (e.target.closest('a').href === this.location.href) e.preventDefault()
+		}
+
 	});
 })();
 
@@ -104,7 +111,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-(function () {
+export function whoSliders() {
 	const who = document.querySelectorAll(".who");
 
 	if (!who.length) return;
@@ -142,9 +149,9 @@ import "swiper/css/pagination";
 		});
 	})
 
-})();
+}
 
-(function () {
+export function gallerySliders() {
 	const gallery = document.querySelectorAll(".gallery");
 
 	if (!gallery.length) return;
@@ -182,4 +189,4 @@ import "swiper/css/pagination";
 		});
 	})
 
-})();
+}

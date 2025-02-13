@@ -4,13 +4,7 @@ import { Pagination } from 'swiper/modules';
 import "swiper/css";
 import 'swiper/css/pagination';
 
-// console.log(Swiper);
-
-// const firstSlider = new Swiper(".first_slider", {
-// 	speed: 500,
-// });
-
-(function hallsSliders() {
+export function firstSliders() {
 	const hallSlider = document.querySelector(".first_slider");
 	const hallDescSlider = document.querySelector(".halls__slider_desc");
 	const smSlider = document.querySelector(".first_slider_aside");
@@ -49,34 +43,6 @@ import 'swiper/css/pagination';
 	const titleList = gallery.querySelectorAll("[data-title]");
 	const textList = gallery.querySelectorAll("[data-text]");
 	const btnList = gallery.querySelectorAll(".halls__slide_link");
-
-	// function textToggle() {
-	// 	if (!titleList.length && !textList.length && !btnList.length) return;
-
-	// 	const tl = gsap.timeline({
-	// 		paused: true,
-	// 		onComplete: () => {
-	// 			animate = false;
-	// 		},
-	// 	});
-	// 	textSlides.forEach((ts) => {
-	// 		ts.classList.remove("active");
-	// 	});
-	// 	textSlides[activeIndex].classList.add("active");
-	// 	const currentTitle = textSlides[activeIndex].querySelector("[data-title]");
-	// 	const currentText = textSlides[activeIndex].querySelector("[data-text]");
-	// 	const currentBtn = textSlides[activeIndex].querySelector(".halls__slide_link");
-
-	// 	animate = true;
-
-	// 	tl.to([...titleList, ...textList, ...btnList], { opacity: 0, stagger: 0, duration: 0.2 }).fromTo(
-	// 		[currentTitle, currentText, currentBtn],
-	// 		{ opacity: 0, y: 16 },
-	// 		{ opacity: 1, y: 0, stagger: 0.1, duration: 0.5 }
-	// 	);
-
-	// 	tl.play();
-	// }
 
 	function progress(slider) {
 		if (slider.slides.length) {
@@ -260,8 +226,6 @@ import 'swiper/css/pagination';
 	}
 	slidersSide[0].init();
 	slidersSide[1].init();
-	// console.log(mainSliderNode, sliderSide);
-
 
 	prev.forEach(item => {
 		item.addEventListener("click", () => {
@@ -275,11 +239,7 @@ import 'swiper/css/pagination';
 		});
 	})
 
-	// next.addEventListener("click", () => {
-	// 	slideChange("next");
-	// });
-
 	sliderMain.init();
 
 	return { sliderMain, sliderSide };
-})();
+}

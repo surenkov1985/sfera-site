@@ -8,12 +8,12 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
-(function () {
+export function sampleSlider() {
 	const sample = document.querySelector(".sample__docks_slider");
 
 	if (!sample) return;
 
-	const sampleSlider = new Swiper(sample, {
+	const slider = new Swiper(sample, {
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		loop: true,
@@ -47,7 +47,7 @@ import "swiper/css/pagination";
 			},
 		},
 	});
-})();
+}
 
 Fancybox.bind("[data-fancybox]", {
 	// Your custom options
