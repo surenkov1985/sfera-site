@@ -2,36 +2,43 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Корзина</title>
-    <meta name="theme-color" content="#fff">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="/img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="16x16" href="/img/favicons/favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="/img/favicons/favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon-precomposed" href="/img/favicons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/img/favicons/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="/img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="/styles/main.min.css">
-    <meta name="robots" content="noindex,nofollow">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Корзина</title>
+	<meta name="theme-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" href="/img/favicons/favicon.ico" type="image/x-icon">
+	<link rel="icon" sizes="16x16" href="/img/favicons/favicon-16x16.png" type="image/png">
+	<link rel="icon" sizes="32x32" href="/img/favicons/favicon-32x32.png" type="image/png">
+	<link rel="apple-touch-icon-precomposed" href="/img/favicons/apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/img/favicons/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="/img/favicons/apple-touch-icon-1024x1024.png">
+	<link rel="stylesheet" href="/styles/main.min.css">
+	<meta name="robots" content="noindex,nofollow">
 </head>
 
 <body>
-    <div id="wrapper" class="wrapper">
-        <header class="head">
+
+
+	<svg class="page-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path class="shape-overlays__path"></path>
+		<!-- <path class="shape-overlays__path"></path>
+	<path class="shape-overlays__path"></path> -->
+	</svg>
+	<div id="wrapper" class="wrapper" data-barba="wrapper">
+		<header class="head">
 	<div class="container">
 		<div class="head__top">
 			<div class="head__top_contacts">
@@ -141,7 +148,7 @@
 										fill="currentColor" />
 								</svg>
 							</span>
-							<ul class="head__submenu" style="left: 0; right: auto;">
+							<ul class="head__submenu" style="left: -20px; right: auto;">
 								<li class="head__submenu_item">
 									<a class="link menu_link" href="/pages/university/university_detail/">Корп. университет
 										детальная</a>
@@ -154,68 +161,11 @@
 						</li>
 						<li class="head__menu_item">
 							<a class="link menu_link" href="/pages/grade/">Оценка персонала</a>
-							<!-- <span class="caret">
-								<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M12.5194 6.35378L7.8319 11.3538C7.78837 11.4003 7.73667 11.4372 7.67976 11.4623C7.62286 11.4875 7.56186 11.5004 7.50026 11.5004C7.43866 11.5004 7.37766 11.4875 7.32076 11.4623C7.26385 11.4372 7.21215 11.4003 7.16862 11.3538L2.48112 6.35378C2.39316 6.25996 2.34375 6.13272 2.34375 6.00003C2.34375 5.86735 2.39316 5.7401 2.48112 5.64628C2.56908 5.55246 2.68837 5.49976 2.81276 5.49976C2.93715 5.49976 3.05644 5.55246 3.1444 5.64628L7.50026 10.2932L11.8561 5.64628C11.8997 5.59983 11.9514 5.56298 12.0083 5.53784C12.0652 5.5127 12.1262 5.49976 12.1878 5.49976C12.2494 5.49976 12.3103 5.5127 12.3672 5.53784C12.4241 5.56298 12.4759 5.59983 12.5194 5.64628C12.563 5.69274 12.5975 5.74789 12.6211 5.80859C12.6446 5.86928 12.6568 5.93434 12.6568 6.00003C12.6568 6.06573 12.6446 6.13079 12.6211 6.19148C12.5975 6.25218 12.563 6.30733 12.5194 6.35378Z"
-										fill="currentColor" />
-								</svg>
-							</span> -->
-							<!-- <ul class="head__submenu" style="left: 0; right: auto;">
-								<li class="head__submenu_item max768">
-									<a class="link menu_link" href="#">Проекты</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Новости</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Контакты</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Платформа обучения</a>
-								</li>
-							</ul> -->
 						</li>
-						<!-- <li class="head__menu_item">
-							<a class="link menu_link" href="/pages/about/">О нас</a>
-							<span class="caret">
-								<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M12.5194 6.35378L7.8319 11.3538C7.78837 11.4003 7.73667 11.4372 7.67976 11.4623C7.62286 11.4875 7.56186 11.5004 7.50026 11.5004C7.43866 11.5004 7.37766 11.4875 7.32076 11.4623C7.26385 11.4372 7.21215 11.4003 7.16862 11.3538L2.48112 6.35378C2.39316 6.25996 2.34375 6.13272 2.34375 6.00003C2.34375 5.86735 2.39316 5.7401 2.48112 5.64628C2.56908 5.55246 2.68837 5.49976 2.81276 5.49976C2.93715 5.49976 3.05644 5.55246 3.1444 5.64628L7.50026 10.2932L11.8561 5.64628C11.8997 5.59983 11.9514 5.56298 12.0083 5.53784C12.0652 5.5127 12.1262 5.49976 12.1878 5.49976C12.2494 5.49976 12.3103 5.5127 12.3672 5.53784C12.4241 5.56298 12.4759 5.59983 12.5194 5.64628C12.563 5.69274 12.5975 5.74789 12.6211 5.80859C12.6446 5.86928 12.6568 5.93434 12.6568 6.00003C12.6568 6.06573 12.6446 6.13079 12.6211 6.19148C12.5975 6.25218 12.563 6.30733 12.5194 6.35378Z"
-										fill="currentColor" />
-								</svg>
-							</span>
-							<ul class="head__submenu" style="left: 0; right: auto;">
-								<li class="head__submenu_item max768">
-									<a class="link menu_link" href="/pages/projects/">Проекты</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Новости</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Контакты</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Платформа обучения</a>
-								</li>
-							</ul>
-						</li> -->
-						<!-- <li class="head__menu_item min768">
-							<a class="link menu_link" href="/pages/projects/">Проекты</a>
-
-						</li> -->
 						<li class="head__menu_item min1200">
 							<a class="link menu_link" href="#">Аутсорсинг охраны труда</a>
 
 						</li>
-
-						<!-- <li class="head__menu_item min1200">
-							<a class="link menu_link" href="#">Новости</a>
-						</li>
-						<li class="head__menu_item min1200">
-							<a class="link menu_link" href="#">Контакты</a>
-
-						</li> -->
 						<li class="head__menu_item max1200">
 							<button class="link menu_link dots">
 								<svg width="28" height="4" viewBox="0 0 28 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +174,7 @@
 									<circle cx="26" cy="2" r="2" fill="currentColor" />
 								</svg>
 							</button>
-							<ul class="head__submenu">
+							<ul class="head__submenu" style="right: -20px; left: auto;">
 								<li class="head__submenu_item">
 									<a class="link menu_link" href="#">Аутсорсинг охраны труда</a>
 
@@ -263,7 +213,7 @@
 								fill="currentColor" />
 						</svg>
 					</span>
-					<ul class="head__submenu" style="left: 0; right: auto;">
+					<ul class="head__submenu" style="left: -20px; right: auto;">
 						<li class="head__submenu_item max768">
 							<a class="link menu_link" href="/pages/projects/">Проекты</a>
 						</li>
@@ -287,7 +237,7 @@
 								fill="currentColor" />
 						</svg>
 					</span>
-					<ul class="head__submenu">
+					<ul class="head__submenu" style="left: -20px; right: auto;">
 						<li class="head__submenu_item">
 							<a class="link menu_link" target="_blank" href="https://t.me">Telegram</a>
 						</li>
@@ -312,7 +262,7 @@
 								fill="currentColor" />
 						</svg>
 					</span>
-					<ul class="head__submenu">
+					<ul class="head__submenu" style="left: -20px; right: auto;">
 						<li class="head__submenu_item max768">
 							<a class="link menu_link" href="/pages/solutions/solutions_detail/">Комплексные решения
 								детальная</a>
@@ -341,7 +291,7 @@
 		</div>
 	</div>
 </header>
-        <header class="head fixed">
+		<header class="head fixed">
 	<div class="container">
 		<div class="head__navigation">
 			<div class="head__navigation_btn btn btn_primary btn_services">
@@ -497,9 +447,9 @@
 		</div>
 	</div>
 </header>
-        <div class="obs-target"></div>
-        <main class="main">
-            <div class="first">
+		<div class="obs-target"></div>
+		<main class="main" data-barba="container" data-barba-namespace="home">
+			<div class="first">
 	<div class="container">
 		<div class="breadcrumbs">
 	<ul class="breadcrumbs__list">
@@ -519,7 +469,7 @@
 		</div>
 	</div>
 </div>
-            <div class="cart">
+			<div class="cart">
 	<div class="container">
 		<form class="cart__form">
 			<!-- <div class="cart__form_top">
@@ -758,13 +708,14 @@
 							</div>
 						</div>
 						<div class="cart__total_bottom">
-							<button class="btn btn_small btn_trans" type="button">
-								<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<button class="btn btn_trans popup_open" type="button">
+								<!-- <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M6.75 10.25C6.75 10.0511 6.82902 9.86032 6.96967 9.71967C7.11032 9.57902 7.30109 9.5 7.5 9.5H16.5C16.6989 9.5 16.8897 9.57902 17.0303 9.71967C17.171 9.86032 17.25 10.0511 17.25 10.25C17.25 10.4489 17.171 10.6397 17.0303 10.7803C16.8897 10.921 16.6989 11 16.5 11H7.5C7.30109 11 7.11032 10.921 6.96967 10.7803C6.82902 10.6397 6.75 10.4489 6.75 10.25ZM7.5 14H16.5C16.6989 14 16.8897 13.921 17.0303 13.7803C17.171 13.6397 17.25 13.4489 17.25 13.25C17.25 13.0511 17.171 12.8603 17.0303 12.7197C16.8897 12.579 16.6989 12.5 16.5 12.5H7.5C7.30109 12.5 7.11032 12.579 6.96967 12.7197C6.82902 12.8603 6.75 13.0511 6.75 13.25C6.75 13.4489 6.82902 13.6397 6.96967 13.7803C7.11032 13.921 7.30109 14 7.5 14ZM21.75 5.75V20C21.7499 20.1278 21.7172 20.2535 21.6549 20.3651C21.5926 20.4768 21.5028 20.5706 21.394 20.6378C21.2853 20.7049 21.1611 20.7432 21.0334 20.7489C20.9057 20.7546 20.7787 20.7275 20.6644 20.6703L18 19.3381L15.3356 20.6703C15.2314 20.7225 15.1165 20.7496 15 20.7496C14.8835 20.7496 14.7686 20.7225 14.6644 20.6703L12 19.3381L9.33563 20.6703C9.23143 20.7225 9.11652 20.7496 9 20.7496C8.88348 20.7496 8.76857 20.7225 8.66437 20.6703L6 19.3381L3.33563 20.6703C3.22131 20.7275 3.09427 20.7546 2.96657 20.7489C2.83887 20.7432 2.71474 20.7049 2.60597 20.6378C2.49721 20.5706 2.40741 20.4768 2.34511 20.3651C2.28281 20.2535 2.25007 20.1278 2.25 20V5.75C2.25 5.35218 2.40804 4.97064 2.68934 4.68934C2.97064 4.40804 3.35218 4.25 3.75 4.25H20.25C20.6478 4.25 21.0294 4.40804 21.3107 4.68934C21.592 4.97064 21.75 5.35218 21.75 5.75ZM20.25 5.75H3.75V18.7869L5.66437 17.8287C5.76857 17.7766 5.88349 17.7495 6 17.7495C6.11651 17.7495 6.23143 17.7766 6.33563 17.8287L9 19.1619L11.6644 17.8287C11.7686 17.7766 11.8835 17.7495 12 17.7495C12.1165 17.7495 12.2314 17.7766 12.3356 17.8287L15 19.1619L17.6644 17.8287C17.7686 17.7766 17.8835 17.7495 18 17.7495C18.1165 17.7495 18.2314 17.7766 18.3356 17.8287L20.25 18.7869V5.75Z"
 										fill="#4988D1" />
 								</svg>
-								Запросить счёт на оплату
+								Запросить счёт на оплату -->
+								Консультация
 							</button>
 							<div class="to_installment">
 								<label class="label_checkbox label_checkbox_white">
@@ -787,7 +738,15 @@
 
 					</div>
 					<div class="cart__form_submit">
-						<input type="submit" class="btn btn_primary" value="Оформить заказ">
+						<input type="submit" class="btn btn_pink" value="Купить">
+						<button type="button" class="btn btn_primary">
+							<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M6.75 10.25C6.75 10.0511 6.82902 9.86032 6.96967 9.71967C7.11032 9.57902 7.30109 9.5 7.5 9.5H16.5C16.6989 9.5 16.8897 9.57902 17.0303 9.71967C17.171 9.86032 17.25 10.0511 17.25 10.25C17.25 10.4489 17.171 10.6397 17.0303 10.7803C16.8897 10.921 16.6989 11 16.5 11H7.5C7.30109 11 7.11032 10.921 6.96967 10.7803C6.82902 10.6397 6.75 10.4489 6.75 10.25ZM7.5 14H16.5C16.6989 14 16.8897 13.921 17.0303 13.7803C17.171 13.6397 17.25 13.4489 17.25 13.25C17.25 13.0511 17.171 12.8603 17.0303 12.7197C16.8897 12.579 16.6989 12.5 16.5 12.5H7.5C7.30109 12.5 7.11032 12.579 6.96967 12.7197C6.82902 12.8603 6.75 13.0511 6.75 13.25C6.75 13.4489 6.82902 13.6397 6.96967 13.7803C7.11032 13.921 7.30109 14 7.5 14ZM21.75 5.75V20C21.7499 20.1278 21.7172 20.2535 21.6549 20.3651C21.5926 20.4768 21.5028 20.5706 21.394 20.6378C21.2853 20.7049 21.1611 20.7432 21.0334 20.7489C20.9057 20.7546 20.7787 20.7275 20.6644 20.6703L18 19.3381L15.3356 20.6703C15.2314 20.7225 15.1165 20.7496 15 20.7496C14.8835 20.7496 14.7686 20.7225 14.6644 20.6703L12 19.3381L9.33563 20.6703C9.23143 20.7225 9.11652 20.7496 9 20.7496C8.88348 20.7496 8.76857 20.7225 8.66437 20.6703L6 19.3381L3.33563 20.6703C3.22131 20.7275 3.09427 20.7546 2.96657 20.7489C2.83887 20.7432 2.71474 20.7049 2.60597 20.6378C2.49721 20.5706 2.40741 20.4768 2.34511 20.3651C2.28281 20.2535 2.25007 20.1278 2.25 20V5.75C2.25 5.35218 2.40804 4.97064 2.68934 4.68934C2.97064 4.40804 3.35218 4.25 3.75 4.25H20.25C20.6478 4.25 21.0294 4.40804 21.3107 4.68934C21.592 4.97064 21.75 5.35218 21.75 5.75ZM20.25 5.75H3.75V18.7869L5.66437 17.8287C5.76857 17.7766 5.88349 17.7495 6 17.7495C6.11651 17.7495 6.23143 17.7766 6.33563 17.8287L9 19.1619L11.6644 17.8287C11.7686 17.7766 11.8835 17.7495 12 17.7495C12.1165 17.7495 12.2314 17.7766 12.3356 17.8287L15 19.1619L17.6644 17.8287C17.7686 17.7766 17.8835 17.7495 18 17.7495C18.1165 17.7495 18.2314 17.7766 18.3356 17.8287L20.25 18.7869V5.75Z"
+									fill="currentColor" />
+							</svg>
+							Запросить счет
+						</button>
 					</div>
 					<div class="agree">
 						<label class="label_checkbox ">
@@ -834,9 +793,9 @@
 	</div>
 </div>
 
-        </main>
+		</main>
 
-        <footer class="foot">
+		<footer class="foot">
 	<div class="container">
 		<div class="foot__cols">
 			<div class="foot__col col-3">
@@ -1065,7 +1024,7 @@
 		</div>
 	</div>
 </div>
-        <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
 	<path class="shape-overlays__path"></path>
 	<!-- <path class="shape-overlays__path"></path>
     <path class="shape-overlays__path"></path> -->
@@ -1211,10 +1170,10 @@
 		</div>
 	</div>
 </div>
-    </div>
+	</div>
 
-    <script src="/js/vendor.min.js"></script>
-    <script src="/js/main.min.js"></script>
+	<script src="/js/vendor.min.js"></script>
+	<script src="/js/main.min.js"></script>
 </body>
 
 </html>

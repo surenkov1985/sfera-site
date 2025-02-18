@@ -30,7 +30,14 @@
 </head>
 
 <body>
-	<div id="wrapper" class="wrapper">
+
+
+	<svg class="page-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path class="shape-overlays__path"></path>
+		<!-- <path class="shape-overlays__path"></path>
+	<path class="shape-overlays__path"></path> -->
+	</svg>
+	<div id="wrapper" class="wrapper" data-barba="wrapper">
 		<header class="head">
 	<div class="container">
 		<div class="head__top">
@@ -141,7 +148,7 @@
 										fill="currentColor" />
 								</svg>
 							</span>
-							<ul class="head__submenu" style="left: 0; right: auto;">
+							<ul class="head__submenu" style="left: -20px; right: auto;">
 								<li class="head__submenu_item">
 									<a class="link menu_link" href="/pages/university/university_detail/">Корп. университет
 										детальная</a>
@@ -154,68 +161,11 @@
 						</li>
 						<li class="head__menu_item">
 							<a class="link menu_link" href="/pages/grade/">Оценка персонала</a>
-							<!-- <span class="caret">
-								<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M12.5194 6.35378L7.8319 11.3538C7.78837 11.4003 7.73667 11.4372 7.67976 11.4623C7.62286 11.4875 7.56186 11.5004 7.50026 11.5004C7.43866 11.5004 7.37766 11.4875 7.32076 11.4623C7.26385 11.4372 7.21215 11.4003 7.16862 11.3538L2.48112 6.35378C2.39316 6.25996 2.34375 6.13272 2.34375 6.00003C2.34375 5.86735 2.39316 5.7401 2.48112 5.64628C2.56908 5.55246 2.68837 5.49976 2.81276 5.49976C2.93715 5.49976 3.05644 5.55246 3.1444 5.64628L7.50026 10.2932L11.8561 5.64628C11.8997 5.59983 11.9514 5.56298 12.0083 5.53784C12.0652 5.5127 12.1262 5.49976 12.1878 5.49976C12.2494 5.49976 12.3103 5.5127 12.3672 5.53784C12.4241 5.56298 12.4759 5.59983 12.5194 5.64628C12.563 5.69274 12.5975 5.74789 12.6211 5.80859C12.6446 5.86928 12.6568 5.93434 12.6568 6.00003C12.6568 6.06573 12.6446 6.13079 12.6211 6.19148C12.5975 6.25218 12.563 6.30733 12.5194 6.35378Z"
-										fill="currentColor" />
-								</svg>
-							</span> -->
-							<!-- <ul class="head__submenu" style="left: 0; right: auto;">
-								<li class="head__submenu_item max768">
-									<a class="link menu_link" href="#">Проекты</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Новости</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Контакты</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Платформа обучения</a>
-								</li>
-							</ul> -->
 						</li>
-						<!-- <li class="head__menu_item">
-							<a class="link menu_link" href="/pages/about/">О нас</a>
-							<span class="caret">
-								<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M12.5194 6.35378L7.8319 11.3538C7.78837 11.4003 7.73667 11.4372 7.67976 11.4623C7.62286 11.4875 7.56186 11.5004 7.50026 11.5004C7.43866 11.5004 7.37766 11.4875 7.32076 11.4623C7.26385 11.4372 7.21215 11.4003 7.16862 11.3538L2.48112 6.35378C2.39316 6.25996 2.34375 6.13272 2.34375 6.00003C2.34375 5.86735 2.39316 5.7401 2.48112 5.64628C2.56908 5.55246 2.68837 5.49976 2.81276 5.49976C2.93715 5.49976 3.05644 5.55246 3.1444 5.64628L7.50026 10.2932L11.8561 5.64628C11.8997 5.59983 11.9514 5.56298 12.0083 5.53784C12.0652 5.5127 12.1262 5.49976 12.1878 5.49976C12.2494 5.49976 12.3103 5.5127 12.3672 5.53784C12.4241 5.56298 12.4759 5.59983 12.5194 5.64628C12.563 5.69274 12.5975 5.74789 12.6211 5.80859C12.6446 5.86928 12.6568 5.93434 12.6568 6.00003C12.6568 6.06573 12.6446 6.13079 12.6211 6.19148C12.5975 6.25218 12.563 6.30733 12.5194 6.35378Z"
-										fill="currentColor" />
-								</svg>
-							</span>
-							<ul class="head__submenu" style="left: 0; right: auto;">
-								<li class="head__submenu_item max768">
-									<a class="link menu_link" href="/pages/projects/">Проекты</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Новости</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Контакты</a>
-								</li>
-								<li class="head__submenu_item">
-									<a class="link menu_link" href="#">Платформа обучения</a>
-								</li>
-							</ul>
-						</li> -->
-						<!-- <li class="head__menu_item min768">
-							<a class="link menu_link" href="/pages/projects/">Проекты</a>
-
-						</li> -->
 						<li class="head__menu_item min1200">
 							<a class="link menu_link" href="#">Аутсорсинг охраны труда</a>
 
 						</li>
-
-						<!-- <li class="head__menu_item min1200">
-							<a class="link menu_link" href="#">Новости</a>
-						</li>
-						<li class="head__menu_item min1200">
-							<a class="link menu_link" href="#">Контакты</a>
-
-						</li> -->
 						<li class="head__menu_item max1200">
 							<button class="link menu_link dots">
 								<svg width="28" height="4" viewBox="0 0 28 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +174,7 @@
 									<circle cx="26" cy="2" r="2" fill="currentColor" />
 								</svg>
 							</button>
-							<ul class="head__submenu">
+							<ul class="head__submenu" style="right: -20px; left: auto;">
 								<li class="head__submenu_item">
 									<a class="link menu_link" href="#">Аутсорсинг охраны труда</a>
 
@@ -263,7 +213,7 @@
 								fill="currentColor" />
 						</svg>
 					</span>
-					<ul class="head__submenu" style="left: 0; right: auto;">
+					<ul class="head__submenu" style="left: -20px; right: auto;">
 						<li class="head__submenu_item max768">
 							<a class="link menu_link" href="/pages/projects/">Проекты</a>
 						</li>
@@ -287,7 +237,7 @@
 								fill="currentColor" />
 						</svg>
 					</span>
-					<ul class="head__submenu">
+					<ul class="head__submenu" style="left: -20px; right: auto;">
 						<li class="head__submenu_item">
 							<a class="link menu_link" target="_blank" href="https://t.me">Telegram</a>
 						</li>
@@ -312,7 +262,7 @@
 								fill="currentColor" />
 						</svg>
 					</span>
-					<ul class="head__submenu">
+					<ul class="head__submenu" style="left: -20px; right: auto;">
 						<li class="head__submenu_item max768">
 							<a class="link menu_link" href="/pages/solutions/solutions_detail/">Комплексные решения
 								детальная</a>
@@ -498,7 +448,7 @@
 	</div>
 </header>
 		<div class="obs-target"></div>
-		<main class="main">
+		<main class="main" data-barba="container" data-barba-namespace="home">
 			<div class="first">
 	<div class="container">
 		<div class="breadcrumbs">
@@ -592,8 +542,7 @@
 						персонала, необходимый компании для реализации долгосрочных целей и совершенствования профессиональных
 						навыков у сотрудников.
 					</p>
-					<br>
-					<br>
+					<h3>Заголовок третьего уровня</h3>
 					<p>КОРПОРАТИВНЫЙ УНИВЕРСИТЕТ НА АУТСОРСИНГЕ - это полный комплекс услуг учебного центра для всего
 						персонала компании Заказчика на основе годового абонентского обслуживания.
 
@@ -618,8 +567,7 @@
 						персонала, необходимый компании для реализации долгосрочных целей и совершенствования профессиональных
 						навыков у сотрудников.
 					</p>
-					<br>
-					<br>
+					<h4>Заголовок 4 уровня</h4>
 					<p>КОРПОРАТИВНЫЙ УНИВЕРСИТЕТ НА АУТСОРСИНГЕ - это полный комплекс услуг учебного центра для всего
 						персонала компании Заказчика на основе годового абонентского обслуживания.
 
@@ -724,6 +672,196 @@
 								</a>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			<section class="gallery pt0 pb0 grid">
+	<div class="container">
+		<div class="news__title">
+			<h2>Фотогалерея</h2>
+			<div class="swiper_navigation ">
+	<button class="swiper_prev" data-prev>
+		<svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M0.213997 8.51452L7.48636 15.7869C7.55392 15.8544 7.63414 15.908 7.72242 15.9446C7.8107 15.9812 7.90532 16 8.00088 16C8.09643 16 8.19105 15.9812 8.27933 15.9446C8.36761 15.908 8.44783 15.8544 8.5154 15.7869C8.58296 15.7193 8.63656 15.6391 8.67313 15.5508C8.70969 15.4625 8.72852 15.3679 8.72852 15.2724C8.72852 15.1768 8.70969 15.0822 8.67313 14.9939C8.63656 14.9056 8.58296 14.8254 8.5154 14.7578L1.75665 8L8.5154 1.24216C8.65185 1.1057 8.72852 0.920622 8.72852 0.72764C8.72852 0.534658 8.65185 0.34958 8.5154 0.213121C8.37894 0.0766618 8.19386 1.43783e-09 8.00088 0C7.80789 -1.43783e-09 7.62281 0.0766618 7.48636 0.213121L0.213997 7.48548C0.14638 7.55302 0.0927401 7.63323 0.0561428 7.72151C0.0195446 7.8098 0.00070858 7.90443 0.00070858 8C0.00070858 8.09557 0.0195446 8.1902 0.0561428 8.27849C0.0927401 8.36677 0.14638 8.44698 0.213997 8.51452Z"
+				fill="currentColor" />
+		</svg>
+	</button>
+	<button class="swiper_next" data-next>
+		<svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M8.51501 8.51452L1.24265 15.7869C1.17508 15.8544 1.09487 15.908 1.00658 15.9446C0.918303 15.9812 0.823684 16 0.728129 16C0.632573 16 0.537954 15.9812 0.449672 15.9446C0.361391 15.908 0.281176 15.8544 0.213609 15.7869C0.146041 15.7193 0.0924436 15.6391 0.0558763 15.5508C0.0193089 15.4625 0.000488281 15.3679 0.000488281 15.2724C0.000488281 15.1768 0.0193089 15.0822 0.0558763 14.9939C0.0924436 14.9056 0.146041 14.8254 0.213609 14.7578L6.97236 8L0.213609 1.24216C0.0771498 1.1057 0.00048828 0.920622 0.000488281 0.72764C0.000488283 0.534658 0.0771498 0.34958 0.213609 0.213121C0.350068 0.0766618 0.535146 1.43783e-09 0.728129 0C0.921111 -1.43783e-09 1.10619 0.0766618 1.24265 0.213121L8.51501 7.48548C8.58262 7.55302 8.63626 7.63323 8.67286 7.72151C8.70946 7.8098 8.7283 7.90443 8.7283 8C8.7283 8.09557 8.70946 8.1902 8.67286 8.27849C8.63626 8.36677 8.58262 8.44698 8.51501 8.51452Z"
+				fill="currentColor" />
+		</svg>
+	</button>
+</div>
+		</div>
+		<div class="news__list gallery__slider swiper" data-desctop-slides="3">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+				<div class="gallery__item" data-fancybox="gallery" data-src="/img/gallery1.png">
+					<img src="/img/gallery1.png" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="gallery__item" data-fancybox="gallery" data-src="/img/gallery2.png">
+					<img src="/img/gallery2.png" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="gallery__item" data-fancybox="gallery" data-src="/img/gallery1.png">
+					<img src="/img/gallery1.png" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="gallery__item" data-fancybox="gallery" data-src="/img/gallery2.png">
+					<img src="/img/gallery2.png" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="gallery__item" data-fancybox="gallery" data-src="/img/gallery1.png">
+					<img src="/img/gallery1.png" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="gallery__item" data-fancybox="gallery" data-src="/img/gallery2.png">
+					<img src="/img/gallery2.png" alt="">
+				</div>
+			</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+			<div class="advs">
+	<div class="container">
+		<div class="advs__list">
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/Briefcase.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Работаем<br>
+						официально
+					</div>
+					<div class="advs__item_text">
+						имеем лицензию Минтруда и аккредитацию по охране труда
+					</div>
+				</div>
+			</div>
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/ListChecks.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Все форматы<br>
+						обучения
+					</div>
+					<div class="advs__item_text">
+						очно, очно-заочно, дистанционно, выездные мероприятия на территории заказчика
+					</div>
+				</div>
+			</div>
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/IdentificationBadge.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Личный куратор<br>
+						проекта
+					</div>
+					<div class="advs__item_text">
+						имеем лицензию Минтруда и аккредитацию по охране труда
+					</div>
+				</div>
+			</div>
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/Briefcase.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Работаем<br>
+						официально
+					</div>
+					<div class="advs__item_text">
+						имеем лицензию Минтруда и аккредитацию по охране труда
+					</div>
+				</div>
+			</div>
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/Briefcase.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Работаем<br>
+						официально
+					</div>
+					<div class="advs__item_text">
+						имеем лицензию Минтруда и аккредитацию по охране труда
+					</div>
+				</div>
+			</div>
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/Briefcase.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Работаем<br>
+						официально
+					</div>
+					<div class="advs__item_text">
+						имеем лицензию Минтруда и аккредитацию по охране труда
+					</div>
+				</div>
+			</div>
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/Briefcase.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Работаем<br>
+						официально
+					</div>
+					<div class="advs__item_text">
+						имеем лицензию Минтруда и аккредитацию по охране труда
+					</div>
+				</div>
+			</div>
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/Briefcase.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Работаем<br>
+						официально
+					</div>
+					<div class="advs__item_text">
+						имеем лицензию Минтруда и аккредитацию по охране труда
+					</div>
+				</div>
+			</div>
+			<div class="advs__item">
+				<div class="advs__item_icon">
+					<img src="/img/sprites/Briefcase.svg" alt="">
+				</div>
+				<div class="advs__item_content">
+					<div class="advs__item_title">
+						Работаем<br>
+						официально
+					</div>
+					<div class="advs__item_text">
+						имеем лицензию Минтруда и аккредитацию по охране труда
 					</div>
 				</div>
 			</div>
