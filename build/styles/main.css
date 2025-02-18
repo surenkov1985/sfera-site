@@ -2941,6 +2941,12 @@ ul {
   aspect-ratio: 434/424;
 }
 
+.news.grid.gallery .news__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
+}
+
 .news__title {
   display: flex;
   justify-content: space-between;
