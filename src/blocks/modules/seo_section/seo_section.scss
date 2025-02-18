@@ -122,36 +122,84 @@
 			margin-top: auto;
 			display: flex;
 			flex-direction: column;
-			gap: 10px;
+			gap: 1px;
 
 			@media screen and (max-width: 768px) {
-				transform: rotate(-90deg);
-		}
+				// transform: rotate(-90deg);
+				flex-direction: row;
+			}
 
 			& .next_btn {
-				width: 50px;
-				color: $clrDark;
-				transition: all 0.2s;
+				// width: 50px;
+				// color: $clrDark;
+				// transition: all 0.2s;
+				// cursor: pointer;
+
+				// &:hover {
+				// 	color: $clrPink;
+				// }
+				background: #E7E7E7;
+				border-radius: 0 0 50% 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 60px;
+				height: 54px;
 				cursor: pointer;
+				transition: all 0.3s;
 
 				&:hover {
-					color: $clrPink;
+					background: $clrBlue;
+					color: $clrWhite;
+				}
+
+				& svg {
+					width: 20px;
+					height: auto;
+				}
+
+				@media screen and (max-width: 768px) {
+					transform: rotate(-90deg);
+					width: 54px
+					// flex-direction: row;
 				}
 			}
 
 			& .prev_btn {
-				width: 50px;
-				color: $clrDark;
-				transition: all 0.2s;
+				// width: 50px;
+				// color: $clrDark;
+				// transition: all 0.2s;
+				// cursor: pointer;
+				background: #E7E7E7;
+				border-radius: 50% 50% 0 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 60px;
+				height: 54px;
 				cursor: pointer;
+				transition: all 0.3s;
+
+				&:hover {
+					background: $clrBlue;
+					color: $clrWhite;
+				}
 
 				& svg {
 					transform: scaleY(-1);
+					width: 20px;
+					height: auto;
 				}
 
-				&:hover {
-					color: $clrPink;
+				@media screen and (max-width: 768px) {
+					transform: rotate(-90deg);
+					width: 54px;
+					// flex-direction: row;
 				}
+
+				// &:hover {
+				// 	color: $clrPink;
+				// }
 			}
 		}
 

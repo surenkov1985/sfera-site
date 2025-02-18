@@ -510,6 +510,16 @@ ul {
 		}
 	}
 
+	& h2, & h3, & h4 {
+		margin-bottom: 24px;
+		margin-top: 32px;
+
+		@media screen and (max-width:991px) {
+			margin-bottom: 20px;
+			margin-top: 24px;
+		}
+	}
+
 	& ul {
 		padding-left: 24px;
 		list-style: disc;
@@ -813,6 +823,10 @@ ul {
 
 .w100 {
 	width: 100% !important;
+}
+
+.pt0 {
+	padding-top: 0 !important;
 }
 
 .play_btn {
