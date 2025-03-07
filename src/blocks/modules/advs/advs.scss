@@ -1,3 +1,7 @@
+@function rem($px) {
+    @return calc($px / 16) + rem;
+}
+
 .advs {
 	margin-top: 120px;
 	margin-bottom: 120px;
@@ -22,12 +26,12 @@
 	display: flex;
 	gap: 15px;
 	padding: 26px 26px 28px;
-	border: 1px solid $clrBorder;
+	border: 1px solid var(--clrBorder);
 	border-radius: rem(20);
 
 	&-white {
 		border: none;
-		background: $clrWhite;
+		background: var(--clrWhite);
 	}
 
 	&-sm {
@@ -69,7 +73,7 @@
 
 	&_text {
 		font-size: rem(14);
-		color: $clrDarkGray;
+		color: var(--clrDarkGray);
 	}
   }
 }

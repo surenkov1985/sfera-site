@@ -92,7 +92,7 @@
 
 	&__form {
 		width: calc((100% - 15px) / 6 * 4);
-		color: $clrWhite;
+		color: var(--clrWhite);
 
 		@media screen and (max-width: 1440px) {
 			width: calc((100% - 15px) / 6 * 5);
@@ -120,7 +120,7 @@
 		& input {
 
 			&::placeholder {
-				color: $clrWhite;
+				color: var(--clrWhite);
 			}
 		}
 
@@ -131,7 +131,7 @@
 				&:checked {
 		
 					&+span.checkbox {
-						background: $clrWhite;
+						background: var(--clrWhite);
 						
 						& svg {
 							opacity: 1;
@@ -141,8 +141,8 @@
 			}
 
 			& span.checkbox {
-				border-color: $clrWhite;
-				color: $clrBlue;
+				border-color: var(--clrWhite);
+				color: var(--clrBlue);
 				
 				& svg {
 					opacity: 0;

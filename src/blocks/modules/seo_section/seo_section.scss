@@ -1,3 +1,7 @@
+@function rem($px) {
+    @return calc($px / 16) + rem;
+}
+
 .seo {
 	position: relative;
 	z-index: 9;
@@ -149,8 +153,8 @@
 				transition: all 0.3s;
 
 				&:hover {
-					background: $clrBlue;
-					color: $clrWhite;
+					background: var(--clrBlue);
+					color: var(--clrWhite);
 				}
 
 				& svg {
@@ -181,8 +185,8 @@
 				transition: all 0.3s;
 
 				&:hover {
-					background: $clrBlue;
-					color: $clrWhite;
+					background: var(--clrBlue);
+					color: var(--clrWhite);
 				}
 
 				& svg {
@@ -226,7 +230,7 @@
 			height: 70px;
 			border-radius: 50%;
 			overflow: hidden;
-			outline: 3px solid $clrWhite;
+			outline: 3px solid var(--clrWhite);
 			position: relative;
 			transition: all 0.3s;
 
@@ -245,11 +249,11 @@
 			}
 
 			&.active {
-				outline-color: $clrBlue;
+				outline-color: var(--clrBlue);
 			}
 
 			&:hover {
-				outline-color: $clrBlue;
+				outline-color: var(--clrBlue);
 			}
 
 			& img {
@@ -325,7 +329,7 @@
 	&__item {
 		padding: rem(32) rem(33);
 		border-radius: rem(20);
-		background: $clrWhite;
+		background: var(--clrWhite);
 		flex: 0 1 190px;
 
 		@media screen and (max-width:1200px) {
@@ -378,7 +382,7 @@
 
 		&_text {
 			font-size: rem(14);
-			color: $clrDarkGray;
+			color: var(--clrDarkGray);
 
 			@media screen and (max-width:400px) {
 				font-size: rem(12);

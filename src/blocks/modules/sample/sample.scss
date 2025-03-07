@@ -1,3 +1,7 @@
+@function rem($px) {
+    @return calc($px / 16) + rem;
+}
+
 .sample {
 	margin-top: 120px;
 	margin-bottom: 120px;
@@ -83,7 +87,7 @@
 
 	&__desc {
 		width: calc((100% - 30px) / 12 * 5);
-		background: $clrGray;
+		background: var(--clrGray);
 		border-radius: 20px;
 		padding: 50px 42px;
 
@@ -123,7 +127,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			border: 1px solid $clrBorder;
+			border: 1px solid var(--clrBorder);
 			border-radius: 50%;
 			transition: all .3s;
 			cursor: pointer;
@@ -135,14 +139,14 @@
 			}
 
 			&:hover {
-				// background: $clrBlue;
-				color: $clrBlue;
-				border-color: $clrBlue;
+				// background: var(--clrBlue);
+				color: var(--clrBlue);
+				border-color: var(--clrBlue);
 			}
 
 			&:disabled {
 				pointer-events: none;
-				color: $clrGray;
+				color: var(--clrGray);
 			}
 		}
 
@@ -243,12 +247,12 @@
 			&-bullet {
 				width: 10px;
 				height: 10px;
-				background: $clrBorder;
+				background: var(--clrBorder);
 				opacity: 1;
 				margin: 0 !important;
 
 				&-active {
-					background: $clrBlue;
+					background: var(--clrBlue);
 				}
 			}
 		}

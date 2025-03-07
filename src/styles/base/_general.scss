@@ -1,3 +1,6 @@
+
+@import "../helpers/variables";
+@import "../helpers/functions";
 h1,
 h2,
 h3,
@@ -20,7 +23,7 @@ ul {
 	border-radius: rem(60);
 	padding: 20px 38px;
 	white-space: nowrap;
-	line-height: (19.2 / 16);
+	line-height: calc(19.2 / 16);
 
 	@media screen and (max-width:500px) {
 		width: 100%;
@@ -272,7 +275,7 @@ ul {
 .phone_link {
 	color: $clrWhite;
 	font-size: rem(24);
-	line-height: (29 / 24);
+	line-height: calc(29 / 24);
 	font-weight: 700;
 	text-decoration: none;
 	position: relative;

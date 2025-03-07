@@ -1,5 +1,11 @@
-$gap: rem(30);
 
+@function rem($px) {
+    @return ($px / 16) +rem;
+}
+
+@import "../helpers/variables";
+@import "../helpers/functions";
+$gap: rem(30);
 .foot {
 	background: $clrDark;
 	padding-top: rem(204);

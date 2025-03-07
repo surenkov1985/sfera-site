@@ -1,13 +1,28 @@
+@function rem($px) {
+    @return ($px / 16) +rem;
+}
+
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/functions";
+
+// CSS-файлы библиотек
+@import "../vendor/libs";
+
+// Основное
+// @import "../base/fonts";
+// @import "../base/general";
+
 .head {
 	position: absolute;
 	width: 100%;
-	z-index: 100;
+	z-index: 100; 
 
 	&.fixed {
 		position: fixed;
 		transform: translateY(-100%);
 		transition: all 0.3s;
-		// backdrop-filter: blur(10px);
+		// bac kdrop-filter: blur(10px);
 
 		&.show {
 			transform: translateY(0);
@@ -29,7 +44,7 @@
 				&_btn {
 					padding: 16px 32px;
 					font-size: 16px;
-		
+		 
 					&:last-child {
 						padding: 16px 32px 16px 66px;
 						margin-left: -42px;
@@ -50,7 +65,7 @@
 							padding: 14px 30px 14px 65px;
 							border-radius: 10px;
 						}
-					}
+					} 
 		
 					@media screen and (max-width: 1440px) {
 						padding: 16px 22px;
@@ -72,7 +87,7 @@
 		
 					@media screen and (max-width: 419px) {
 						padding: 14px 20px;
-						font-size: rem(16);
+						font-size: 1rem;
 						width: auto;
 						flex-grow: 1;
 		
@@ -110,7 +125,7 @@
 						margin-left: -50px;
 		
 						& .btn_burger {
-							font-size: rem(16);
+							font-size: 1rem;
 						}
 					}
 		

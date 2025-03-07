@@ -16,8 +16,8 @@
 		transition: all 0.3s;
 
 		&:hover {
-			background: $clrBlue;
-			color: $clrWhite;
+			background: var(--clrBlue);
+			color: var(--clrWhite);
 		}
 	}
 
@@ -33,8 +33,8 @@
 		transition: all 0.3s;
 
 		&:hover {
-			background: $clrBlue;
-			color: $clrWhite;
+			background: var(--clrBlue);
+			color: var(--clrWhite);
 		}
 	}
 }

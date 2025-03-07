@@ -1,3 +1,7 @@
+@function rem($px) {
+    @return calc($px / 16) + rem;
+}
+
 .news {
 	padding-top: 126px;
 	padding-bottom: 82px;
@@ -44,7 +48,8 @@
 			}
 
 			&__slide {
-				border: 1px solid $clrBorder;
+				border: 1px solid var(--clrBorder);
+				color: var(--clrDark);
 			}
 
 			&__first {
@@ -67,7 +72,7 @@
 				}
 
 				& .service {
-					color: $clrDark;
+					color: var(--clrDark);
 
 					&__title {
 						margin-top: 42px;
@@ -163,12 +168,12 @@
 		&-bullet {
 			width: 10px;
 			height: 10px;
-			background: $clrBorder;
+			background: var(--clrBorder);
 			opacity: 1;
 			margin: 0 !important;
 
 			&-active {
-				background: $clrBlue;
+				background: var(--clrBlue);
 			}
 		}
 	}
@@ -177,7 +182,8 @@
 		display: flex;
 		flex-direction: column;
 		border-radius: rem(20);
-		background: $clrWhite;
+		background: var(--clrWhite);
+		color: var(--clrDark);
 
 		&_preview {
 			border-radius: rem(20);
@@ -205,8 +211,8 @@
 			align-items: center;
 			justify-content: center;
 			border-radius: 50%;
-			background: $clrGray;
-			color: $clrDarkGray;
+			background: var(--clrGray);
+			color: var(--clrDark)Gray;
 			font-size: 1.125rem;
 			line-height: 1;
 			font-weight: 600;
@@ -231,13 +237,13 @@
 			display: flex;
 			align-items: center;
 			gap: rem(10);
-			color: $clrDarkGray;
+			color: var(--clrDark)Gray;
 			font-size: 12px;
 			margin-bottom: 16px;
 		}
 
 		&_title {
-			color: $clrDark;
+			color: var(--clrDark);
 			margin-bottom: 18px;
 			transition: all 0.5s
 		}
@@ -245,7 +251,7 @@
 		&_text {
 			font-size: 12px;
 			line-height: 1.1;
-			color: $clrDarkGray;
+			color: var(--clrDark)Gray;
 			margin-bottom: 28px;
 		}
 
@@ -253,7 +259,7 @@
 			display: flex;justify-content: flex-start;
 			gap: 10px;
 			align-items: center;
-			color: $clrBlue;
+			color: var(--clrBlue);
 			margin-top: auto;
 			transition: all 0.5s;
 		}
@@ -271,11 +277,11 @@
 					}
 
 					&_title {
-						color: $clrPink;
+						color: var(--clrPink);
 					}
 
 					&_more{
-						color: $clrPink;
+						color: var(--clrPink);
 					}
 				}
 

@@ -1,3 +1,7 @@
+@function rem($px) {
+    @return calc($px / 16) + rem;
+}
+
 .company {
 	margin-top: 120px;
 	margin-bottom: 120px;
@@ -16,7 +20,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
-	border: 1px solid $clrBorder;
+	border: 1px solid var(--clrBorder);
 	border-radius: rem(20);
 	padding-top: 45px;
 	padding-bottom: 58px;
@@ -134,7 +138,7 @@
 
 		&_list {
 			padding-top: 50px;
-			border-top: 1px solid $clrBorder;
+			border-top: 1px solid var(--clrBorder);
 			display: flex;
 			// grid-template-columns: 3fr 5.5fr;
 			flex-direction: column;
@@ -151,7 +155,7 @@
 			display: flex;
 			align-items: center;
 			gap: 12px;
-			color: $clrDark;
+			color: var(--clrDark);
 			transition: all 0.2s;
 
 			& img {
@@ -159,7 +163,7 @@
 			}
 
 			&:hover{
-				color: $clrBlue;
+				color: var(--clrBlue);
 			}
 
 			@media screen and (max-width: 1200px) {

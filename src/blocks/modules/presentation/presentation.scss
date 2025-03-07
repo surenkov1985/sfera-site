@@ -1,3 +1,7 @@
+@function rem($px) {
+    @return calc($px / 16) + rem;
+}
+
 .presentation {
 	padding-top: 137px;
 	padding-bottom: 137px;
@@ -134,7 +138,7 @@
 	}
 
 	&-text {
-		color: $clrWhite;
+		color: var(--clrWhite);
 		font-size: 12px;
 		line-height: 1.1;
 	}

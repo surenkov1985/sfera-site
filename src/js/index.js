@@ -53,7 +53,8 @@ const ease = {
 		return Math.pow(t - 1.0, 3.0) * (1.0 - t) + 1.0;
 	},
 };
-
+const menuSelectors = document.querySelectorAll(".aside__nav_link");
+const header = document.querySelector(".head.fixed");
 
 class PageOverlays {
 	constructor(elm) {
@@ -150,7 +151,111 @@ function initScripts() {
 	whoSliders()
 	gallerySliders()
 }
+function clickAnchors() {
+	on("click", 'a[href^="#"]', function (e) {
+		e.preventDefault();
+		const element = document.getElementById(this.getAttribute("href").substr(1));
+		if (!element) return;
+		const offset = -100; // Смещение на -100px
 
+		// Получаем текущую позицию элемента и добавляем смещение
+		const elementPosition = element.getBoundingClientRect().top + window.scrollY - header.getBoundingClientRect().height;
+
+		// Прокручиваем к рассчитанной позиции с плавной анимацией
+		window.scrollTo({
+			top: elementPosition,
+			left: 0,
+			behavior: "smooth",
+		});
+	});
+}
+
+document.addEventListener("scroll", function () {
+	onScroll();
+});
+
+onScroll();
+function onScroll() {
+	var scroll_top = window.pageYOffset;
+	menuSelectors.forEach(function (link) {
+		const url = new URL(link.href);
+		const hash = url.hash;
+
+		const target = document.querySelector(hash);
+
+		if (target) {
+			link.classList.remove("active");
+			if (
+				target.getBoundingClientRect().top <= header.getBoundingClientRect().height &&
+				target.getBoundingClientRect().bottom >= header.getBoundingClientRect().height
+			) {
+				link.classList.add("active");
+			} else {
+				// link.classList.remove("active");
+			}
+		}
+	});
+}
+
+function on(event, object, func = function () { }) {
+	document.addEventListener(event, function (e) {
+		const eTarget = e.target.closest(object);
+		if (eTarget == null) return;
+		func.call(eTarget, e);
+	});
+}
+
+(function () {
+	const menuSelectors = document.querySelectorAll(".aside__nav_link");
+const header = document.querySelector(".head.fixed");
+	document.addEventListener("click", function (e) {
+		if (e.target.closest(".workers__card_more")) {
+			if (e.target.closest(".workers__card")) {
+				const workers = document.querySelectorAll(".workers__cards_item");
+
+				workers.forEach((worker) => {
+					const popup = worker.querySelector(".workers__popup");
+
+					popup.classList.remove("show");
+				});
+				const cardItem = e.target.closest(".workers__cards_item");
+				console.log(
+					cardItem.closest(".workers__cards_list").getBoundingClientRect(),
+					cardItem.getBoundingClientRect(),
+					window.getComputedStyle(cardItem.closest(".workers__cards_list"))["gap"]
+				);
+				const popup = cardItem.querySelector(".workers__popup");
+
+				popup.style.width = cardItem.closest(".workers__cards_list").getBoundingClientRect().width + "px";
+				if (cardItem.closest(".workers__cards_list").getBoundingClientRect().x === cardItem.getBoundingClientRect().x) {
+					popup.style.left = 0;
+
+					if (cardItem.closest(".workers__cards_list").getBoundingClientRect().width === cardItem.getBoundingClientRect().width) {
+						const gap = parseInt(window.getComputedStyle(cardItem.closest(".workers__cards_list"))["gap"], 10);
+
+						popup.style.height = cardItem.getBoundingClientRect().height * 2 + gap + "px";
+
+						popup.classList.add("column");
+					} else {
+						popup.classList.remove("column");
+					}
+				} else {
+					popup.style.left = "auto";
+				}
+				popup.classList.add("show");
+			} else if (e.target.closest(".workers__popup")) {
+				const popup = e.target.closest(".workers__popup");
+
+				popup.classList.remove("show");
+			}
+		}
+
+		if (!!e.target.closest('a')) {
+			if (e.target.closest('a').href === this.location.href) e.preventDefault()
+		}
+
+	});
+})();
 document.addEventListener('DOMContentLoaded', function () {
 	loadScript(window.location.protocol + "//api-maps.yandex.ru/2.1.79/?lang=ru_RU", setMap);
 	initScripts()
@@ -240,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	barba.hooks.enter(() => {
-
+		initScripts()
 
 	});
 })

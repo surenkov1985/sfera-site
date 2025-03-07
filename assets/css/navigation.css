@@ -1,0 +1,50 @@
+.swiper_navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1px;
+}
+.swiper_prev {
+  background: #E7E7E7;
+  border-radius: 50% 0 0 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 54px;
+  height: 60px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.swiper_prev:hover {
+  background: var(--clrBlue);
+  color: var(--clrWhite);
+}
+.swiper_next {
+  background: #E7E7E7;
+  border-radius: 0 50% 50% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 54px;
+  height: 60px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.swiper_next:hover {
+  background: var(--clrBlue);
+  color: var(--clrWhite);
+}/*# sourceMappingURL=navigation.css.map */

@@ -1,0 +1,60 @@
+.marks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.marks.small .marks__item {
+  width: 32px;
+  height: 32px;
+}
+.marks.small .marks__item:not(:first-child) {
+  margin-left: -12px;
+}
+.marks.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.marks.column .marks__item {
+  width: 32px;
+  height: 32px;
+}
+.marks.column .marks__item:not(:first-child) {
+  margin-top: -12px;
+  margin-left: 0;
+}
+.marks__item {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  outline: 2px solid var(--clrBorder);
+}
+.marks__item:not(:first-child) {
+  margin-left: -20px;
+}
+.marks__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.marks.with_plus::before {
+  content: url("../img/sprites/plus.svg");
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  right: calc(100% + 8px);
+}
+@media screen and (max-width: 991px) {
+  .marks.with_plus::before {
+    display: none;
+  }
+}/*# sourceMappingURL=marks.css.map */

@@ -18,7 +18,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 20px 42px;
-		margin-bottom: rem(40);
+		margin-bottom: 2.5rem;
 	}
 
 	&__list {
@@ -32,7 +32,7 @@
 	}
 
 	&__item {
-		border: 1px solid $clrBorder;
+		border: 1px solid var(--clrBorder);
 		border-radius: 20px;
 
 		&_top {
@@ -90,20 +90,20 @@
 			transition: all 0.3s;
 
 			&:hover {
-				color: $clrBlue;
+				color: var(--clrBlue);
 			}
 
 			&::before {
 				content: attr(data-num);
 				font-size: 18px;
-				color: $clrDarkGray;
+				color: var(--clrDarkGray);
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				width: 43px;
 				height: 43px;
 				border-radius: 50%;
-				background: $clrGray;
+				background: var(--clrGray);
 				position: absolute;
 				right: calc(100% + 40px);
 
@@ -142,7 +142,7 @@
 			padding: 6px 15px;
 			border-radius: 30px;
 			gap: 13px;
-			color: $clrWhite;
+			color: var(--clrWhite);
 
 			& img {
 				height: 24px;
@@ -152,15 +152,15 @@
 			&.tag {
 
 				&_lecture {
-					background: $clrBlue;
+					background: var(--clrBlue);
 				}
 
 				&_webinar {
-					background: $clrPink;
+					background: var(--clrPink);
 				}
 
 				&_homework {
-					background: $clrDarkGray;
+					background: var(--clrDarkGray);
 				}
 			}
 		}

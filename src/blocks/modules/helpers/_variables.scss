@@ -1,0 +1,23 @@
+
+
+//////////////////////// COLORS ///////////////////////
+
+$clrDark: #1B2A3B;
+$clrBlue: #4988D1;
+$clrDarkGray: #6B91A0;
+$clrLightGray: #D0D0D0;
+$clrLightBlue: #E5F8FF;
+$clrGray: #F2F2F2;
+$clrPink: #78213A;
+$clrBorder: #E6E6E6;
+$clrWhite: #FFFFFF;
+$clrBlack: #000000;
+
+///////////////////////////////////////////////////////
+
+$gap: 2rem;
+$radius: 20px;
+
+@media screen and (max-width: 991px) {
+	$radius: 10px;
+}
