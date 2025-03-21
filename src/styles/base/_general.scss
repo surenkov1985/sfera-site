@@ -129,8 +129,9 @@ ul {
 		color: $clrWhite;
 
 		&:hover {
-			color: $clrBlue;
-			border-color: $clrBlue;
+			// color: $clrBlue;
+			// border-color: $clrBlue;
+			opacity: 0.5;
 		}
 	}
 
@@ -311,13 +312,30 @@ ul {
 		font-size: 1.5rem;
 	}
 }
+.white_link {
+	color: var(--clrWhite);
+	text-decoration: underline;
+	transition: all .2s;
 
+	&:hover {
+		opacity: 0.5;
+	}
+}
 .service_link {
 	color: $clrDark;
 	transition: all .3s;
 
 	&:hover {
 		color: $clrBlue;
+	}
+}
+
+.pink_link {
+	color: var(--clrPink);
+	text-decoration: underline;
+
+	&:hover {
+		opacity: 0.5;
 	}
 }
 
@@ -549,6 +567,9 @@ ul {
 				font-size: 10px;
 			}
 		}
+	}
+
+	& ol {
 	}
 
 	& blockquote {

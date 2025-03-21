@@ -253,6 +253,10 @@
 			line-height: 1.1;
 			color: var(--clrDark)Gray;
 			margin-bottom: 28px;
+			-webkit-line-clamp: 5; /* Число отображаемых строк */
+			display: -webkit-box; /* Включаем флексбоксы */
+			-webkit-box-orient: vertical; /* Вертикальная ориентация */
+			overflow: hidden;
 		}
 
 		&_more {

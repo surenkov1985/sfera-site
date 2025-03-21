@@ -165,6 +165,40 @@
 			}
 		}
 	}
+
+	&__advs {
+		padding: 28px;
+		border-radius: var(--radius);
+		background: var(--clrGray);
+
+		@media screen and (max-width: 1200px) {
+			padding: 22px;
+		}
+	  
+		@media screen and (max-width: 768px) {
+			padding: 16px;
+		}
+
+		&_list {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			gap: 24px 26px;	
+
+			@media screen and (max-width: 1200px) {
+				gap: 18px 20px;
+			}
+		  
+			@media screen and (max-width: 768px) {
+				gap: 12px 12px;
+				grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+			}
+		}
+
+		&_item {
+			background: #fafafa;
+			border-radius: 6px;
+		}
+	}
 }
 
 .accordion {

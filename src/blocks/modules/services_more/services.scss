@@ -373,6 +373,12 @@
 			}
 		}
 
+		&_sections {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+		}
+
 		&_marks {
 			display: flex;
 			width: 158px;

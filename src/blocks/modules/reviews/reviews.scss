@@ -228,14 +228,25 @@
 
 		&_num {
 			margin-bottom: 12px;
+
+			color: #fff;
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: -1px 1px 0 #78213a, 1px 1px 0 #78213a, 1px -1px 0 #78213a, -1px -1px 0 #78213a;
 			@media screen and (max-width: 1200px) {
+				font-size: 72px;
 				& svg {
 					width: auto;
 					height: 50px;
 				}
+
+
 			}
 
 			@media screen and (max-width: 991px) {
+				font-size: 64px;
 				margin-bottom: 8px;
 				& svg {
 					height: 40px;
