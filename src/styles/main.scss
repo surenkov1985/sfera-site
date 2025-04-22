@@ -2,6 +2,7 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
+@import "helpers/animate/style";
 
 // CSS-файлы библиотек
 @import "vendor/libs";
@@ -25,4 +26,12 @@
 
 .main {
 	flex-grow: 1;
+}
+
+.animated {
+	opacity: 0;
+
+	&.isView {
+		animation: fadeInUpSm 1.5s ease forwards alternate ;
+	}
 }

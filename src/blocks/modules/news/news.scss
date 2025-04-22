@@ -43,7 +43,7 @@
 
 			&__list {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 				gap: 30px;
 			}
 
@@ -184,12 +184,14 @@
 		border-radius: rem(20);
 		background: var(--clrWhite);
 		color: var(--clrDark);
+		border: 1px solid var(--clrBorder);
 
 		&_preview {
 			border-radius: rem(20);
 			overflow: hidden;
 			width: 100%;
 			aspect-ratio: 16 / 9.4;
+			z-index: 0;
 
 			& img {
 				width: 100%;

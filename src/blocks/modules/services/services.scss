@@ -379,7 +379,31 @@
 			}
 		}
 
-		
+		&_text {
+			padding: 48px 52px 52px;
+			background: var(--clrGray);
+			border-radius: var(--radius);
+
+			@media screen and (max-width: 1440px) {
+				padding: 42px 48px 48px;
+			}
+
+			@media screen and (max-width: 1200px) {
+				padding: 36px 42px 42px;
+			}
+
+			@media screen and (max-width: 991px) {
+				padding: 32px 36px 42px;
+			}
+
+			@media screen and (max-width: 768px) {
+				padding: 32px 24px 32px;
+			}
+
+			@media screen and (max-width: 576px) {
+				padding: 24px 16px;
+			}
+		}
 
 		&_sections {
 			display: flex;
@@ -458,6 +482,7 @@
 		aspect-ratio: 16 / 10;
 		border-radius: rem(20);
 		overflow: hidden;
+		z-index: 0;
 
 		& img {
 			width: 100%;

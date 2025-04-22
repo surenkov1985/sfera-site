@@ -26,7 +26,18 @@
 		aspect-ratio: 1 / 1;
 		background-image: url(../img/dark_decor.png);
 		background-size: contain;
+		animation: fadeInRightSm 1.5s ease forwards alternate;
 
+		// @keyframes fadeInLeft {
+		// 	from {
+		// 		opacity: 0;
+		// 		transform: translateX(20%);
+		// 	}
+		// 	to {
+		// 		opacity: 1;
+		// 		transform: translateX(0px);
+		// 	}
+		// }
 
 		@media screen and (max-width: 1200px) {
 			width: 760px;
@@ -148,6 +159,8 @@
 
 	&__title {
 		margin-bottom: rem(36);
+		opacity: 0;
+		animation: fadeInUpSm 1.5s 0.2s ease forwards alternate;
 		// word-break: break-all;
 
 		@media screen and (max-width: 1200px) {
@@ -160,6 +173,8 @@
 		align-items: center;
 		gap: rem(24);
 		margin-bottom: rem(58);
+		opacity: 0;
+		animation: fadeInUpSm 1.5s 0.3s ease forwards alternate ;
 
 		&_text {
 			font-size: clamp(1rem, 0.9423rem + 0.2564vw, 1.25rem);
@@ -180,6 +195,8 @@
 
 		&_slider {
 			position: relative;
+			opacity: 0;
+			animation: fadeInUpSm 1.5s 0.2s ease forwards alternate;
 
 			&_control {
 				display: flex;
@@ -247,6 +264,8 @@
 			border-radius: 50%;
 			overflow: hidden;
 			cursor: pointer;
+			opacity: 0;
+			animation: fadeIn 1.5s 0.3s ease forwards alternate ;
 
 			&:nth-child(2) {
 				left: calc(100% - 230px / 2);
@@ -308,6 +327,8 @@
 			align-items: center;
 			gap: rem(44);
 			margin-top: auto;
+			opacity: 0;
+			animation: fadeInUpSm 1.5s 0.4s ease forwards alternate ;
 
 			@media screen and (max-width: 1200px) {
 				gap: rem(32);
@@ -340,6 +361,8 @@
 
 	&__nums {
 		margin-bottom: rem(32);
+		opacity: 0;
+		animation: fadeInUpSm 1.5s 0.3s ease forwards alternate ;
 
 		&_list {
 			display: flex;

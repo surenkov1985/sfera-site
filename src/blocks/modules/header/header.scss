@@ -17,11 +17,13 @@
 	position: absolute;
 	width: 100%;
 	z-index: 100; 
+	top: 0;
 
 	&.fixed {
 		position: fixed;
 		transform: translateY(-100%);
 		transition: all 0.3s;
+		top: 0;
 		// bac kdrop-filter: blur(10px);
 
 		&.show {
@@ -134,6 +136,68 @@
 					}
 				}
 			}
+
+			&__submenu {
+				position: absolute;
+				top: calc(100% + 15px);
+				left: 0;
+				min-width: 200px;
+				// transform: translateX(-50%);
+				// background: $clrDark;
+				background: var(--clrDark);
+				padding: 20px;
+				-webkit-box-shadow: 0px 1px 3px 1px rgba(242, 242, 242, 0.2);
+				-moz-box-shadow: 0px 1px 3px 1px rgba(242, 242, 242, 0.2);
+				box-shadow: 0px 1px 3px 1px rgba(242, 242, 242, 0.2);
+				border-radius: var(--radius);
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				// transition: opacity 0.3s;
+				visibility: hidden;
+				opacity: 0;
+				z-index: 1;
+		
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;
+					left: calc(var(--radius) * 2);
+					background: var(--clrDark);
+					width: 16px;height: 16px;
+					transform: rotate(-45deg);
+					transform-origin: left top;
+				}
+		
+				&::before {
+					content: "";
+					width: 100%;
+					height: 20px;
+					display: block;
+					position: absolute;
+					left: 0;
+					bottom: 100%;
+				}
+		
+				& ul {
+					display: flex;
+				flex-direction: column;
+				gap: 12px;
+				max-height: 300px;
+				overflow: auto;
+				}
+		
+				&_item {
+		
+					& .link {
+						// color: $clrWhite;
+						color: var(--clrWhite);
+						font-size: rem(16);
+						white-space: nowrap;
+					}
+				}
+			}
 		}
 	}
 
@@ -149,6 +213,8 @@
 
 	& .logo {
 		display: flex;
+		opacity: 0;
+		animation: fadeIn 1.2s ease alternate forwards ;
 		&_black {
 			display: none;
 		}
@@ -174,7 +240,8 @@
 			&-info {
 				display: flex;
 				flex-direction: column;
-
+				opacity: 0;
+				animation: fadeIn 1.2s 0.1s ease alternate forwards ;
 
 			}
 
@@ -209,6 +276,8 @@
 				flex-direction: column;
 				justify-content: space-between;
 				align-items: flex-start;
+				opacity: 0;
+				animation: fadeIn 1.2s 0.2s ease alternate forwards ;
 
 				& .row {
 					display: flex;
@@ -264,6 +333,8 @@
 			display: flex;
 			align-items: center;
 			gap: 20px;
+			opacity: 0;
+			animation: fadeIn 1.2s 0.3s ease alternate forwards ;
 
 			@media screen and (max-width:400px) {
 				gap: 12px;
@@ -273,6 +344,10 @@
 
 	&__navigation {
 		display: flex;
+		opacity: 0;
+		position: relative;
+		z-index: 2;
+		animation: fadeIn 1.2s 0.4s ease alternate forwards ;
 		// align-items: center;
 
 		&_btn {
@@ -478,23 +553,46 @@
 
 	&__submenu {
 		position: absolute;
-		top: calc(100% + 2px);
+		top: calc(100% + 15px);
 		left: 0;
 		min-width: 200px;
 		// transform: translateX(-50%);
-		background: $clrDark;
+		// background: $clrDark;
+		background: var(--clrLightBlue);
 		padding: 20px;
 		-webkit-box-shadow: 0px 1px 3px 1px rgba(242, 242, 242, 0.2);
 		-moz-box-shadow: 0px 1px 3px 1px rgba(242, 242, 242, 0.2);
 		box-shadow: 0px 1px 3px 1px rgba(242, 242, 242, 0.2);
-		border-radius: $radius;
+		border-radius: var(--radius);
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
-		transition: opacity 0.3s;
+		// transition: opacity 0.3s;
 		visibility: hidden;
 		opacity: 0;
 		z-index: 1;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: calc(var(--radius) * 2);
+			background: var(--clrLightBlue);
+			width: 16px;height: 16px;
+			transform: rotate(-45deg);
+		transform-origin: left top;
+		}
+
+		&::before {
+			content: "";
+			width: 100%;
+			height: 20px;
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 100%;
+		}
 
 		& ul {
 			display: flex;
@@ -507,7 +605,8 @@
 		&_item {
 
 			& .link {
-				color: $clrWhite;
+				// color: $clrWhite;
+				color: var(--clrDark);
 				font-size: rem(16);
 				white-space: nowrap;
 			}
@@ -516,6 +615,9 @@
 
 	&__services {
 		position: relative;
+		z-index: 1;
+		opacity: 0;
+		animation: fadeIn 1.2s 0.5s ease alternate forwards;
 
 		&::after {
 			content: '';

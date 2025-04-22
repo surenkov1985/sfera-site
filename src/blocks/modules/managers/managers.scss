@@ -60,6 +60,10 @@
 		}
 	}
 
+	& .swiper-slide {
+		height: auto;
+	}
+
 	&__slide {
 		display: flex;
 		flex-direction: column;
@@ -252,6 +256,7 @@
 	border-radius: 20px;
 	background: $clrWhite;
 	align-items: flex-start;
+	height: 100%;
 
 	@media screen and (max-width:768px) {
 		padding: 16px;
@@ -278,7 +283,7 @@
 	&_info {
 		display: flex;
 		flex-direction: column;
-		height: auto;
+		height: 100%;
 		align-items: flex-start;
 	}
 
@@ -299,6 +304,7 @@
 		gap: 10px;
 		transition: all 0.2s;
 		cursor: pointer;
+		margin-top: auto;
 	}
 
 	&_contacts {

@@ -107,29 +107,183 @@
 						color: $clrBlue;
 					}
 				}
+
+				&.row {
+					display: flex;
+					align-items: center;
+					gap: 9px;
+
+					&  .scls {
+						display: flex;
+						align-items: center;
+						gap: 7px;
+
+						&_item {
+							display: flex;
+								width: 26px;
+								height: 26px;
+								align-items: center;
+								justify-content: center;
+								transition: .2s;
+								border-radius: 50%;
+								background: #4988d1;
+
+								&:hover {
+									background: #78213a;
+								}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.socials__item {
+
+		& svg {
+			& rect {
+				fill: var($clrBlue);
 			}
 		}
 	}
 
 	&__map {
 		width: calc(680 / 1360 * 100%);
-		aspect-ratio: 680 / 360;
-		height: auto;
-		border-radius: 20px;
-		overflow: hidden;
 		flex-shrink: 0;
+
+		&_container {
+			width: 100%;
+			border-radius: 20px;
+			aspect-ratio: 680 / 360;
+			overflow: hidden;
+			height: auto;
+
+		@media screen and (max-width:576px) {
+			height: 250px;
+		}
+		}
+		
 
 		@media screen and (max-width:768px) {
 			width: 100%;
 		}
 
-		@media screen and (max-width:576px) {
-			height: 250px;
-		}
 
 		& .map {
 			width: 100%;
 			height: 100%;
+		}
+
+		&_gallery {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			// gap: 75px;
+			margin-top: 64px;
+
+			@media screen and (max-width: 1440px) {
+				margin-top: 56px;
+				// gap: 64px;
+			}
+			
+
+			@media screen and (max-width: 1200px) {
+				margin-top: 48px;
+				// flex-direction: column;
+				// align-items: flex-start;
+				gap: 1rem;
+			}
+
+			@media screen and (max-width: 991px) {
+				margin-top: 32px;
+			}
+
+			@media screen and (max-width: 768px) {
+				margin-top: 24px;
+			}
+		}
+	}
+
+	&__gallery {
+		display: flex;
+		align-items: center;
+	}
+
+	&__slider {
+			width: 156px;
+			aspect-ratio: 1 / 1;
+			// height: 156px;
+			border-radius: 50%;
+			overflow: hidden;
+
+			@media screen and (max-width: 1440px) {
+				width: 140px;
+			}
+
+			@media screen and (max-width: 1200px) {
+				width: 130px;
+			}
+
+			@media screen and (max-width: 991px) {
+				width: 120px;
+			}
+
+			@media screen and (max-width: 768px) {
+				width: 135px;
+			}
+
+			&_aside {
+				width: 156px;
+				aspect-ratio: 1 / 1;
+				// height: 156px;
+				border-radius: 50%;
+				overflow: hidden;
+				margin-left: -42px ;
+
+				@media screen and (max-width: 1440px) {
+					width: 140px;
+				}
+
+				@media screen and (max-width: 1200px) {
+					width: 130px;
+				}
+
+				@media screen and (max-width: 991px) {
+					width: 120px;
+				}
+
+				@media screen and (max-width: 768px) {
+					width: 135px;
+				}
+			}
+		
+			& .swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+				aspect-ratio: 1 / 1;
+				overflow: hidden;
+			
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				flex-shrink: 0;
+				will-change: transform;
+				transform: translateX(0px);
+				transition: 0.5s;
+			}
+		}
+	}
+
+	& .socials {
+		&__item {
+			width: 52px;
+			height: 52px;
 		}
 	}
 }

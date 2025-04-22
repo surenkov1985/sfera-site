@@ -432,7 +432,7 @@
 			bottom: 0;
 			right: 16px;
 			width: 120px;
-			height: 110px;
+			height: 130px;
 
 			@media screen and (max-width:576px) {
 				display: none;
@@ -539,6 +539,12 @@
 
 .who {
 
+	&__list{
+		& .swiper-slide {
+			height: auto !important;
+		}
+	}
+	
 	&__item {
 		background: $clrGray;
 		border-radius: 20px;
@@ -547,13 +553,14 @@
 		align-items: flex-start;
 		gap: 20px;
 		padding: 22px 30px 24px;
+		height: 100%;
 
 		&_icon {
 			width: auto;
 			height: 85px;
 
 			& img {
-				width: 100%;
+				width: auto;
 				height: 100%;
 				object-fit: cover;
 			}

@@ -161,6 +161,10 @@
 		padding: 36px 30px 42px;
 	}
 
+	@media screen and (max-width: 1200px) {
+		aspect-ratio: 16/11.5;
+	}
+
 	@media screen and (max-width: 576px) {
 		padding: 30px 24px 32px;
 	}

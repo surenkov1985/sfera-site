@@ -402,14 +402,14 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 
-::-webkit-file-upload-button {
+*::-webkit-file-upload-button {
 	-webkit-appearance: button;
 	/* 1 */
 	font: inherit;
 	/* 2 */
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
 	width: 8px;
 	height: 8px;
 	background-color: $clrGray;
@@ -422,13 +422,13 @@ textarea {
 	}
 }
 
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
 	background-color: $clrGray;
 	border-radius: 6px;
 	/* цвет дорожки */
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
 	background-color: $clrBorder;
 	border-radius: 6px;
 	cursor: pointer;

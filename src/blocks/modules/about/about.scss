@@ -14,11 +14,11 @@
 	}
 
 	&__cols {
-		display: flex;
-		gap: rem(30);
-		position: relative;
-		align-items: flex-start;
-		z-index: 1;
+		display: flow-root;
+		// gap: rem(30);
+		// position: relative;
+		// align-items: flex-start;
+		// z-index: 1;
 
 		@media screen and (max-width:991px) {
 			flex-direction: column-reverse;
@@ -28,8 +28,11 @@
 
 	&__image {
 		width: calc((100% - 30px) / 12 * 5);
+		aspect-ratio: 550 / 500;
 		border-radius: 20px;
 		overflow: hidden;
+		float: left;
+		margin-right: 2rem;margin-top: 2rem;
 
 		& img {
 			width: 100%;
@@ -44,7 +47,8 @@
 	}
 
 	&__col {
-		width: calc((100% - 30px) / 12 * 7);
+		// width: calc((100% - 30px) / 12 * 7);
+		width: 100%;
 
 		@media screen and (max-width:991px) {
 			width: 100%;

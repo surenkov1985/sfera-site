@@ -257,7 +257,7 @@ const header = document.querySelector(".head.fixed");
 	});
 })();
 document.addEventListener('DOMContentLoaded', function () {
-	loadScript(window.location.protocol + "//api-maps.yandex.ru/2.1.79/?lang=ru_RU", setMap);
+	loadScript(window.location.protocol + "/api-maps.yandex.ru/2.1.79/?lang=ru_RU", setMap);
 	initScripts()
 
 	const numberLabels = document.querySelectorAll('.label_number');
