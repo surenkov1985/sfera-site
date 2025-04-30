@@ -36,7 +36,7 @@
 		top: 90px;
 
 		@media screen and (max-width:1200px) {
-			top:90px;
+			top: 90px;
 		}
 
 		@media screen and (max-width:991px) {
@@ -429,10 +429,10 @@
 
 		&_img {
 			position: absolute;
-			bottom: 0;
-			right: 16px;
-			width: 120px;
-			height: 130px;
+			bottom: -20px;
+			right: -20px;
+			width: 140px;
+			height: 170px;
 
 			@media screen and (max-width:576px) {
 				display: none;
@@ -441,7 +441,7 @@
 			& img {
 				width: 100%;
 				height: 100%;
-				object-fit: cover;
+				object-fit: contain;
 			}
 		}
 	}
@@ -539,12 +539,12 @@
 
 .who {
 
-	&__list{
+	&__list {
 		& .swiper-slide {
 			height: auto !important;
 		}
 	}
-	
+
 	&__item {
 		background: $clrGray;
 		border-radius: 20px;
@@ -864,6 +864,7 @@
 	@media screen and (max-width: 480px) {
 		padding: 24px;
 	}
+
 	// overflow: hidden;
 
 	&::after {
