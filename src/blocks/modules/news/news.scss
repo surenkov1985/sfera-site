@@ -1,5 +1,5 @@
 @function rem($px) {
-    @return calc($px / 16) + rem;
+	@return calc($px / 16)+rem;
 }
 
 .news {
@@ -25,10 +25,10 @@
 
 	&.grid {
 		margin-top: 120px;
-    margin-bottom: 120px;
-	 padding-top: 0;
-	 padding-bottom: 0;
-	 
+		margin-bottom: 120px;
+		padding-top: 0;
+		padding-bottom: 0;
+
 		@media screen and (max-width: 1200px) {
 			margin-top: 110px;
 			margin-bottom: 110px;
@@ -55,7 +55,7 @@
 			&__first {
 				margin-bottom: 30px;
 
-				& .services{
+				& .services {
 
 					&__result {
 
@@ -91,8 +91,9 @@
 						}
 
 						& h2 {
-						font-size: clamp(1.375rem, 1.27rem + 0.4vw, 1.75rem);
-					}}
+							font-size: clamp(1.375rem, 1.27rem + 0.4vw, 1.75rem);
+						}
+					}
 
 					& .text_content {
 						width: 95%;
@@ -100,11 +101,12 @@
 
 						& p {
 							@media screen and (max-width:576px) {
-							font-size: 14px;
+								font-size: 14px;
+							}
 						}
-						}
-						
+
 					}
+
 					&__preview {
 						flex-shrink: 0;
 						width: calc(434 / 1362 * 100%);
@@ -134,12 +136,12 @@
 
 		&.gallery {
 			& .news {
-			&__list {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-				gap: 30px;
+				&__list {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+					gap: 30px;
+				}
 			}
-		}
 		}
 	}
 
@@ -152,7 +154,8 @@
 	}
 
 	& .swiper-pagination {
-		position: static;margin-top: 52px;
+		position: static;
+		margin-top: 52px;
 		display: flex;
 		gap: 19px;
 		justify-content: center;
@@ -160,7 +163,7 @@
 		@media screen and (max-width: 768px) {
 			margin-top: 44px;
 		}
-	
+
 		@media screen and (max-width: 576px) {
 			margin-top: 40px;
 		}
@@ -185,6 +188,7 @@
 		background: var(--clrWhite);
 		color: var(--clrDark);
 		border: 1px solid var(--clrBorder);
+		height: auto !important;
 
 		&_preview {
 			border-radius: rem(20);
@@ -229,7 +233,7 @@
 			@media screen and (max-width: 768px) {
 				padding: 24px 28px;
 			}
-		
+
 			@media screen and (max-width: 576px) {
 				padding: 22px 18px 24px;
 			}
@@ -255,20 +259,25 @@
 			line-height: 1.1;
 			color: var(--clrDark)Gray;
 			margin-bottom: 28px;
-			-webkit-line-clamp: 5; /* Число отображаемых строк */
-			display: -webkit-box; /* Включаем флексбоксы */
-			-webkit-box-orient: vertical; /* Вертикальная ориентация */
+			-webkit-line-clamp: 5;
+			/* Число отображаемых строк */
+			display: -webkit-box;
+			/* Включаем флексбоксы */
+			-webkit-box-orient: vertical;
+			/* Вертикальная ориентация */
 			overflow: hidden;
 		}
 
 		&_more {
-			display: flex;justify-content: flex-start;
+			display: flex;
+			justify-content: flex-start;
 			gap: 10px;
 			align-items: center;
 			color: var(--clrBlue);
 			margin-top: auto;
 			transition: all 0.5s;
 		}
+
 		&:hover {
 
 			& .news {
@@ -276,7 +285,7 @@
 				&__slide {
 					&_preview {
 
-						& img 	{
+						& img {
 							transform: scale(1.05);
 
 						}
@@ -286,12 +295,12 @@
 						color: var(--clrPink);
 					}
 
-					&_more{
+					&_more {
 						color: var(--clrPink);
 					}
 				}
 
-				
+
 			}
 		}
 	}
