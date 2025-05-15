@@ -602,6 +602,54 @@ ul {
 	}
 
 	& ol {
+		padding-left: 24px;
+		list-style: decimal;
+
+		@media screen and (max-width:1200px) {
+			padding-left: 20px;
+		}
+
+		@media screen and (max-width:768px) {
+			padding-left: 30px;
+		}
+
+
+		& li {
+			font-size: 16px;
+			line-height: (22.4 / 16);
+
+			&:not(:last-of-type) {
+				margin-bottom: 10px;
+			}
+
+			// &::marker {
+			// 	font-weight: 200;
+			// 	font-size: 10px;
+			// }
+		}
+
+		&.map-level-0{ 
+
+			& li{
+				
+				&:not(:last-of-type) {
+				margin-bottom: 16px;}
+			}
+		}
+		
+		&.map-level-1 { 
+			padding-top: 20px;
+			padding-bottom: 10px;
+
+			& li{
+				&:not(:last-of-type) {
+				margin-bottom: 16px;}
+			}
+		}
+		ul.map-level-1 {
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
 	}
 
 	& blockquote {
